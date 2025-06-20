@@ -129,11 +129,11 @@
   }
 
   .footer-link {
-    @apply text-gray-600 hover:text-digitalx-500 transition-colors duration-300 inline-block mb-2;
+    @apply text-sm text-gray-600 hover:text-digitalx-500 transition-colors duration-300 inline-block mb-1;
   }
 
   .footer-heading {
-    @apply text-gray-800 font-semibold text-lg mb-4;
+    @apply text-gray-800 font-bold text-base mb-4;
   }
 
   .ripple {

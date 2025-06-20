@@ -344,7 +344,7 @@ const HeroSection = () => {
 
           <div className="flex items-center justify-center px-6 py-4 text-white bg-teal-500 lg:min-h-0">
             <Link
-              href="#"
+              href="/central-de-ajuda"
               className={cn(
                 "flex items-center justify-center gap-4 transform",
                 "hover:scale-105 transition-transform duration-300"

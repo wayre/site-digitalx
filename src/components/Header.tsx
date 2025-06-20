@@ -184,7 +184,7 @@ const Header = () => {
       </div>
 
       {/* Navigation Menu */}
-      <div className="absolute top-[65px] md:top-[88px] w-full">
+      <div className="absolute top-[64px] md:top-[64px] w-full">
         <nav
           className={cn(
             "navMenu hidden sm:block",
@@ -244,7 +244,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-0 bg-white z-40 flex flex-col p-8 pt-24 transform transition-transform duration-300 ease-in-out",
+          "fixed inset-0 bg-white z-40 flex flex-col p-8 pt-24 transform transition-transform duration-300 ease-in-out h-[100vh]",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

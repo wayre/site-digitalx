@@ -12,11 +12,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="text-base bg-gray-900 text-white pt-16 pb-8 overflow-hidden">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-[40%_60%] lg:grid-cols-[31%_37%_31%] gap-1 sm:gap-8 mb-12">
           {/* Sobre */}
-          <div>
+          <div className="w-5/6 mx-auto md:w-full">
             <h3 className="footer-heading">Sobre a Digital X</h3>
             <p className="text-gray-400 mb-4">
               Referência em exames radiológicos odontológicos, oferecendo
@@ -40,81 +40,85 @@ const Footer = () => {
           </div>
 
           {/* Links rápidos */}
-          <div>
-            <h3 className="footer-heading">Links Rápidos</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#home" className="footer-link">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#sobre" className="footer-link">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Exames
-                </a>
-              </li>
-              <li>
-                <a href="#convenios" className="footer-link">
-                  Convênios
-                </a>
-              </li>
-              <li>
-                <a href="#dentista" className="footer-link">
-                  Área do Dentista
-                </a>
-              </li>
-              <li>
-                <a href="#contato" className="footer-link">
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className="w-5/6 sm:w-[90%] mx-auto md:mx-0 lg:mx-auto grid grid-cols-2  gap-1">
+            <div>
+              <h3 className="footer-heading">Links Rápidos</h3>
+              <ul className="space-y-1">
+                <li>
+                  <a href="#home" className="footer-link">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#sobre" className="footer-link">
+                    Sobre Nós
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Exames
+                  </a>
+                </li>
+                <li>
+                  <a href="#convenios" className="footer-link">
+                    Convênios
+                  </a>
+                </li>
+                <li>
+                  <a href="#dentista" className="footer-link">
+                    Área do Dentista
+                  </a>
+                </li>
+                <li>
+                  <a href="#contato" className="footer-link">
+                    Contato
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-          {/* Exames */}
-          <div>
-            <h3 className="footer-heading">Nossos Exames</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#exames" className="footer-link">
-                  Tomografia Computadorizada
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Radiografia Panorâmica
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Radiografia Cefalométrica
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Radiografia Periapical
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Radiografia Interproximal
-                </a>
-              </li>
-              <li>
-                <a href="#exames" className="footer-link">
-                  Documentação Ortodôntica
-                </a>
-              </li>
-            </ul>
+            {/* Exames */}
+            <div>
+              <h3 className="footer-heading">Nossos Exames</h3>
+              <ul
+                className="space-y-1
+              "
+              >
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Tomografia Computadorizada
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Radiografia Panorâmica
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Radiografia Cefalométrica
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Radiografia Periapical
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Radiografia Interproximal
+                  </a>
+                </li>
+                <li>
+                  <a href="#exames" className="footer-link">
+                    Documentação Ortodôntica
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-
           {/* Contato */}
-          <div>
+          <div className="w-5/6 mx-auto md:w-full">
             <h3 className="footer-heading">Contato</h3>
             <ul className="space-y-4">
               <li className="flex">
