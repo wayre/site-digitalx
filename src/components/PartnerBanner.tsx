@@ -1,0 +1,55 @@
+import Image from "next/image";
+
+const PartnerBanner = () => {
+  return (
+    // Container principal com a cor de fundo solicitada (usando valor arbitrário do Tailwind)
+    <section className="bg-[#DBE1DA]">
+      <div className="container mx-auto">
+        {/* Grid responsivo:
+          - 1 coluna em telas pequenas (padrão)
+          - 2 colunas em telas grandes (lg) e superiores
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          {/* Coluna Esquerda: Conteúdo de Texto */}
+          <div className="flex flex-col justify-center p-8 lg:p-16 max-w-[550px] lg:max-w-max  mx-auto">
+            <h2 className="text-2xl md:text-2xl tracking-tight font-light text-gray-800 leading-tight">
+              Seja parceiro da Digital X e dedique-se ao que realmente importa:
+              o sorriso dos seus pacientes!
+            </h2>
+            <p className="mt-4 text-gray-700">
+              Entre em contato com nossa Central de Atendimento no telefone (57)
+              3026-2890 para cadastrar suas informações.
+            </p>
+            <div className="mt-8">
+              <button
+                type="button"
+                // Botão com a cor de fundo customizada e efeito de transição
+                className="bg-[#A5CC3A] hover:bg-[#8eb32d] text-gray-900 font-bold tracking-wider uppercase text-sm px-8 py-3 rounded-lg shadow-md transition-colors duration-300"
+              >
+                Seja Parceiro
+              </button>
+            </div>
+          </div>
+
+          {/* Coluna Direita: Imagem */}
+          {/* A imagem é ocultada em telas pequenas (hidden) e exibida a partir de 'lg' */}
+          <div className="order-first lg:order-last">
+            <Image
+              src="/partnerBanner.webp"
+              alt="Profissional da saúde sorrindo em um consultório"
+              // layout="fill"
+              // objectFit="cover"
+              // A prioridade na otimização da imagem pode ser útil para o LCP
+              width={480}
+              height={330}
+              className="h-full w-auto object-contain"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default PartnerBanner;

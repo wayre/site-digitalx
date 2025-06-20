@@ -1,0 +1,46 @@
+.navMenu::after {
+  content: " ";
+  display: block;
+  background-image: url("/ico-x.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 139px;
+  height: 85px;
+  position: absolute;
+  z-index: 9;
+  top: -40px;
+  left: -100px;
+  transform: scale(0.8);
+}
+
+.navMenu {
+  width: calc(100% - 50px) !important;
+  @apply max-w-screen-xl z-30;
+}
+.lfirst {
+  /* width: calc(100% - 50px) !important; */
+  @apply flex w-full mx-auto px-3 sm:px-8 pt-2 items-center justify-between max-w-screen-xl;
+}
+
+.lfirst:first-child {
+  @apply min-w-[90px];
+}
+
+@media (min-width: 670px) {
+  .navMenu {
+    width: calc(100% - 120px) !important;
+  }
+  .lfirst {
+    width: calc(100% - 80px) !important;
+  }
+}
+
+nav.navMenu ul li {
+  @apply uppercase text-[10px] tracking-wide text-white hover:text-cyan-300 whitespace-nowrap;
+}
+
+nav.navMenu a {
+  @apply lowercase text-[9px] text-white px-1 md:px-2 py-0 rounded-full;
+  @apply text-[11px] uppercase tracking-tighter flex items-center space-x-0.5 h-auto;
+}
