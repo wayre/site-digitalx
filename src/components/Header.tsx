@@ -4,53 +4,48 @@ import React from "react";
 import styles from "./Header.module.css";
 import { Button } from "@/components/ui/button";
 import { User, Menu, X, Phone, MapPin } from "lucide-react";
-import { cn } from "@/lib/utils"; // Você precisará criar este utilitário (veja abaixo)
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
+  const lastScrollY = useRef(0); // To store the last scroll position
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentPosition = window.scrollY;
+      const currentScrollY = window.scrollY;
 
-      // Sempre mostra o header no topo
-      if (currentPosition === 0) {
-        setIsScrolled(false);
-        setHeaderVisible(true);
-        setScrollPosition(currentPosition);
-        return;
-      }
-
-      setIsScrolled(currentPosition > 20);
-
-      // Lógica de mostrar/ocultar header com base na direção
-      if (currentPosition > scrollPosition) {
-        // Scroll para baixo
-        if (currentPosition - scrollPosition > 5) {
-          setHeaderVisible(false);
-        }
+      if (currentScrollY === 0) {
+        setIsScrolled(false); // Not scrolled when at the very top
+        setHeaderVisible(true); // Always visible at the top
       } else {
-        // Scroll para cima
-        if (scrollPosition - currentPosition > 5) {
+        setIsScrolled(currentScrollY > 20); // Considered "scrolled" if past 20px (for bg/shadow)
+
+        const scrollDelta = currentScrollY - lastScrollY.current;
+
+        if (scrollDelta > 10) {
+          // Scrolled down more than 10px
+          setHeaderVisible(false);
+        } else if (scrollDelta < -5) {
+          // Scrolled up more than 5px (to avoid jitter)
           setHeaderVisible(true);
         }
       }
-
-      setScrollPosition(currentPosition);
+      lastScrollY.current = currentScrollY;
     };
 
+    // Initialize lastScrollY and call handleScroll on mount
+    lastScrollY.current = window.scrollY;
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollPosition]);
+  }, []); // Empty dependency array, effect runs once.
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -77,8 +72,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed w-full bg-white shadow-md text-[#0a3c44] flex items-center justify-center flex-col pb-4 z-30 transition-all duration-300",
-        isScrolled ? "" : ""
+        "fixed w-full text-[#0a3c44] flex items-center justify-center flex-col pb-4 z-30 transition-all duration-300",
+        // Animation for hide/show
+        headerVisible
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-full opacity-0",
+        // Styling for scrolled state (e.g., background, shadow)
+        isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"
       )}
     >
       {/* Top Section */}
