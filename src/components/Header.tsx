@@ -62,7 +62,7 @@ const Header = () => {
   };
 
   const navLinks = [
-    { id: "sobre", label: "SOBRE-NÓS" },
+    { id: "#sobre", label: "SOBRE-NÓS" },
     { id: "exames", label: "EXAMES" },
     { id: "servicos", label: "SERVIÇOS" },
     { id: "#convenios", label: "CONVÊNIOS" },
@@ -72,13 +72,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed w-full text-[#0a3c44] flex items-center justify-center flex-col pb-4 z-30 transition-all duration-300",
+        "fixed w-full text-[#0a3c44] bg-white flex items-center justify-center flex-col pb-4 z-30 transition-all ease-out duration-300",
         // Animation for hide/show
         headerVisible
           ? "translate-y-0 opacity-100"
           : "-translate-y-full opacity-0",
         // Styling for scrolled state (e.g., background, shadow)
-        isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"
+        isScrolled ? "bg-white shadow-md" : "bg-white shadow-none"
       )}
     >
       {/* Top Section */}

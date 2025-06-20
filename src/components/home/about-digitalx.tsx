@@ -75,19 +75,20 @@ export const AboutDigitalX = () => {
                       Sobre Nós
                     </div>
 
-                    <h1 className="mt-2 text-2xl sm:text-3xl tracking-wider text-gray-800 md:text-4xl">
-                      <span className="text-gray-600 font-poppins">
+                    <h1 className="mt-2 text-base tracking-wide text-gray-800 sm:text-2xl">
+                      <span className="text-gray-600 font-poppins scale-y-90 block">
                         Digital X:
                       </span>
-                      <span className="mt-1 text-lg block sm:font-semiboold text-gray-500 tracking-tight">
-                        Tecnologia e precisão para diagnósticos odontológicos.
+                      <span className="mt-1 text-base font-light block text-gray-500 tracking-tight leading-4">
+                        Tecnologia e precisão <br /> para diagnósticos
+                        odontológicos.
                       </span>
                     </h1>
                   </div>
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-5 text-gray-600">
               Somos um centro moderno de radiologia odontológica.
             </p>
 
