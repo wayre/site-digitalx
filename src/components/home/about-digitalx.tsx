@@ -39,7 +39,7 @@ const cardData = [
 
 export const AboutDigitalX = () => {
   return (
-    <section className="relative w-full bg-[#F8F9FA] py-10 sm:py-28">
+    <section className="relative w-full bg-[#F8F9FA] py-10 sm:py-28" id="sobre">
       {/* Efeito de bolhas animadas no fundo */}
 
       <div className="container mx-auto px-6">

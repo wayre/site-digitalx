@@ -1,6 +1,7 @@
 "use client"; // Necessário para componentes com interatividade no Next.js App Router
 import React, { useState, FormEvent } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LoginPage: React.FC = () => {
   const [username, setUsername] = useState<string>("");
@@ -30,7 +31,7 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-100 p-4 sm:p-6 md:p-8 font-sans">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[url('/bg-login.webp')] bg-cover bg-center bg-no-repeat p-4 sm:p-6 md:p-8 font-sans">
       <div className="bg-white p-8 md:p-12 rounded-xl shadow-2xl w-full max-w-md text-center">
         <Image
           src="/logo-digitalx.svg"
@@ -66,12 +67,22 @@ const LoginPage: React.FC = () => {
             />
           </div>
           <div>
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-slate-600 mb-1 text-left"
-            >
-              Senha
-            </label>
+            <div className="flex items-center justify-between">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-slate-600"
+              >
+                Senha
+              </label>
+              <div className="text-sm">
+                <a
+                  href="#"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Esqueci minha senha
+                </a>
+              </div>
+            </div>
             <input
               type="password"
               id="password"
@@ -101,6 +112,14 @@ const LoginPage: React.FC = () => {
             {message}
           </p>
         )}
+      </div>
+      <div className="w-full max-w-md mt-4 text-right">
+        <Link
+          href="/"
+          className="inline-block px-4 py-2 text-sm font-medium text-white rounded-md bg-black/10 hover:bg-black/20 backdrop-blur-sm transition-colors"
+        >
+          &larr; Voltar
+        </Link>
       </div>
     </div>
   );
