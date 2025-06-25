@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
               <p className="text-[0.7rem] font-semibold text-teal-600 uppercase tracking-wider">
                 Melhor Escolha
               </p>
-              <h2 className="flex flex-col mt-2 text-[22px] text-3xl md:text-3xl font-light text-gray-800 tracking-tighter leading-tight">
+              <h2 className="flex flex-col mt-2 text-[22px] md:text-3xl font-light text-gray-800 tracking-tighter leading-tight">
                 Por que somos a escolha certa?
               </h2>
               <p className="hidden md:block mt-6 text-gray-600 leading-relaxed">

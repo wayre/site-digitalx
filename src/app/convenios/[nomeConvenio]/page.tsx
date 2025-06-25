@@ -134,7 +134,7 @@ const ConvenioDetalhes = () => {
         {/* Content Section */}
         <section className="section-padding">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:px-12">
               {/* Primeira Coluna - Informações */}
               <div>
                 <div className="bg-white rounded-lg shadow-md p-8">
@@ -147,7 +147,7 @@ const ConvenioDetalhes = () => {
                   </div>
 
                   {/* Documentação Necessária */}
-                  <div className="mb-8">
+                  <div className="mb-8 w-4/5 ">
                     <div className="flex items-center mb-4">
                       <FileText className="text-[#078080] mr-3 h-6 w-6" />
                       <h3 className="text-xl font-semibold text-gray-800">

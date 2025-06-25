@@ -39,25 +39,19 @@ export default function CentralDeAjudaPage() {
     <>
       <Header />
       <HeaderInternas
-        title="Nossos Serviços"
-        subtitle="Diagnósticos Radiológicos Odontológicos por Imagem"
+        title="Central de Resultados"
+        subtitle="Abaixo verifique todos os seus resultados de exames."
       />
 
       <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
         {/***********************
          * 2 colunas (contant and aside) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
+        <div className="grid grid-cols-1  gap-4 p-3 w-full mx-auto mt-4">
           {/* coluna 1 */}
           <div className="px-8">
             <ContentPage />
           </div>
-
-          {/* aside - coluna 2 */}
-          <Aside />
         </div>
-
-        {/* Contato */}
-        <ContactSection />
       </main>
       <Footer />
     </>

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { CheckCircle2, BookHeart, ClipboardList, Layers3 } from "lucide-react";
-import { cn } from "@/lib/utils"; // Assumindo que você tem um utilitário para `clsx` e `tailwind-merge`. Se não, veja a nota abaixo.
 
 // Lista de diferenciais para reutilização
 const features = [

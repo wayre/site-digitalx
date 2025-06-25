@@ -51,16 +51,16 @@
   }
 
   .container {
-    @apply px-4 md:px-8 lg:px-12 xl:px-20;
+    @apply px-4 md:px-8 lg:px-12 xl:px-20 max-w-[1180px];
   }
 
   .section-padding {
-    @apply py-12 md:py-20;
+    @apply py-4 md:py-16;
   }
 
   .section-title {
     /* @apply text-2xl md:text-3xl text-[#20383B] lg:text-4xl font-semibold text-center mb-8 md:mb-12 relative inline-block; */
-    @apply mt-2 text-[22px] text-3xl md:text-3xl font-light text-gray-800 tracking-tighter leading-tight mb-6 md:mb-12;
+    @apply mt-2 text-[22px]  md:text-3xl font-light text-gray-800 tracking-tighter leading-tight mb-6 md:mb-12;
   }
 
   .btn-primary {

@@ -2,7 +2,6 @@
 import {
   CircleCheckBigIcon,
   CircleHelpIcon,
-  Clock,
   ClockIcon,
   HandshakeIcon,
   MousePointerClickIcon,
@@ -11,28 +10,6 @@ import {
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-
-// Placeholder Icon Component.
-// Replace this with your actual icon components or SVGs.
-// For example, you could use an icon library like 'lucide-react' or 'react-icons'.
-const PlaceholderIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      // Using a generic icon path, replace with specific icons for each item if needed
-      d="M9.375 3.005A2.25 2.25 0 007.125 5.25v13.5A2.25 2.25 0 009.375 21h5.25A2.25 2.25 0 0016.875 18.75V5.25A2.25 2.25 0 0014.625 3.005h-5.25zM12 18.75a.75.75 0 100-1.5.75.75 0 000 1.5z"
-    ></path>
-  </svg>
-);
 
 // Interface for the properties of each link item
 interface HeroLinkItemProps {

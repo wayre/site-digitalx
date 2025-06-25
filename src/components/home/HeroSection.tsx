@@ -20,11 +20,11 @@ const HeroSection = () => {
   const [isMounted, setIsMounted] = useState(false);
 
   const slides = [
-    "/cover-bg-1.webp",
-    "/cover-bg-2.webp",
-    "/cover-bg-3.webp",
-    "/cover-bg-4.webp",
     "/cover-bg-5.webp",
+    "/cover-bg-1.webp",
+    "/cover-bg-4.webp",
+    "/cover-bg-3.webp",
+    "/cover-bg-2.webp",
   ];
 
   const impactPhrases = [

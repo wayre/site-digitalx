@@ -243,14 +243,8 @@ export default function HelpCenterPage() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 py-12 md:py-16">
       <div className="container mx-auto max-w-4xl px-4">
         <header className="text-center mb-10 md:mb-14">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-800 dark:text-slate-100">
-            Perguntas Frequentes - Digital X
-          </h1>
           <p className="mt-4 text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-            Seja bem-vindo(a) à nossa página de Perguntas Frequentes! Aqui você
-            encontra as respostas para as dúvidas mais comuns sobre os serviços
-            de radiologia odontológica da Digital X. Se sua pergunta não for
-            respondida aqui, entre em contato conosco!
+            Tudo o que você precisa saber sobre nossos exames, sem complicação!
           </p>
         </header>
 
