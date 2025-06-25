@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,27 +14,6 @@ import {
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Contato() {
-  // Variantes para animações
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
   return (
     <>
       {/* Banner Section */}
@@ -124,9 +104,16 @@ export default function Contato() {
             <div>
               <div className="bg-[#E5F1FB] h-full min-h-[300px] rounded-lg flex items-center justify-center">
                 {/* Placeholder for map */}
-                <div className="text-[#1E5B94] text-center">
-                  <div className="text-5xl font-light mb-2">Mapa</div>
-                  <p className="text-lg">Google Maps embed</p>
+                <div className="text-[#1E5B94] text-center h-full w-full hover:cursor-pointer transform-gpu hover:scale-105 transition-transform duration-300 ">
+                  <Link href={"/mapa"} target="_blank">
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/mapa.webp"
+                      className="w-full h-full object-cover"
+                      alt="Mapa Digital X"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>

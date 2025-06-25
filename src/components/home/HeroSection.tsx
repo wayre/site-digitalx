@@ -26,20 +26,26 @@ const HeroSection = () => {
     "/cover-bg-3.webp",
     "/cover-bg-2.webp",
   ];
-
-  const impactPhrases = [
-    "Precisão em cada diagnóstico",
-    "Tecnologia avançada \npara sua saúde",
-    "Exames radiológicos \nde excelência",
-    "Resultados confiáveis, \ncuidado especializado",
-  ];
-
-  const subtitles = [
-    "A clareza que seu sorriso merece.",
-    "Imagens de alta definição para um tratamento seguro.",
-    "Detalhes que fazem a diferença na sua saúde bucal.",
-    "A segurança e a atenção que você e seu dentista precisam.",
-  ];
+  // Memoize the impactPhrases array to prevent unnecessary re-renders of effects that depend on it.
+  const impactPhrases = React.useMemo(
+    () => [
+      "Precisão em cada diagnóstico",
+      "Tecnologia avançada \npara sua saúde",
+      "Exames radiológicos \nde excelência",
+      "Resultados confiáveis, \ncuidado especializado",
+    ],
+    []
+  );
+  // Memoize the subtitles array to prevent unnecessary re-renders of effects that depend on it.
+  const subtitles = React.useMemo(
+    () => [
+      "A clareza que seu sorriso merece.",
+      "Imagens de alta definição para um tratamento seguro.",
+      "Detalhes que fazem a diferença na sua saúde bucal.",
+      "A segurança e a atenção que você e seu dentista precisam.",
+    ],
+    []
+  );
 
   useEffect(() => {
     setIsMounted(true);
@@ -89,7 +95,7 @@ const HeroSection = () => {
     }, 60);
 
     return () => clearInterval(typingInterval);
-  }, [currentPhrase]);
+  }, [currentPhrase, impactPhrases]); // Added impactPhrases as a dependency
 
   const handleCTAClick = (id: string) => {
     const element = document.getElementById(id);

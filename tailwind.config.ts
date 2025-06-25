@@ -10,22 +10,22 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        sm: "0.7875rem", // 12.6px (0.875 * 0.9)
-        base: "0.9rem", // 14.4px (1 * 0.9)
-        lg: "1.0125rem", // 16.2px (1.125 * 0.9)
-        xl: "1.125rem", // 18.0px (1.25 * 0.9)
-        "2xl": "1.35rem", // 21.6px (1.5 * 0.9)
-        "3xl": "1.6875rem", // 27.0px (1.875 * 0.9)
-        "4xl": "2.025rem", // 32.4px (2.25 * 0.9)
-        "5xl": "2.7rem", // 43.2px (3 * 0.9)
-        "6xl": "3.375rem", // 54.0px (3.75 * 0.9)
-        "7xl": "4.05rem", // 64.8px (4.5 * 0.9)
-        "8xl": "5.4rem", // 86.4px (6 * 0.9)
-        "9xl": "7.2rem", // 115.2px (8 * 0.9)
+        sm: "0.7875rem",
+        base: "0.9rem",
+        lg: "1.0125rem",
+        xl: "1.125rem",
+        "2xl": "1.35rem",
+        "3xl": "1.6875rem",
+        "4xl": "2.025rem",
+        "5xl": "2.7rem",
+        "6xl": "3.375rem",
+        "7xl": "4.05rem",
+        "8xl": "5.4rem",
+        "9xl": "7.2rem",
       },
       fontFamily: {
-        sans: ["var(--font-open-sans)" /* ...fallbacks */],
-        poppins: ["var(--font-poppins)" /* ...fallbacks */], // Garanta que isso esteja definido
+        sans: ["var(--font-open-sans)"],
+        poppins: ["var(--font-poppins)"],
       },
       fontWeight: {
         light: "200",
@@ -33,7 +33,7 @@ const config: Config = {
         medium: "400",
         semibold: "500",
         bold: "600",
-        extrabold: "800", // Se sua fonte suportar o peso 650
+        extrabold: "800",
       },
       colors: {
         background: "hsl(var(--background))",
@@ -89,6 +89,16 @@ const config: Config = {
           "900": "#0a2351",
           transp: "#bcd5e742",
         },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -96,22 +106,6 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
         "fade-in": {
           "0%": {
             opacity: "0",
@@ -170,6 +164,22 @@ const config: Config = {
           "100%": {
             transform: "scale(10)",
             opacity: "0",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
           },
         },
       },

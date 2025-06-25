@@ -5,6 +5,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import Image from "next/image";
 import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -50,7 +51,7 @@ const ExamModal = ({ isOpen, onClose, exam }: ExamModalProps) => {
         <div className="mt-4 space-y-6">
           {exam.imageUrl && (
             <div className="rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={exam.imageUrl}
                 alt={exam.title}
                 className="w-full h-auto object-cover"

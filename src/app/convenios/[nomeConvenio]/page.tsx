@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
 import { ConvenioTypes } from "@/app/convenios/page";
+import Image from "next/image";
 
 const ConvenioDetalhes = () => {
   const [conveniosData, setConveniosData] = useState<ConvenioTypes[]>([]);
@@ -139,9 +140,11 @@ const ConvenioDetalhes = () => {
               <div>
                 <div className="bg-white rounded-lg shadow-md p-8">
                   <div className="text-center mb-8">
-                    <img
+                    <Image
                       src={`/convenios/${convenio.logo}`}
                       alt={convenio.name}
+                      width={256}
+                      height={97}
                       className="w-48 h-auto mx-auto object-contain"
                     />
                   </div>
@@ -189,9 +192,11 @@ const ConvenioDetalhes = () => {
               {/* Segunda Coluna - Imagem e CTA */}
               <div>
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=1770&auto=format&fit=crop"
                     alt="Exame radiológico"
+                    width={256}
+                    height={97}
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-8 text-center">

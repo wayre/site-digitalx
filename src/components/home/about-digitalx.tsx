@@ -1,16 +1,47 @@
+// "use client";
 // src/components/about-digitalx.tsx
 
 import Image from "next/image";
-import { CheckCircle2, BookHeart, ClipboardList, Layers3 } from "lucide-react";
+import {
+  CheckCircle2,
+  BookHeart,
+  ClipboardList,
+  Layers3,
+  LucideIcon,
+} from "lucide-react";
+import { useState } from "react";
+
+interface CardItem {
+  id: number;
+  Icon: LucideIcon; // O tipo do componente de ícone de Lucide
+  bgColor: string;
+  iconColor: string;
+  title: string;
+  description: string;
+}
+interface FeatureItem {
+  id: number;
+  text: string;
+}
 
 // Lista de diferenciais para reutilização
-const features = [
-  "Oferecemos exames digitais com imagens de alta definição e baixa exposição à radiação.",
-  "Realizamos radiografias intra e extraorais, além de tomografia Cone Beam com o equipamento I-CAT Next Generation.",
-  "Atendemos diversas especialidades com agilidade, biossegurança e laudos confiáveis.",
-];
-const cardData = [
+const featuresData: FeatureItem[] = [
   {
+    id: 1,
+    text: "Oferecemos exames digitais com imagens de alta definição e baixa exposição à radiação.",
+  },
+  {
+    id: 2,
+    text: "Realizamos radiografias intra e extraorais, além de tomografia Cone Beam com o equipamento I-CAT Next Generation.",
+  },
+  {
+    id: 3,
+    text: "Atendemos diversas especialidades com agilidade, biossegurança e laudos confiáveis.",
+  },
+];
+const cardData: CardItem[] = [
+  {
+    id: 1,
     Icon: BookHeart,
     bgColor: "bg-yellow-100",
     iconColor: "text-yellow-500",
@@ -19,6 +50,7 @@ const cardData = [
       "Informações sobre convênios atendidos e condições para exames com cobertura.",
   },
   {
+    id: 2,
     Icon: ClipboardList,
     bgColor: "bg-blue-100",
     iconColor: "text-blue-500",
@@ -27,6 +59,7 @@ const cardData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.",
   },
   {
+    id: 3,
     Icon: Layers3,
     bgColor: "bg-red-100",
     iconColor: "text-red-500",
@@ -43,10 +76,8 @@ export const AboutDigitalX = () => {
 
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-12 md:grid-cols-[33%_1fr] md:gap-2">
-          {/* Layout para Dispositivos Grandes (lg e acima) */}
           <div className="hidden md:block">
             <div className="flex transform-gpu fade-in justify-center transition-transform duration-700 ease-out hover:scale-105">
-              {/* O ideal é que o logo seja um SVG para melhor qualidade */}
               <Image
                 src="/logo-about-digitalx.webp" // <-- Coloque o caminho para o seu logo aqui
                 alt="Logo Digital X Imagens Odontológicas"
@@ -57,7 +88,6 @@ export const AboutDigitalX = () => {
             </div>
           </div>
 
-          {/* Conteúdo de Texto */}
           <div className="flex flex-col animate-fade-in-left">
             <div className="grid grid-cols-[40%_1fr] md:grid-cols-1 items-center gap-1">
               <Image
@@ -92,13 +122,13 @@ export const AboutDigitalX = () => {
             </p>
 
             <ul className="w-[90%] m-auto mt-6 space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-x-3">
+              {featuresData.map((feature) => (
+                <li key={feature.id} className="flex items-start gap-x-3">
                   <CheckCircle2
                     className="mt-1 h-5 w-5 flex-none text-teal-500"
                     aria-hidden="true"
                   />
-                  <span className="text-sm text-gray-600">{feature}</span>
+                  <span className="text-sm text-gray-600">{feature.text}</span>
                 </li>
               ))}
             </ul>
@@ -113,23 +143,21 @@ export const AboutDigitalX = () => {
       {/* Usamos Grid para um layout responsivo que se ajusta automaticamente. */}
       <div className="container pt-8">
         <div className="grid grid-cols-3 gap-1 sm:gap-8 w-full p-2 sm:p-0 sm:w-5/6 md:w-4/6 m-auto">
-          {cardData.map((card, index) => (
+          {cardData.map((card) => (
             <div
-              key={index}
+              key={card.id}
               className="flex flex-col items-center text-center p-1 sm:p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 gap-1"
             >
-              {/* O container do ícone com cores e formato dinâmicos. */}
               <div
                 className={`flex h-20 w-20 items-center justify-center rounded-full ${card.bgColor} scale-75 sm:scale-100`}
               >
                 <card.Icon className={`h-10 w-10 ${card.iconColor}`} />
               </div>
 
-              {/* Título e Descrição */}
               <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] whitespace-nowrap font-semibold tracking-wider uppercase text-gray-800">
                 {card.title}
               </h3>
-              <p className="hidden sm:blocktext-sm text-gray-600 leading-relaxed">
+              <p className="hidden sm:block text-sm text-gray-600 leading-relaxed">
                 {card.description}
               </p>
             </div>

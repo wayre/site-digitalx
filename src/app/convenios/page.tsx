@@ -25,7 +25,7 @@ export default function Convenios() {
   const [convenios, setConvenios] = useState<ConvenioTypes[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile(); // Mantém este hook se ele não depender de framer-motion
+  // const isMobile = useIsMobile(); // This variable is not being used.
   const [filterText, setFilterText] = useState("");
   const [filteredConvenios, setFilteredConvenios] = useState(convenios);
 
@@ -66,13 +66,13 @@ export default function Convenios() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSectionRef = sectionRef.current;
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        // Garante que o observer só é desconectado se estiver observando
+      if (currentSectionRef) {
         observer.disconnect();
       }
     };

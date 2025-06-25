@@ -138,7 +138,7 @@ export default function SolicitacaoExamesPage() {
                         <Checkbox
                           id="periapicalCompleta"
                           checked={formData.periapicalCompleta}
-                          onCheckedChange={(checked: any) =>
+                          onCheckedChange={(checked: boolean) =>
                             setFormData((prev) => ({
                               ...prev,
                               periapicalCompleta: Boolean(checked),

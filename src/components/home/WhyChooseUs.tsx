@@ -60,15 +60,15 @@ const WhyChooseUs = () => {
             </div>
           </div>
         </div>
-        <div>
-          {/* Coluna de Texto small devices */}
+        {/* Coluna de Texto small devices */}
+        {/* <div>
           <p className="block md:hidden w-[79%] m-auto mt-8 text-gray-600 leading-5 tracking-tight">
             Na Digital X, unimos tecnologia de ponta e precisão diagnóstica em
             um centro radiológico odontológico moderno, que oferece exames
             digitais e tomografia Cone Beam com mínima exposição à radiação e
             máxima qualidade de imagem para todas as especialidades.
           </p>
-        </div>
+        </div> */}
 
         {/* --- SEÇÃO INFERIOR: DIFERENCIAIS --- */}
         <div className="w-5/6 m-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12">

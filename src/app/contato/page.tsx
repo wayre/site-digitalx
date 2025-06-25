@@ -5,7 +5,6 @@ import Header from "@/components/HeaderInternas";
 import Footer from "@/components/Footer";
 import HeaderInternas from "@/components/HeroInternas";
 import Aside from "@/components/Aside";
-import ContactSection from "@/components/home/ContactSection";
 
 export default function CentralDeAjudaPage() {
   const sectionRef = useRef<HTMLDivElement>(null);

@@ -23,12 +23,13 @@ export default function CentralDeAjudaPage() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSectionRef = sectionRef.current;
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
+      if (currentSectionRef) {
         // Garante que o observer só é desconectado se estiver observando
         observer.disconnect();
       }

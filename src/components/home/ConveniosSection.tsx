@@ -41,42 +41,52 @@ const ConveniosSection = () => {
   // Lista de convênios (exemplos)
   const insurances = [
     {
+      id: "unimed",
       name: "Unimed",
       logo: "/convenios/unimed-odonto.png",
     },
     {
+      id: "bradesco-saude",
       name: "Bradesco Saúde",
       logo: "/convenios/bradesco-saude.webp",
     },
     {
+      id: "amil",
       name: "Amil",
       logo: "/convenios/amil.png",
     },
     {
+      id: "sulamerica",
       name: "SulAmérica",
       logo: "/convenios/sulamerica.png",
     },
     {
+      id: "porto-seguro",
       name: "Porto Seguro",
       logo: "/convenios/portoseguro.png",
     },
     {
+      id: "hapvida",
       name: "Hapvida",
       logo: "/convenios/hapvida.png",
     },
     {
+      id: "notredame-intermédica",
       name: "NotreDame Intermédica",
       logo: "/convenios/notredame-intermedica.png",
     },
     {
+      id: "odontolife",
       name: "Odontolife",
       logo: "/convenios/odontolife.jpg",
     },
     {
+      id: "mediservice",
       name: "Mediservice",
       logo: "/convenios/mediservice.jpg",
     },
     {
+      id: "odontoprev",
       name: "OdontoPrev",
       logo: "/convenios/odontoprev.png",
     },
@@ -122,12 +132,16 @@ const ConveniosSection = () => {
                   >
                     <div className="p-2">
                       <div className="relative transition-all p-4 h-24 flex items-center justify-center select-none">
-                        <Image
-                          src={insurance.logo}
-                          alt={insurance.name}
-                          fill
-                          className="max-h-16 max-w-full object-contain transition-transform hover:scale-105"
-                        />
+                        <Link href={`/convenios/${insurance.id}`}>
+                          <Image
+                            src={insurance.logo}
+                            alt={insurance.name}
+                            width={256}
+                            height={97}
+                            // fill
+                            className="max-h-16 max-w-full object-contain transition-transform hover:scale-105"
+                          />
+                        </Link>
                       </div>
                     </div>
                   </CarouselItem>
@@ -153,13 +167,15 @@ const ConveniosSection = () => {
                 )}
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
-                <Image
-                  src={insurance.logo}
-                  alt={insurance.name}
-                  width={256}
-                  height={97}
-                  className="w-auto h-full object-contain object-center duration-300 transition-transform scale-90 hover:scale-100"
-                />
+                <Link href={`/convenios/${insurance.id}`}>
+                  <Image
+                    src={insurance.logo}
+                    alt={insurance.name}
+                    width={256}
+                    height={97}
+                    className="w-auto h-full object-contain object-center duration-300 transition-transform scale-90 hover:scale-100"
+                  />
+                </Link>
               </div>
             ))}
           </div>

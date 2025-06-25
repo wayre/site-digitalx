@@ -12,11 +12,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -67,8 +66,7 @@ const ContactSection = () => {
     // Simulating form submission
     setTimeout(() => {
       setIsLoading(false);
-      toast({
-        title: "Mensagem enviada com sucesso!",
+      toast.success("Mensagem enviada com sucesso!", {
         description: "Entraremos em contato em breve.",
       });
 

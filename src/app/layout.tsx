@@ -3,6 +3,7 @@ import { Open_Sans, Poppins } from "next/font/google"; // Import Open_Sans and P
 
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 // Configure Open Sans
 const openSans = Open_Sans({
@@ -33,9 +34,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${poppins.variable} antialiased min-w-[370px] flex flex-col`}
+        className={`${poppins.variable} antialiased min-w-[390px] flex flex-col`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

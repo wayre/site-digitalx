@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import {
   Carousel,
   CarouselContent,
@@ -92,7 +93,9 @@ const Comments: React.FC = () => {
                     <Card className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
                       <CardContent className="p-6 flex flex-col flex-grow">
                         <div className="flex items-center mb-4">
-                          <img
+                          <Image
+                            width={50}
+                            height={50}
                             src={comment.profile_photo_url}
                             alt={comment.author_name}
                             className="w-12 h-12 rounded-full mr-4 object-cover"

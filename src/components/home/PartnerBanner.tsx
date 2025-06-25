@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const PartnerBanner = () => {
   return (
@@ -21,13 +22,13 @@ const PartnerBanner = () => {
               3026-2890 para cadastrar suas informações.
             </p>
             <div className="mt-8 flex flex-row justify-center sm:justify-start">
-              <button
-                type="button"
+              <Link
+                href="/whatsapp"
                 // Botão com a cor de fundo customizada e efeito de transição
                 className="bg-[#A5CC3A] hover:bg-[#8eb32d] text-gray-900 font-bold tracking-wider uppercase text-sm px-8 py-3 rounded-lg shadow-md transition-colors duration-300"
               >
                 Seja Parceiro
-              </button>
+              </Link>
             </div>
           </div>
 

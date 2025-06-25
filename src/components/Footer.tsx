@@ -1,3 +1,6 @@
+"use client";
+
+import React from "react";
 import {
   Facebook,
   Instagram,
@@ -7,9 +10,14 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2024); // Initialize with a default year
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="text-base bg-gray-900 text-white pt-16 pb-8 overflow-hidden">
