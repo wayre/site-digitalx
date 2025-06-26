@@ -47,7 +47,7 @@ WORKDIR /app
 # Copia os arquivos de ambiente de produção (se existirem)
 # Certifique-se de que estes arquivos NÃO contenham segredos sensíveis!
 # Para segredos, use variáveis de ambiente do Docker ou secrets orchestration.
-COPY --from=builder --chown=nextjs:nodejs /app/.env.production ./.env.production || true
+COPY --from=builder --chown=nextjs:nodejs /app/.env.production ./.env.production
 
 # Copia o bundle de build otimizado e os módulos node_modules do estágio de build.
 # A pasta 'standalone' é o que torna o build Next.js otimizado para Docker.

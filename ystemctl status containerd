@@ -1,0 +1,14 @@
+[0;1;31m×[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (]8;;file://wayre-pc/usr/lib/systemd/system/docker.service\/usr/lib/systemd/system/docker.service]8;;\; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2025-06-26 01:50:21 -03; 17s ago
+   Duration: 17h 52min 3.742s
+ Invocation: f7c49127150e4a1aa648af8a2fa43415
+TriggeredBy: [0;1;31m×[0m docker.socket
+       Docs: ]8;;https://docs.docker.com\https://docs.docker.com]8;;\
+    Process: 3521650 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 3521650 (code=exited, status=1/FAILURE)
+
+jun 26 01:50:21 wayre-pc systemd[1]: docker.service: Scheduled restart job, restart counter is at 3.
+jun 26 01:50:21 wayre-pc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Start request repeated too quickly.[0m
+jun 26 01:50:21 wayre-pc systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mdocker.service: Failed with result 'exit-code'.[0m
+jun 26 01:50:21 wayre-pc systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Docker Application Container Engine.[0m

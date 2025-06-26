@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    # Opção 1: Construir a imagem localmente a partir do seu Dockerfile.
+    # Isso é recomendado para desenvolvimento local, pois reflete as mudanças no código.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Opção 2: Puxar a imagem diretamente do Docker Hub (descomente esta linha e comente 'build' acima se preferir).
+    # image: wayreavelar/digitalx-site
+
+    container_name: site-digitalx-local # Um nome diferente para evitar conflito com o da VPS
+    restart: always # Garante que o contêiner reinicie se parar inesperadamente
+
+    # Mapeamento de portas: Porta do seu computador:Porta do container
+    # Isso permite que você acesse o Next.js via http://localhost:3000
+    ports:
+      - "3000:3000"
+
+    # Variáveis de ambiente para sua aplicação Next.js (adicione aqui as suas específicas para o ambiente local)
+    environment:
+      NODE_ENV: development # Geralmente 'development' para ambiente local
+      # NEXT_PUBLIC_API_URL: http://localhost:PORTA_DA_SUA_API_LOCAL
+      # Alguma_Variavel_Local: "valor_para_teste"
+
+    # Opcional: Montar seu código fonte local dentro do container.
+    # Isso permite que as mudanças no seu código local sejam refletidas no container sem precisar reconstruir a imagem.
+    # CUIDADO: Isso pode impactar a performance do hot reloading em Next.js devido a problemas de polling.
+    # Se usar, adicione node_modules e .next ao .dockerignore para que não sejam copiados duas vezes.
+    # volumes:
+    #   - .:/app
+    #   - /app/node_modules # Impede que node_modules local sobrescreva o do container
+    #   - /app/.next # Impede que .next local sobrescreva o do container
+
+networks:
+  # Define uma rede local para este docker-compose.yml
+  # É uma rede interna para os serviços deste arquivo
+  local_next_network:
+    driver: bridge

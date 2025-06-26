@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    # Use a imagem existente do Docker Hub
+    image: wayreavelar/digitalx-site
+    # container_name: site-digitalx
+    restart: always # Garante que o contêiner reinicie se parar inesperadamente
+    networks:
+      - minha_rede
+    labels:
+      # Habilita o Traefik para este serviço
+      - "traefik.enable=true"
+      # Define a regra de roteamento: se a requisição for para digitalx.wayre.dev, vá para este serviço
+      - "traefik.http.routers.nextjs-app.rule=Host(`digitalx.wayre.dev`)"
+      # Define o serviço a ser usado pelo Traefik (o nome do serviço no Docker Compose)
+      - "traefik.http.routers.nextjs-app.service=nextjs-app"
+      # Opcional: Redireciona HTTP para HTTPS (assumindo que você tem um Traefik configurado para SSL)
+      - "traefik.http.routers.nextjs-app.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-app.priority=1"
+      - "traefik.http.routers.nextjs-app.tls=true"
+      - "traefik.http.routers.nextjs-app.tls.certresolver=letsencryptresolver"  # Certificado Let's Encrypt
+      - "traefik.http.services.nextjs-app.loadbalancer.server.port=3000"
+      # Opcional: Middlewares para redirecionamento HTTP para HTTPS, se seu Traefik tiver configurado
+      # - "traefik.http.routers.nextjs-app.middlewares=redirect-to-https@docker"
+
+    # Variáveis de ambiente para sua aplicação Next.js (adicione aqui as suas)
+    environment:
+      # Exemplo: NODE_ENV já está no Dockerfile, mas pode ser sobreescrito se necessário
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: https://digitalx.wayre.dev
+      # Alguma_Variavel_Interna: "segredo_aqui_mas_use_segredos_do_docker_se_for_sensivel"
+
+networks:
+  minha_rede:
+    external: true
+    name: public_network

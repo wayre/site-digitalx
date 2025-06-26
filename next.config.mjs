@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "standalone",
   images: {
     domains: ["i.pravatar.cc", "images.unsplash.com"],
     // unoptimized: true,
