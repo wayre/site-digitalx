@@ -37,12 +37,12 @@ export default function Contato() {
       {/* Contact Info Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-[#333333]">
+          <h2 className="text-3xl font-semibold text-center mb-12 text-[#333333] animate-fade-in">
             Informações de Contato
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
+            <div className="animate-fade-in-left">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-[#E5F1FB] p-3 rounded-full">
@@ -101,14 +101,14 @@ export default function Contato() {
               </div>
             </div>
 
-            <div>
+            <div className="animate-fade-in-right">
               <div className="bg-[#E5F1FB] h-full min-h-[300px] rounded-lg flex items-center justify-center">
                 {/* Placeholder for map */}
                 <div className="text-[#1E5B94] text-center h-full w-full hover:cursor-pointer transform-gpu hover:scale-105 transition-transform duration-300 ">
                   <Link href={"/mapa"} target="_blank">
                     <Image
-                      width={500}
-                      height={500}
+                      width={1530}
+                      height={616}
                       src="/mapa.webp"
                       className="w-full h-full object-cover"
                       alt="Mapa Digital X"

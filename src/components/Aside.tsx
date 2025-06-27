@@ -27,8 +27,8 @@ function Aside() {
           // layout="fill"
           // objectFit="cover"
           // A prioridade na otimização da imagem pode ser útil para o LCP
-          width={480}
-          height={330}
+          width={1103}
+          height={759}
           className="h-full w-auto object-cover min-h-[230px] sm:min-h-full"
           priority
         />
@@ -39,11 +39,11 @@ function Aside() {
             sorriso dos seus pacientes!
           </h3>
           <p className="mt-2 text-[13px] text-center px-1">
-            Entre em contato com nossa Central de Atendimento no telefone (57)
+            Entre em contato com nossa Central de Atendimento no telefone (67)
             3026-2890 para cadastrar suas informações.
           </p>
           <Link
-            href="/whatsapp"
+            href="/parceria"
             target="_blank"
             type="button"
             // Botão com a cor de fundo customizada e efeito de transição

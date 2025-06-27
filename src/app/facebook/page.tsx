@@ -1,7 +1,11 @@
-import { redirect } from "next/navigation";
+"use client";
+
+import { useEffect } from "react";
 
 export default function FacebookRedirectPage() {
-  redirect("https://www.facebook.com/digitalxms");
+  useEffect(() => {
+    window.location.href = "https://www.facebook.com/digitalxms";
+  }, []);
 
   // Como o redirect() interrompe a renderização,
   // nada abaixo dele será executado ou renderizado.

@@ -23,7 +23,7 @@ const PartnerBanner = () => {
             </p>
             <div className="mt-8 flex flex-row justify-center sm:justify-start">
               <Link
-                href="/whatsapp"
+                href="/parceria"
                 // Botão com a cor de fundo customizada e efeito de transição
                 className="bg-[#A5CC3A] hover:bg-[#8eb32d] text-gray-900 font-bold tracking-wider uppercase text-sm px-8 py-3 rounded-lg shadow-md transition-colors duration-300"
               >
@@ -41,8 +41,8 @@ const PartnerBanner = () => {
               // layout="fill"
               // objectFit="cover"
               // A prioridade na otimização da imagem pode ser útil para o LCP
-              width={480}
-              height={330}
+              width={1103}
+              height={759}
               className="h-full w-auto object-cover min-h-[230px] sm:min-h-full"
               priority
             />

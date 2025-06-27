@@ -1,7 +1,11 @@
-import { redirect } from "next/navigation";
+"use client";
+
+import { useEffect } from "react";
 
 export default function InstagramRedirectPage() {
-  redirect("https://www.instagram.com/digitalxms/");
+  useEffect(() => {
+    window.location.href = "https://www.instagram.com/digitalxms/";
+  }, []);
 
   // Como o redirect() interrompe a renderização,
   // nada abaixo dele será executado ou renderizado.
