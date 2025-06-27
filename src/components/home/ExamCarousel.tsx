@@ -96,7 +96,7 @@ const ExamCarousel = () => {
     },
     {
       id: "tomografia",
-      title: "Tomografia Computadorizada Cone-Beam",
+      title: "Tomografia Digital Cone-Beam",
       description:
         "Exame de alta precisão para aquisição das imagens dos ossos...",
       imageUrl:
@@ -104,7 +104,7 @@ const ExamCarousel = () => {
     },
     {
       id: "periapical",
-      title: "Radiografia Periapical Convecional e Digital",
+      title: "Radiografia Periapical",
       description:
         "Imagem bi-dimensional com uma visão da anatomia dentária...",
       imageUrl:
@@ -127,7 +127,7 @@ const ExamCarousel = () => {
     },
     {
       id: "seios-face",
-      title: "Radiografias dos seios da face (P.A. E WATERS)",
+      title: "Radiografias P.A. E WATERS",
       description:
         "Radiografias realizadas para visualização da transparência...",
       imageUrl:
@@ -179,8 +179,8 @@ const ExamCarousel = () => {
                         className="w-full h-48 bg-cover bg-center"
                         style={{ backgroundImage: `url(${item.imageUrl})` }}
                       />
-                      <CardHeader className="p-4 pb-2">
-                        <CardTitle className="text-lg font-bold line-clamp-2">
+                      <CardHeader className="p-4 pb-1">
+                        <CardTitle className="text-lg font-bold line-clamp-2  leading-5">
                           {item.title}
                         </CardTitle>
                       </CardHeader>

@@ -141,12 +141,12 @@ export const AboutDigitalX = () => {
       </div>
 
       {/* Usamos Grid para um layout responsivo que se ajusta automaticamente. */}
-      <div className="container pt-8">
-        <div className="grid grid-cols-3 gap-1 sm:gap-8 w-full p-2 sm:p-0 sm:w-5/6 md:w-4/6 m-auto">
+      <div className="box-itens-sobre container pt-8 m-auto">
+        <div className="grid grid-cols-3 gap-1 sm:gap-3 w-full p-2 lg:gap-8 m-auto max-w-[1000px]">
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col items-center text-center p-1 sm:p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 gap-1"
+              className="box-itens-sobre-card flex flex-col items-center text-center p-1 sm:p-3 lg:p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 gap-1"
             >
               <div
                 className={`flex h-20 w-20 items-center justify-center rounded-full ${card.bgColor} scale-75 sm:scale-100`}

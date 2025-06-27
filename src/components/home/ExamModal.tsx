@@ -34,14 +34,6 @@ const ExamModal = ({ isOpen, onClose, exam }: ExamModalProps) => {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-gray-800 flex items-center justify-between">
             {exam.title}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={onClose}
-              className="h-8 w-8 rounded-full hover:bg-gray-100"
-            >
-              <X className="h-4 w-4" />
-            </Button>
           </DialogTitle>
           <DialogDescription className="text-gray-600 mt-2">
             {exam.shortDescription}
@@ -54,7 +46,9 @@ const ExamModal = ({ isOpen, onClose, exam }: ExamModalProps) => {
               <Image
                 src={exam.imageUrl}
                 alt={exam.title}
-                className="w-full h-auto object-cover"
+                width={1940}
+                height={990}
+                className="w-full h-auto object-contain max-h-[330px]"
               />
             </div>
           )}

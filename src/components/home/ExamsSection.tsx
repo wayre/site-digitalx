@@ -15,7 +15,7 @@ const ExamsSection = () => {
   const exams = [
     {
       id: "tomografia",
-      title: "Tomografia Computadorizada Cone Beam",
+      title: "Tomografia Digital Cone Beam",
       shortDescription:
         "Imagens tridimensionais de alta resolução da cavidade oral e maxilofacial.",
       fullDescription:
@@ -34,7 +34,7 @@ const ExamsSection = () => {
         "Imagens de alta resolução",
         "Planejamento de tratamento mais eficaz",
       ],
-      imageUrl: "/TomografiaComputadorizadaConeBeam_converted.webp",
+      imageUrl: "/TomografiaComputadorizadaConeBeam.webp",
     },
     {
       id: "radiografias-extraorais",
@@ -57,7 +57,7 @@ const ExamsSection = () => {
         "Menor desconforto para o paciente",
         "Complemento para o planejamento de tratamentos complexos",
       ],
-      imageUrl: "/RadiografiasExtra-Orais_converted.webp",
+      imageUrl: "/RadiografiasExtra-Orais.webp",
     },
     {
       id: "radiografias-intraorais",
@@ -80,7 +80,7 @@ const ExamsSection = () => {
         "Custo acessível",
         "Rapidez na execução e processamento",
       ],
-      imageUrl: "/RadiografiasIntra-Orais_converted.webp",
+      imageUrl: "/RadiografiasIntra-Orais.webp",
     },
   ];
 
@@ -119,7 +119,7 @@ const ExamsSection = () => {
       className="section-padding bg-slate-100"
       ref={sectionRef}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto p-1">
         <div className="text-center mb-12">
           <h2 className="section-title">
             Exames Odontológicos com Alta Precisão
@@ -131,13 +131,13 @@ const ExamsSection = () => {
           </p>
         </div>
 
-        <div className="w-full flex flex-row sm:gap-4 md:gap-8 justify-center flex-wrap">
+        <div className="w-full flex flex-row gap-2 sm:gap-4 md:gap-2 justify-center flex-wrap md:flex-nowrap">
           {exams.map((exam, index) => (
             <div
               key={exam.id}
               className={cn(
-                "bg-white rounded-xl shadow-card overflow-hidden transition-all duration-700 transform",
-                "max-w-[370px] w-auto",
+                " bg-white rounded-xl shadow-card overflow-hidden transition-all duration-700 transform",
+                "max-w-[45%] min-w-[290px] sm:min-w-[240px] lg:max-w-[340px] w-auto scale-95 hover:scale-100",
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-20"
@@ -149,14 +149,14 @@ const ExamsSection = () => {
                 style={{ backgroundImage: `url(${exam.imageUrl})` }}
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 leading-5 md:leading-normal">
                   {exam.title}
                 </h3>
                 <p className="text-gray-600 mb-5">{exam.shortDescription}</p>
                 <Button
                   onClick={() => openModal(exam)}
                   variant="outline"
-                  className="w-full flex items-center justify-center"
+                  className="w-full flex items-center justify-center bg-[#257c42] hover:bg-[#2b964e] text-white hover:text-white"
                 >
                   <Info className="mr-2 h-4 w-4" />
                   Saiba Mais
