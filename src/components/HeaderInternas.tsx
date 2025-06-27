@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link"; // Mantém esta importação
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation"; // Nova importação para obter o caminho da URL
+import path from "path";
 
 const HeaderInternas = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -97,7 +98,8 @@ const HeaderInternas = () => {
                       href={`/${item.id}`} // Garante que o href seja um caminho absoluto
                       className={cn(
                         "uppercase text-[11px] font-bold tracking-tighter",
-                        pathname === `/${item.id}`
+                        // pathname === `/${item.id}`
+                        pathname.includes(item.id)
                           ? "text-cyan-500"
                           : "text-black hover:text-cyan-300" // Aplica a classe 'text-cyan-500' se for o link ativo
                       )}

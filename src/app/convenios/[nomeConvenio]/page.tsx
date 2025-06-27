@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { ArrowLeft, Phone, FileText, Calendar } from "lucide-react";
-import Header from "@/components/Header";
+import Header from "@/components/HeaderInternas";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
