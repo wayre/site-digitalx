@@ -40,7 +40,7 @@ function Aside() {
           </h3>
           <p className="mt-2 text-[13px] text-center px-1">
             Entre em contato com nossa Central de Atendimento no telefone (67)
-            3026-2890 para cadastrar suas informações.
+            3028-2890 para cadastrar suas informações.
           </p>
           <Link
             href="/parceria"

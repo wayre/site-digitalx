@@ -47,16 +47,16 @@ const cardData: CardItem[] = [
     iconColor: "text-yellow-500",
     title: "CONVÊNIOS",
     description:
-      "Informações sobre convênios atendidos e condições para exames com cobertura.",
+      "Trabalhamos com diversos convênios odontológicos para facilitar o seu atendimento.",
   },
   {
     id: 2,
     Icon: ClipboardList,
     bgColor: "bg-blue-100",
     iconColor: "text-blue-500",
-    title: "LINKS RÁPIDOS",
+    title: "RAPIDEZ E PRATICIDADE",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do labore et dolore magna aliqua.",
+      "Mais agilidade: seus exames de imagem com entrega rápida e acesso online.",
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const cardData: CardItem[] = [
     iconColor: "text-red-500",
     title: "SERVIÇOS",
     description:
-      "Serviços de imagem em altíssima qualidade: Tomografia, Radiografias, Scan 3D e Diagnóstico de Dor.",
+      "Exames por imagem com alta tecnologia: Tomografia, RX, Scan 3D e mais.",
   },
 ];
 
@@ -106,20 +106,20 @@ export const AboutDigitalX = () => {
 
                     <h1 className="mt-2 text-base tracking-wide text-gray-800 sm:text-2xl">
                       <span className="text-gray-600 font-poppins scale-y-90 block">
-                        Digital X:
+                        Digital X
                       </span>
-                      <span className="mt-1 text-base font-light block text-gray-500 tracking-tight leading-4">
+                      {/* <span className="mt-1 text-base font-light block text-gray-500 tracking-tight leading-4">
                         Tecnologia e precisão <br /> para diagnósticos
                         odontológicos.
-                      </span>
+                      </span> */}
                     </h1>
+                    <p className="mt-3 text-lg leading-5 text-gray-600">
+                      Somos um centro moderno de radiologia odontológica.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <p className="mt-6 text-lg leading-5 text-gray-600">
-              Somos um centro moderno de radiologia odontológica.
-            </p>
 
             <ul className="w-[90%] m-auto mt-6 space-y-4">
               {featuresData.map((feature) => (

@@ -30,7 +30,7 @@ export default function HomePage() {
         <ExamCarousel />
         <ConveniosSection />
         <Comments />
-        <FaqSection />
+        {/* <FaqSection /> */}
         <ContactSection />
       </main>
       <Footer />

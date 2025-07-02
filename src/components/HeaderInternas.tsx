@@ -54,7 +54,7 @@ const HeaderInternas = () => {
   };
 
   const navLinks = [
-    { id: "sobre", label: "SOBRE A DIGITAL X" },
+    { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
     { id: "servicos", label: "SERVIÇOS" },
     { id: "convenios", label: "CONVÊNIOS" },
@@ -66,11 +66,13 @@ const HeaderInternas = () => {
     <>
       <header
         className={cn(
-          "fixed w-full text-[#0a3c44] bg-white flex items-center justify-center flex-col z-30 transition-all ease-out duration-300",
+          "fixed w-full transform-3d text-[#0a3c44] bg-white flex items-center justify-center flex-col z-30 transition-all ease-out duration-300",
           // Animation for hide/show
           headerVisible ? "translate-y-0" : "-translate-y-[200%]",
           // Styling for scrolled state (e.g., background, shadow)
-          isScrolled ? "bg-white shadow-md" : "bg-white shadow-none"
+          isScrolled
+            ? "bg-white shadow-md backdrop-blur-sm bg-white/80"
+            : "bg-white shadow-none backdrop-blur-none"
         )}
       >
         {/* barra superior */}
@@ -79,37 +81,40 @@ const HeaderInternas = () => {
       </div> */}
 
         <div className="w-full grid grid-cols-[90px_1fr_70px] px-2 py-2 max-w-[1280px] mx-auto">
-          <Link href="/" className="font-bold">
-            <Image
-              src="/logo-digitalx.svg"
-              alt="Digital X"
-              width={110}
-              height={55}
-              className="min-w-[90px]"
-            />
-          </Link>
+          <div></div>
           {/* nav */}
-          <div className="flex flex-col items-center justify-end">
-            <nav className="hidden sm:block">
-              <ul className="flex space-x-2 md:space-x-2 justify-center items-center gap-1">
-                {navLinks.map((item) => (
-                  <li key={item.id}>
-                    <Link
-                      href={`/${item.id}`} // Garante que o href seja um caminho absoluto
-                      className={cn(
-                        "uppercase text-[11px] font-bold tracking-tighter",
-                        // pathname === `/${item.id}`
-                        pathname.includes(item.id)
-                          ? "text-cyan-500"
-                          : "text-black hover:text-cyan-300" // Aplica a classe 'text-cyan-500' se for o link ativo
-                      )}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+          <div className="flex flex-col justify-center items-center">
+            <Link href="/" className="font-bold">
+              <Image
+                src="/logo-digitalx.svg"
+                alt="Digital X"
+                width={110}
+                height={55}
+                className="min-w-[90px] mb-1.5"
+              />
+            </Link>
+            <div className="flex flex-col items-center justify-end">
+              <nav className="hidden sm:block">
+                <ul className="flex space-x-2 md:space-x-2 justify-center items-center gap-1">
+                  {navLinks.map((item) => (
+                    <li key={item.id}>
+                      <Link
+                        href={`/${item.id}`} // Garante que o href seja um caminho absoluto
+                        className={cn(
+                          "uppercase text-[12px] md:text-[13px] font-bold tracking-tighter",
+                          // pathname === `/${item.id}`
+                          pathname.includes(item.id)
+                            ? "text-cyan-500"
+                            : "text-black hover:text-cyan-300" // Aplica a classe 'text-cyan-500' se for o link ativo
+                        )}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
 
           {/* icons */}
@@ -196,7 +201,7 @@ const HeaderInternas = () => {
           </nav>
         </div>
       </header>
-      <div className="h-[60px] sm:h-[60px]"></div>
+      <div className="h-[100px] sm:h-[100px]"></div>
     </>
   );
 };

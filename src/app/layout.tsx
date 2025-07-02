@@ -4,6 +4,7 @@ import { Open_Sans, Poppins } from "next/font/google"; // Import Open_Sans and P
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import WhatsButton from "@/components/WhatsButton";
 
 // Configure Open Sans
 const openSans = Open_Sans({
@@ -38,6 +39,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <WhatsButton />
       </body>
     </html>
   );

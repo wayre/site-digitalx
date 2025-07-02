@@ -2,7 +2,6 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { ArrowLeft, Phone, FileText, Calendar } from "lucide-react";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
 import { ConvenioTypes } from "@/app/convenios/page";
@@ -71,7 +70,6 @@ const ConvenioDetalhes = () => {
             {/* Você pode adicionar um componente de spinner aqui */}
           </div>
         </main>
-        <Footer />
       </div>
     );
   }

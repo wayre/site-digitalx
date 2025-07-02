@@ -13,6 +13,9 @@ const PartnerBanner = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2">
           {/* Coluna Esquerda: Conteúdo de Texto */}
           <div className="flex flex-col justify-center p-8 lg:p-16 max-w-[550px] lg:max-w-max  mx-auto">
+            <span className="mb-2 text-center sm:text-left">
+              Você dentista,
+            </span>
             <h2 className="text-2xl md:text-2xl tracking-tight font-light text-gray-800 leading-tight text-center sm:text-left">
               Seja parceiro da Digital X e dedique-se ao que realmente importa:
               o sorriso dos seus pacientes!

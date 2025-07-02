@@ -10,7 +10,7 @@
   position: absolute;
   z-index: 9;
   top: -32px;
-  left: -90px;
+  left: -87px;
   transform: scale(0.5);
   /* top: -40px;
   left: -100px;
@@ -29,7 +29,7 @@
 }
 .lfirst {
   /* width: calc(100% - 50px) !important; */
-  @apply flex w-full mx-auto px-3 sm:px-8 pt-2 items-center justify-between max-w-screen-xl;
+  @apply grid grid-cols-[70px_1fr_70px] w-full mx-auto px-3 sm:px-8 py-2 items-end justify-between max-w-screen-xl;
 }
 
 .lfirst:first-child {
@@ -46,10 +46,10 @@
 }
 
 nav.navMenu ul li {
-  @apply uppercase text-[10px] tracking-wide text-white hover:text-cyan-300 whitespace-nowrap;
+  @apply uppercase tracking-wide text-white hover:text-cyan-300 whitespace-nowrap;
 }
 
 nav.navMenu a {
-  @apply lowercase text-[9px] text-white px-1 md:px-2 py-0 rounded-full;
-  @apply text-[11px] uppercase tracking-tighter flex items-center space-x-0.5 h-auto;
+  @apply lowercase text-[13px] text-white px-1 md:px-2 py-0 rounded-full;
+  @apply uppercase tracking-tighter flex items-center space-x-0.5 h-auto;
 }

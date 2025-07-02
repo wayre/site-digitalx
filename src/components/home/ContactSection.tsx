@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import Link from "next/link";
 import {
   Select,
   SelectContent,
@@ -231,13 +232,21 @@ const ContactSection = () => {
                   <Phone className="contact-info-icon" />
                   <div>
                     <p className="font-medium">Telefone:</p>
-                    <p className="text-gray-600">
-                      <a
+                    <p className="text-gray-600 flex flex-col">
+                      <Link
                         href="tel:+556730282890"
                         className="hover:text-digitalx-500"
                       >
                         (67) 3028-2890
-                      </a>
+                      </Link>
+                      <Link
+                        href="/whatsapp"
+                        type="button"
+                        target="_blank"
+                        className="hover:text-white bg-green-700 hover:bg-green-600 text-white font-bold py-0.5 px-3 rounded"
+                      >
+                        Agendar via whatsapp
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -247,12 +256,12 @@ const ContactSection = () => {
                   <div>
                     <p className="font-medium">E-mail:</p>
                     <p className="text-gray-600">
-                      <a
+                      <Link
                         href="mailto:contato@digitalx.com.br"
                         className="hover:text-digitalx-500"
                       >
                         contato@digitalx.com.br
-                      </a>
+                      </Link>
                     </p>
                   </div>
                 </div>

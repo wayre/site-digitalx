@@ -40,14 +40,12 @@ const HeroSection = () => {
           <h1 className="font-montserrat font-bold text-white mb-6 leading-tight text-3xl md:text-5xl">
             Diagnósticos Precisos,
             <br />
-            <span className="text-[#247ab3]">Resultados Excepcionais</span>
+            <span className="text-[#5fb1e9]">Resultados Excepcionais</span>
           </h1>
 
           {/* Subtitle - Open Sans, 20px (desktop) / 16px (mobile) */}
-          <p className="font-opensans text-[#bbbbbb] mb-8 max-w-4xl mx-auto leading-relaxed text-base md:text-xl">
-            Na Digital X, transformamos imagens em decisões clínicas confiáveis.
-            Tecnologia de ponta, laudos especializados e parceria que impulsiona
-            seus tratamentos.
+          <p className="font-opensans text-gray-100 mb-8 max-w-4xl mx-auto leading-relaxed text-base md:text-xl">
+            Veja por que tantos dentistas confiam na Digital X.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

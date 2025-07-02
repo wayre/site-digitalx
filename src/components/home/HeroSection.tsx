@@ -106,12 +106,14 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="relative w-full bg-[#415462]">
+      <div className="relative w-full h-full bg-[#415462] grid grid-rows-[1fr_auto] sm:grid-rows-[1fr_140px] md:grid-rows-[1fr_auto] grid-cols-1">
         <section
           id="home"
           className={cn(
-            "relative flex items-center pt-16 overflow-hidden max-w-[1920px] mx-auto shadow-md",
-            isMounted && isLandscape ? "min-h-[600px]" : "min-h-[78vh]"
+            "relative w-full flex items-center pt-16 overflow-hidden max-w-[1920px] mx-auto shadow-md",
+            isMounted && isLandscape
+              ? "min-h-[500px] md:h-[calc(100vh-80px)]"
+              : "min-h-[78vh] md:min-h-[90vh]"
           )}
         >
           {/* Background Slides */}
@@ -153,8 +155,8 @@ const HeroSection = () => {
                 className={cn(
                   "text-[#20383B] flex font-semibold",
                   isMounted && isLandscape
-                    ? "text-2xl sm:text-3xl md:text-4xl justify-start"
-                    : "text-3xl justify-center sm:justify-start"
+                    ? "text-2xl sm:text-3xl md:text-4xl lg:text-5xl justify-start"
+                    : "text-3xl md:text-5xl lg:text-5xl justify-center sm:justify-start"
                 )}
               >
                 {/* {displayedText} */}
@@ -212,19 +214,19 @@ const HeroSection = () => {
         </section>
 
         {/* button colors */}
-        <div className="grid grid-cols-2 md:grid-cols-4 max-w-[1920px] mx-auto">
+        <div className="w-full h-auto sm:h-[140px] md:max-h-[98px] grid grid-cols-2 md:grid-cols-4 max-w-[1920px] mx-auto py-0.5">
           <div className="flex items-center justify-center px-6 py-4 text-white bg-lime-500 lg:min-h-0">
             <Link
               href="/requisicao-digital_x.pdf"
               target="_blank"
               // className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left"
               className={cn(
-                "flex flex-row items-left justify-center gap-4 transform",
+                "flex flex-row items-center justify-center gap-4 transform",
                 "hover:scale-105 transition-transform duration-300"
               )}
             >
               {/* icon */}
-              <div className="relative flex-shrink-0 pt-[16px]">
+              <div className="relative flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -251,7 +253,7 @@ const HeroSection = () => {
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="absolute top-[12px] -left-1 text-lime-200"
+                  className="absolute -top-[6px] -left-1 text-lime-200"
                 >
                   <path d="M12 17V3" />
                   <path d="m6 11 6 6 6-6" />
@@ -261,11 +263,9 @@ const HeroSection = () => {
                 <h3 className="text-[15px] sm:text-[16px] tracking-tighter font-semibold leading-4">
                   Requisições de Exames
                 </h3>
-                <div className="mt-2">
-                  <span className="bg-lime-100 text-lime-800 text-[10px] sm:text-sm] font-bold px-4 py-0.5 sm:py-1 rounded-full shadow-md whitespace-nowrap">
-                    Baixar Agora
-                  </span>
-                </div>
+                <p className="text-[10px] lg:text-[12px] tracking-tight sm:tracking-tight opacity-80">
+                  Faça o download da requisição em pdf.
+                </p>
               </div>
             </Link>
           </div>
@@ -376,7 +376,7 @@ const HeroSection = () => {
               </div>
               <div>
                 <h3 className="text-base sm:text-[16px] tracking-tighter font-semibold leading-4">
-                  Central de Ajuda
+                  Dúvidas Frequentes
                 </h3>
                 <p className="text-[10px] lg:text-[12px] tracking-tight sm:tracking-tight opacity-80">
                   Tire suas dúvidas

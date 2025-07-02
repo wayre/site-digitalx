@@ -50,11 +50,18 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // DIGITAL X
+  // EXAMES
+  // SERVIÇOS
+  // CONVÊNIOS
+  // CENTRAL DE AJUDA
+  // CONTATO
   const navLinks = [
-    { id: "sobre", label: "SOBRE" },
+    { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
     { id: "servicos", label: "SERVIÇOS" },
     { id: "convenios", label: "CONVÊNIOS" },
+    { id: "central-de-ajuda", label: "CENTRAL DE AJUDA" },
     { id: "contato", label: "CONTATO" },
   ];
 
@@ -62,7 +69,7 @@ const Header = () => {
     <>
       <header
         className={cn(
-          "fixed w-full text-[#0a3c44] bg-white flex items-center justify-center flex-col pb-4 z-30 transition-all ease-out duration-300",
+          "fixed w-full text-[#0a3c44] bg-white flex items-end justify-center flex-col pb-1 sm:pb-4 z-30 transition-all ease-out duration-300",
           // Animation for hide/show
           headerVisible ? "translate-y-0" : "-translate-y-[200%]",
           // Styling for scrolled state (e.g., background, shadow)
@@ -78,7 +85,7 @@ const Header = () => {
           )}
         >
           {/* Logo Section */}
-          <div
+          {/* <div
             className={cn(
               "transition-all ease-out duration-300",
               isScrolled ? "sm:hidden" : "flex",
@@ -108,42 +115,50 @@ const Header = () => {
                 className="min-w-[90px]"
               />
             </Link>
-          </div>
+          </div> */}
+          <div className="w-[70px]"></div>
 
           {/* Center Text */}
           <div
             className={cn(
               "transition-all ease-out duration-300",
               isScrolled ? "sm:hidden" : "",
-              "flex-1 text-center"
+              "flex-1 text-center justify-center flex items-center"
             )}
           >
-            <p className="flex flex-col text-[#3b3b3b] tracking-tighter text-[11px] sm:text-[14px] md:text-base p-2 sm:p-0 leading-3 sm:leading-4">
+            {/* <p className="hidden sm:flex flex-col text-[#3b3b3b] tracking-tighter text-[11px] sm:text-[16px] p-2 sm:p-0 leading-3 sm:leading-4">
               Referência em
               <br className="" /> Exames de Imagens em Odontologia
-              <small className="hidden sm:inline-block text-[#0a3c44] mt-1">
-                R. 13 de Junho, 499 - Centro, Campo Grande/MS
-              </small>
-            </p>
+              
+            </p> */}
+            <Link href="/" className="font-bold">
+              <Image
+                src="/logo-digitalx.svg"
+                alt="Digital X"
+                width={110}
+                height={55}
+                className="w-auto h-[60px]"
+              />
+            </Link>
           </div>
 
           {/* Social Icons */}
           <div
             className={cn(
-              "transition-all ease-out duration-300",
-              isScrolled ? "flex sm:hidden" : "flex",
-              "items-center space-x-1 w-[70px] justify-end z-50"
+              "transition-all ease-out duration-300 mb-1",
+              "items-center space-x-1 w-[40px] justify-end z-50",
+              isScrolled ? "flex sm:hidden" : "flex"
             )}
           >
-            <span className="text-[#0a3c44] text-[9px] hidden sm:block">
+            {/* <span className="text-[#0a3c44] text-[9px] hidden sm:block">
               Siga:{" "}
-            </span>
+            </span> */}
 
             {/* facebook button */}
             <Link
               href="/facebook"
               target="_blank"
-              className="text-[#0a3c44] hover:text-cyan-700"
+              className="text-cyan-700 hover:text-cyan-600"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +180,7 @@ const Header = () => {
             <Link
               href="/instagram"
               target="_blank"
-              className="text-[#0a3c44] hover:text-red-600"
+              className="text-red-800 hover:text-red-700"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +214,9 @@ const Header = () => {
         <div
           className={cn(
             "absolute w-full",
-            isScrolled ? "top-[12px] md:top-[12px]" : "top-[64px] md:top-[64px]"
+            isScrolled
+              ? "-bottom-[12px] md:-bottom-[12px]"
+              : "-bottom-[12px] md:-bottom-[12px]"
           )}
         >
           <nav
@@ -210,27 +227,27 @@ const Header = () => {
               isScrolled ? "isScrolled" : ""
             )}
           >
-            <div className="mx-auto px-150 py-1 flex items-center justify-center">
+            <div className="wayre mx-auto px-150 py-1 flex items-center justify-center">
               <ul className="flex space-x-0.5 md:space-x-2">
                 {navLinks.map((item) => (
                   <li key={item.id}>
                     <Link
                       href={`/${item.id}`}
-                      className="uppercase text-[10px] tracking-wide text-white hover:text-cyan-300"
+                      className="uppercase tracking-wide text-white hover:text-cyan-300"
                     >
                       {item.label}
                     </Link>
                   </li>
                 ))}
-                <li>
+                {/* <li>
                   <Link
                     href="#contato"
                     className={cn("bg-cyan-700 hover:bg-cyan-600", "ml-3")}
                   >
                     Solicitação de Exames
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/resultados-online"
                     className={cn(
@@ -240,7 +257,7 @@ const Header = () => {
                     <User className="w-2.5 h-2.5" />
                     <span>Login</span>
                   </Link>
-                </li>
+                </li> */}
               </ul>
 
               {/* <div className="absolute right-2 flex space-x-4">

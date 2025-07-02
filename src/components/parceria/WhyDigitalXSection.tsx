@@ -35,13 +35,30 @@ const WhyDigitalXSection = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-sans font-bold text-4xl md:text-5xl text-digital-blue mb-6">
-            Por Que a Digital X É Sua
-            <span className="text-medical-green"> Melhor Aliada?</span>
+        <div className="text-center mb-16 animate-fade-in text-base">
+          <h2 className="font-sans font-bold text-4xl md:text-4xl text-digital-blue mb-6">
+            Por Que escolher
+            <br className="block md:hidden" /> a Digital X ?
           </h2>
-          <p className="font-opensans text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Exatidão Técnica e Inovação a Serviço da Sua Clínica
+          <h3 className="text-lg">
+            Precisão e tecnologia para otimizar seu planejamento.
+          </h3>
+          <p className="p-2 rounded-lg bg-gray-100  w-5/6 md:w-4/6 mx-auto my-2 mb-8">
+            Com o tomógrafo Morita Veraview X800, líder mundial em Cone Beam,
+            entregamos imagens 3D de altíssima definição com precisão
+            submilimétrica — mais agilidade, menos falhas, diagnósticos mais
+            seguros.
+          </p>
+          <h3 className="text-lg">
+            Segurança para o paciente, eficiência para sua clínica.
+          </h3>
+          <p className="p-2 rounded-lg bg-gray-100 w-5/6 md:w-4/6 mx-auto my-2 mb-8">
+            Utilizamos até 40% menos radiação que o padrão do mercado e
+            garantimos acesso online rápido e seguro aos resultados dos exames.
+          </p>
+          <p className="font-semibold text-center tracking-tight">
+            Digital X: qualidade, confiança e inovação em
+            <br /> diagnóstico por imagem.
           </p>
         </div>
 
@@ -70,17 +87,17 @@ const WhyDigitalXSection = () => {
         <div className="bg-light-gray rounded-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto text-center">
             <p className="font-opensans text-lg text-gray-700 leading-relaxed mb-6">
-              Entendemos que cada detalhe no diagnóstico define o sucesso do seu
-              trabalho. Por isso, a Digital X oferece{" "}
+              Na Digital X, você conta com tomografia de precisão submilimétrica{" "}
+              <br />{" "}
               <strong className="text-medical-green">
-                exames radiológicos odontológicos com precisão submilimétrica
+                com o Morita Veraview X800{" "}
               </strong>
-              , garantida pelo Tomógrafo Morita Veraview X800.
+              — o que há de mais avançado em Cone Beam.{" "}
             </p>
             <p className="font-opensans text-lg text-gray-700 leading-relaxed">
-              Nossas imagens 3D de alta resolução permitem visualizar estruturas
-              ósseas, canais radiculares e anomalias com clareza incomparável,
-              reduzindo margens de erro e acelerando seus planejamentos.
+              Imagens 3D nítidas, detalhamento de canais, estruturas ósseas e
+              anomalias <br />
+              com clareza real, que reduzem falhas e aceleram seu planejamento.
             </p>
           </div>
         </div>
