@@ -89,7 +89,7 @@ const config: Config = {
           "900": "#0a2351",
           transp: "#bcd5e742",
         },
-        "digital-blue": "#2C3E50",
+        "digital-blue": "#2b6283",
         "medical-green": "#146758",
         "light-gray": "#F5F5F5",
         sidebar: {

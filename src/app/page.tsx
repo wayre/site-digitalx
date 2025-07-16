@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/home/HeroSection";
+import HeroVideoSection from "@/components/home/HeroVideoSection";
 import ExamsSection from "@/components/home/ExamsSection";
 import ExamCarousel from "@/components/home/ExamCarousel";
 import ConveniosSection from "@/components/home/ConveniosSection";
@@ -22,7 +22,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        <HeroSection />
+        <HeroVideoSection />
         <AboutDigitalX />
         <PartnersBanner />
         <WhyChooseUs />

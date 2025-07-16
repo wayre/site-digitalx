@@ -71,15 +71,13 @@ const cardData: CardItem[] = [
 
 export const AboutDigitalX = () => {
   return (
-    <section className="relative w-full bg-[#F8F9FA] py-10 sm:py-28" id="sobre">
-      {/* Efeito de bolhas animadas no fundo */}
-
+    <section className="relative w-full bg-[#F8F9FA] py-14 sm:py-32" id="sobre">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-12 md:grid-cols-[33%_1fr] md:gap-2">
           <div className="hidden md:block">
             <div className="flex transform-gpu fade-in justify-center transition-transform duration-700 ease-out hover:scale-105">
               <Image
-                src="/logo-about-digitalx.webp" // <-- Coloque o caminho para o seu logo aqui
+                src="/logo-about-digitalx.webp"
                 alt="Logo Digital X Imagens Odontológicas"
                 width={400}
                 height={160}
@@ -91,7 +89,7 @@ export const AboutDigitalX = () => {
           <div className="flex flex-col animate-fade-in-left">
             <div className="grid grid-cols-[40%_1fr] md:grid-cols-1 items-center gap-1">
               <Image
-                src="/logo-about-digitalx.webp" // <-- Coloque o caminho para o seu logo aqui
+                src="/logo-about-digitalx.webp"
                 alt="Logo Digital X Imagens Odontológicas"
                 width={200}
                 height={80}
@@ -100,40 +98,42 @@ export const AboutDigitalX = () => {
               <div>
                 <div className="flex flex-row w-full">
                   <div>
-                    <div className="text-[10px] font-semibold uppercase tracking-wider text-teal-600">
+                    <div className="text-[13px] font-semibold uppercase tracking-wider text-teal-600">
                       Sobre Nós
                     </div>
 
                     <h1 className="mt-2 text-base tracking-wide text-gray-800 sm:text-2xl">
-                      <span className="text-gray-600 font-poppins scale-y-90 block">
+                      <span className="text-gray-600 font-poppins block">
                         Digital X
                       </span>
                       {/* <span className="mt-1 text-base font-light block text-gray-500 tracking-tight leading-4">
                         Tecnologia e precisão <br /> para diagnósticos
                         odontológicos.
                       </span> */}
+                      <span className="mt-3 text-lg leading-5 text-gray-600">
+                        Somos um centro moderno de radiologia odontológica.
+                      </span>
                     </h1>
-                    <p className="mt-3 text-lg leading-5 text-gray-600">
-                      Somos um centro moderno de radiologia odontológica.
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <ul className="w-[90%] m-auto mt-6 space-y-4">
+            <ul className="w-[90%] mt-6 space-y-4 ml-4">
               {featuresData.map((feature) => (
                 <li key={feature.id} className="flex items-start gap-x-3">
                   <CheckCircle2
                     className="mt-1 h-5 w-5 flex-none text-teal-500"
                     aria-hidden="true"
                   />
-                  <span className="text-sm text-gray-600">{feature.text}</span>
+                  <span className="text-base text-gray-600">
+                    {feature.text}
+                  </span>
                 </li>
               ))}
             </ul>
 
-            <p className="mt-8 text-[0.8rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left">
+            <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left">
               Digital X. Imagem clara, diagnóstico seguro
             </p>
           </div>
