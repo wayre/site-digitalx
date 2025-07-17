@@ -54,11 +54,12 @@ const HeaderInternas = () => {
   };
 
   const navLinks = [
+    { id: "home", label: "HOME" },
     { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
     { id: "servicos", label: "SERVIÇOS" },
     { id: "convenios", label: "CONVÊNIOS" },
-    { id: "central-de-ajuda", label: "CENTRAL DE AJUDA" },
+    { id: "central-de-ajuda", label: "SAC" },
     { id: "contato", label: "CONTATO" },
   ];
 
@@ -90,7 +91,7 @@ const HeaderInternas = () => {
                 alt="Digital X"
                 width={110}
                 height={55}
-                className="min-w-[90px] mb-1.5"
+                className="min-w-[90px]"
               />
             </Link>
             <div className="flex flex-col items-center justify-end">
@@ -99,7 +100,7 @@ const HeaderInternas = () => {
                   {navLinks.map((item) => (
                     <li key={item.id}>
                       <Link
-                        href={`/${item.id}`} // Garante que o href seja um caminho absoluto
+                        href={item.id === "home" ? "/" : "/" + item.id} // Garante que o href seja um caminho absoluto
                         className={cn(
                           "uppercase text-[12px] md:text-[13px] font-bold tracking-tighter",
                           // pathname === `/${item.id}`
@@ -201,7 +202,7 @@ const HeaderInternas = () => {
           </nav>
         </div>
       </header>
-      <div className="h-[100px] sm:h-[100px]"></div>
+      <div className="h-[80px] sm:h-[100px]"></div>
     </>
   );
 };

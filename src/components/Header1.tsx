@@ -69,14 +69,14 @@ const Header1 = () => {
   ];
 
   const navLinksLeft = [
-    { id: "", label: "HOME" },
+    // { id: "", label: "HOME" },
     { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
+    { id: "servicos", label: "SERVIÇOS" },
   ];
   const navLinksRight = [
-    { id: "servicos", label: "SERVIÇOS" },
     { id: "convenios", label: "CONVÊNIOS" },
-    // { id: "central-de-ajuda", label: "CENTRAL DE AJUDA" },
+    { id: "central-de-ajuda", label: "SAC" },
     { id: "contato", label: "CONTATO" },
   ];
 
@@ -93,7 +93,7 @@ const Header1 = () => {
         <div
           className={cn(
             "flex flex-row",
-            "flex-row justify-between items-center w-full text-xs py-2 px-3 border-b-gray-200 border-b max-w-[1480px] m-auto",
+            "flex-row justify-center md:justify-between items-center w-full text-xs py-2 px-3 border-b-gray-200 border-b max-w-[1480px] m-auto",
             isAtTop ? "flex" : "hidden"
           )}
         >

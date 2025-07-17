@@ -53,46 +53,40 @@ const ExamCarousel = () => {
       title: "Análises Cefalométricas",
       description:
         "Traçados computadorizados demarcados após a identificação...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/AnalisesCefalometricas.webp",
     },
     {
       id: "facial",
       title: "Análises Faciais",
       description:
         "Análise computadorizada realizada sobre as fotografias da face...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/AnalisesFaciais.webp",
     },
     {
       id: "lateral-mandibula",
       title: "Lateral oblíqua da mandíbula",
       description: "Utilizada para exame do ramo, ângulo e corpo mandibular...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/Lateralobliquadamandibula.webp",
     },
     {
       id: "pa-mandibula",
       title: "P.A. de mandíbula com boca aberta",
       description: "Modificação da técnica radiográfica Frontal com visão...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/PAdemandibulacombocaaberta.webp",
     },
     {
       id: "panoramica",
       title: "Radiografia Panorâmica",
       description:
         "Técnica radiográfica que produz uma única imagem das estruturas...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/RadiografiaPanoramica.webp",
     },
     {
       id: "planigrafia",
       title: "Planigrafia de ATM",
       description:
         "Técnica radiográfica que produz imagens nítidas de estruturas...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/PlanigrafiadeATM.webp",
     },
     {
       id: "tomografia",
@@ -100,45 +94,41 @@ const ExamCarousel = () => {
       description:
         "Exame de alta precisão para aquisição das imagens dos ossos...",
       imageUrl:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+        "/exames/TomografiaComputadorizadaCone-BeamdosMaxilaresTraumaPatologias.webp",
     },
     {
       id: "periapical",
       title: "Radiografia Periapical",
       description:
         "Imagem bi-dimensional com uma visão da anatomia dentária...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1473091534298-04dcbce3278c?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/RadiografiaPeriapicalConvecionaleDigital.webp",
     },
     {
       id: "axial",
       title: "Radiografia Axial (HIRTZ)",
       description: "Indicada para verificação prévia da inclinação do longo...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/RadiografiaAxialHIRTZ.webp",
     },
     {
       id: "telerradiografia",
       title: "Telerradiografia lateral e frontal",
       description:
         "É uma radiografia do crânio em que o paciente é posicionado...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/Telerradiografialateralefrontal.webp",
     },
     {
       id: "seios-face",
       title: "Radiografias P.A. E WATERS",
       description:
         "Radiografias realizadas para visualização da transparência...",
-      imageUrl:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/exames/RadiografiasdosseiosdafacePAEWATERS.webp",
     },
     {
       id: "mao-punho",
       title: "Radiografia da Mão e Punho",
       description: "Análise radiológica da estimativa da idade óssea...",
       imageUrl:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+        "/exames/RadiografiadaMaoePunhocomanaliseCarpaleidadeOssea.webp",
     },
   ];
 
