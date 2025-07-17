@@ -73,7 +73,7 @@ export const AboutDigitalX = () => {
   return (
     <section className="relative w-full bg-[#F8F9FA] py-14 sm:py-32" id="sobre">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 items-center gap-x-16 gap-y-12 md:grid-cols-[33%_1fr] md:gap-2">
+        <div className="grid grid-cols-1 items-center gap-x-16 gap-y-12 md:grid-cols-[43%_1fr] md:gap-2">
           <div className="hidden md:block">
             <div className="flex transform-gpu fade-in justify-center transition-transform duration-700 ease-out hover:scale-105">
               <Image
@@ -119,7 +119,7 @@ export const AboutDigitalX = () => {
               </div>
             </div>
 
-            <ul className="w-[90%] mt-6 space-y-4 ml-4">
+            <ul className="w-[90%] mt-6 space-y-4 ml-4 max-w-[650px]">
               {featuresData.map((feature) => (
                 <li key={feature.id} className="flex items-start gap-x-3">
                   <CheckCircle2

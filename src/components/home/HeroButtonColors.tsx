@@ -51,7 +51,7 @@ function HeroButtonColors() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-[15px] font-bold uppercase lg:normal-case md:text-[17px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
+              <h3 className="text-[14px] font-bold uppercase lg:normal-case md:text-[15px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
                 Requisições de Exames
               </h3>
               <p className="hidden sm:block md:hidden lg:block mt-1 text-[12px] sm:text-[14px] tracking-tight sm:tracking-tight opacity-80 leading-3">
@@ -92,7 +92,7 @@ function HeroButtonColors() {
               </svg>
             </div>
             <div>
-              <h3 className="text-[15px] font-bold uppercase lg:normal-case md:text-[17px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
+              <h3 className="text-[14px] font-bold uppercase lg:normal-case md:text-[15px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
                 Agendamento de Exames
               </h3>
               <p className="hidden sm:block md:hidden lg:block mt-1 text-[12px] sm:text-[14px] tracking-tight sm:tracking-tight opacity-80 leading-3">
@@ -129,7 +129,7 @@ function HeroButtonColors() {
               </svg>
             </div>
             <div>
-              <h3 className="text-[15px] font-bold uppercase lg:normal-case md:text-[17px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
+              <h3 className="text-[14px] font-bold uppercase lg:normal-case md:text-[15px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
                 Resultados Online
               </h3>
               <p className="hidden sm:block md:hidden lg:block mt-1 text-[12px] sm:text-[14px] tracking-tight sm:tracking-tight opacity-80 leading-3">
@@ -166,7 +166,7 @@ function HeroButtonColors() {
               </svg>
             </div>
             <div>
-              <h3 className="text-[15px] font-bold uppercase lg:normal-case md:text-[17px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
+              <h3 className="text-[14px] font-bold uppercase lg:normal-case md:text-[15px] tracking-tight sm:font-semibold leading-4 md:tracking-tighter">
                 Dúvidas Frequentes
               </h3>
               <p className="hidden sm:block md:hidden lg:block mt-1 text-[12px] sm:text-[14px] tracking-tight sm:tracking-tight opacity-80 leading-3">

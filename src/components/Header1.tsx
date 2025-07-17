@@ -121,7 +121,9 @@ const Header1 = () => {
 
         {/* Main Menu */}
         <div
-          className={cn("flex flex-row w-full max-w-[1480px] m-auto px-8 py-4")}
+          className={cn(
+            "flex flex-row w-full max-w-[1480px] m-auto px-8 pt-4 pb-2"
+          )}
         >
           {/* nav menu */}
           <nav
