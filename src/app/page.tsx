@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header1";
 import HeroVideoSection from "@/components/home/HeroVideoSection";
 import ExamsSection from "@/components/home/ExamsSection";
 import ExamCarousel from "@/components/home/ExamCarousel";

@@ -25,9 +25,8 @@ const HeroVideoSection = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
-      {/* <div className="absolute inset-y-0 w-[150%] bg-white/50 z-10 -rotate-[60deg] translate-x-[5%]" /> */}
-      {/* <div className="absolute h-full w-[70%] right-0 bg-gradient-to-r from-transparent to-white z-[5] "></div> */}
-      {/* <div className="absolute h-full w-full right-0 bg-[linear-gradient(115deg,transparent_50%,white_75%)] z-[5]"></div> */}
+
+      {/* div degrade */}
       <div
         className="absolute h-full w-full right-0 z-[5] 
       bg-[linear-gradient(180deg,transparent_35%,white_60%)] 
@@ -37,14 +36,13 @@ const HeroVideoSection = () => {
 
       {/* Main content wrapper */}
       <div className="relative z-20 h-full w-full flex flex-col justify-between">
-        {/* Top content: Centered text and CTA */}
         <div
           className="flex-grow flex items-end text-black 
         justify-center text-center 
         sm:justify-end sm:text-right sm:px-1"
         >
           <div
-            className="relative mb-6 flex flex-col  
+            className="relative mb-7 flex flex-col  
             gap-y-2 px-8 items-center 
           sm:px-14 sm:pl-[30%]  sm:items-end"
           >
