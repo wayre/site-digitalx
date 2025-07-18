@@ -133,7 +133,7 @@ const ExamCarousel = () => {
   ];
 
   return (
-    <div className="py-8 bg-white" ref={sectionRef}>
+    <div className="py-14 sm:py-24 bg-gray-200" ref={sectionRef}>
       <div className="container mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold text-gray-800">

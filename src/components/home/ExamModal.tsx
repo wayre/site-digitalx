@@ -32,7 +32,7 @@ const ExamModal = ({ isOpen, onClose, exam }: ExamModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-3xl max-h-screen overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-gray-800 flex items-center justify-between">
+          <DialogTitle className="text-2xl font-bold text-gray-800 flex items-center justify-between pt-8">
             {exam.title}
           </DialogTitle>
           <DialogDescription className="text-gray-600 mt-2">

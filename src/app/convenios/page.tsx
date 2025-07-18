@@ -173,10 +173,10 @@ export default function Convenios() {
                     <div
                       key={index}
                       className={cn(
-                        "w-1/4 md:w-1/6 bg-[#f9fafb] max-w-[138px] transition-all px-2 flex items-center justify-center duration-300 transform",
-                        isVisible // Mantém a animação baseada em isVisible do IntersectionObserver
-                          ? "opacity-100 translate-y-0"
-                          : "opacity-0 translate-y-10"
+                        "w-1/4 md:w-1/6 bg-[#f9fafb] max-w-[138px] transition-all px-2 flex items-center justify-center duration-300 transform"
+                        // isVisible // Mantém a animação baseada em isVisible do IntersectionObserver
+                        //   ? "opacity-100 translate-y-0"
+                        //   : "opacity-0 translate-y-10"
                       )}
                       style={{ transitionDelay: `${index * 50}ms` }} // Mantém o delay para o efeito de cascata
                     >
@@ -230,9 +230,9 @@ export default function Convenios() {
         </div>
 
         {/* Contato */}
-        <ContactSection />
-        <Footer />
+        {/* <ContactSection /> */}
       </main>
+      <Footer />
     </>
   );
 }

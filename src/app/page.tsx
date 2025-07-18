@@ -3,11 +3,11 @@ import HeroVideoSection from "@/components/home/HeroVideoSection";
 import ExamsSection from "@/components/home/ExamsSection";
 import ExamCarousel from "@/components/home/ExamCarousel";
 import ConveniosSection from "@/components/home/ConveniosSection";
+import { ExamesRadiologicosSobMedida } from "@/components/home/ExamesRadiologicosSobMedida";
 import { AboutDigitalX } from "@/components/home/about-digitalx";
 import PartnersBanner from "@/components/home/PartnerBanner";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Comments from "@/components/home/Comments";
-import FaqSection from "@/components/home/FaqSection";
 import ContactSection from "@/components/home/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -26,11 +26,11 @@ export default function HomePage() {
         <AboutDigitalX />
         <PartnersBanner />
         <WhyChooseUs />
-        <ExamsSection />
+        {/* <ExamsSection /> */}
+        <ExamesRadiologicosSobMedida />
         <ExamCarousel />
         <ConveniosSection />
         <Comments />
-        {/* <FaqSection /> */}
         <ContactSection />
       </main>
       <Footer />

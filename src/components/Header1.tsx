@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import styles from "./Header.module.css";
 import { Button } from "@/components/ui/button";
 import { User, Menu, X, PhoneIcon, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -53,21 +52,6 @@ const Header1 = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // DIGITAL X
-  // EXAMES
-  // SERVIÇOS
-  // CONVÊNIOS
-  // CENTRAL DE AJUDA
-  // CONTATO
-  const navLinks = [
-    { id: "sobre", label: "DIGITAL X" },
-    { id: "exames", label: "EXAMES" },
-    { id: "servicos", label: "SERVIÇOS" },
-    { id: "convenios", label: "CONVÊNIOS" },
-    { id: "central-de-ajuda", label: "CENTRAL DE AJUDA" },
-    { id: "contato", label: "CONTATO" },
-  ];
-
   const navLinksLeft = [
     // { id: "", label: "HOME" },
     { id: "sobre", label: "DIGITAL X" },
@@ -79,6 +63,8 @@ const Header1 = () => {
     { id: "central-de-ajuda", label: "SAC" },
     { id: "contato", label: "CONTATO" },
   ];
+
+  const navLinks = [...navLinksLeft, ...navLinksRight];
 
   return (
     <>
@@ -94,7 +80,7 @@ const Header1 = () => {
           className={cn(
             "flex flex-row",
             "flex-row justify-center md:justify-between items-center w-full text-xs py-2 px-3 border-b-gray-200 border-b max-w-[1480px] m-auto",
-            isAtTop ? "flex" : "hidden"
+            isAtTop ? "hidden md:flex" : "hidden"
           )}
         >
           <div className="hidden md:flex flex-row items-center tracking-tighter text-gray-500">
@@ -105,16 +91,17 @@ const Header1 = () => {
           </div>
           <div className="flex flex-row gap-2">
             <Link
-              href="#"
+              href="/solicitacao-online"
               className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
             >
               Solicitação Online
             </Link>
             <Link
-              href="#"
+              href="http://189.7.79.145:8090/account/login"
+              target="_blank"
               className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
             >
-              Acessar Exames
+              Área do dentista
             </Link>
           </div>
         </div>
@@ -201,8 +188,11 @@ const Header1 = () => {
               asChild
               className="mt-6 w-full bg-digitalx-500 hover:bg-digitalx-600 text-white font-semibold"
             >
-              <Link href="#contato" onClick={() => setIsMenuOpen(false)}>
-                Solicitação de Exames
+              <Link
+                href="#solicitacao-online"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Solicitação Online
               </Link>
             </Button>
             <Button
@@ -210,10 +200,10 @@ const Header1 = () => {
               className="mt-6 w-full bg-digitalx-500 hover:bg-digitalx-600 text-white font-semibold"
             >
               <Link
-                href="/resultados-online"
+                href="http://189.7.79.145:8090/account/login"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Login
+                Área do Dentista
               </Link>
             </Button>
           </nav>

@@ -34,7 +34,7 @@ const examesMock = [
   },
   {
     id: "exam004",
-    nome: "Tomografia Dento-Alveolar",
+    nome: "Tomografia | Thaís Avelar",
     data: "2025-04-22",
     status: "Em Análise",
     tipo: "TDA",
@@ -104,9 +104,11 @@ export default function ExamesResultados() {
                 {exame.previewUrl ? (
                   <div className="relative w-full h-48 bg-gray-200 overflow-hidden">
                     <Image
-                      src="#"
+                      src="/exames/AnalisesCefalometricas.webp"
+                      width={300}
+                      height={0}
                       alt={`Preview do exame ${exame.nome}`}
-                      layout="fill"
+                      // layout="fill"
                       objectFit="cover"
                       className="transition-transform duration-300 hover:scale-110"
                     />

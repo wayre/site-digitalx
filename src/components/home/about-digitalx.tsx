@@ -32,7 +32,7 @@ const featuresData: FeatureItem[] = [
   },
   {
     id: 2,
-    text: "Realizamos radiografias intra e extraorais, além de tomografia Cone Beam com o equipamento I-CAT Next Generation.",
+    text: "Realizamos radiografias intra e extraorais, além de tomografia Cone Beam com o equipamento Morita Veraview X800.",
   },
   {
     id: 3,
@@ -103,13 +103,6 @@ export const AboutDigitalX = () => {
                     </div>
 
                     <h1 className="mt-2 text-base tracking-wide text-gray-800 sm:text-2xl">
-                      <span className="text-gray-600 font-poppins block">
-                        Digital X
-                      </span>
-                      {/* <span className="mt-1 text-base font-light block text-gray-500 tracking-tight leading-4">
-                        Tecnologia e precisão <br /> para diagnósticos
-                        odontológicos.
-                      </span> */}
                       <span className="mt-3 text-lg leading-5 text-gray-600">
                         Somos um centro moderno de radiologia odontológica.
                       </span>
@@ -133,7 +126,7 @@ export const AboutDigitalX = () => {
               ))}
             </ul>
 
-            <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left">
+            <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left uppercase font-semibold">
               Digital X. Imagem clara, diagnóstico seguro
             </p>
           </div>
@@ -154,7 +147,7 @@ export const AboutDigitalX = () => {
                 <card.Icon className={`h-10 w-10 ${card.iconColor}`} />
               </div>
 
-              <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] whitespace-nowrap font-semibold tracking-wider uppercase text-gray-800">
+              <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] font-semibold tracking-wider uppercase text-gray-800">
                 {card.title}
               </h3>
               <p className="hidden sm:block text-sm text-gray-600 leading-relaxed">

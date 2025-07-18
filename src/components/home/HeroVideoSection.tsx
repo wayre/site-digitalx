@@ -1,13 +1,27 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import HeroButtonColors from "./HeroButtonColors";
 import Image from "next/image";
+import { is } from "date-fns/locale";
 
 const HeroVideoSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    checkIsMobile(); // Verifica no carregamento inicial
+    window.addEventListener("resize", checkIsMobile); // Adiciona listener para redimensionamento
+
+    return () => window.removeEventListener("resize", checkIsMobile); // Limpa o listener
+  }, []); // O array vazio garante que o efeito rode apenas uma vez (montagem/desmontagem)
+
   const handleCTAClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,23 +30,34 @@ const HeroVideoSection = () => {
   };
 
   return (
-    <section className="mt-[167px] flex flex-col relative">
-      <div className="py-2 bg-[#E6F0F4] w-full relative h-[calc(80vh-55px)]">
-        <div className="absolute left-1/2 -translate-x-1/2 bg-[#27A0D0] rounded-md w-full max-w-[1480px] m-auto h-[calc(80vh-75px)]"></div>
-        <div className="absolute left-1/2 -translate-x-1/2 max-w-[1440px] w-[calc(100%-40px)] m-auto h-[calc(80vh)] -mt-[40px] flex flex-col justify-between overflow-hidden z-20 shadow-[0_4px_10px_rgba(0,0,10,0.6)] rounded-sm bg-white">
-          <video
-            src="/video-bg-digitalx.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          />
+    <section className="mt-[130px] md:mt-[167px] flex flex-col relative">
+      <div className="py-2 bg-[#E6F0F4] w-full relative h-[calc(80vh-55px)] min-h-[415px]">
+        <div className="absolute left-1/2 -translate-x-1/2 bg-[#27A0D0] rounded-md w-full max-w-[1480px] m-auto h-[calc(80vh-75px)] min-h-[390px]"></div>
+        <div className="absolute left-1/2 -translate-x-1/2 max-w-[1440px] w-[calc(100%-40px)] m-auto h-[calc(80vh)] -mt-[40px] flex flex-col justify-between overflow-hidden z-20 shadow-[0_4px_10px_rgba(0,0,10,0.6)] rounded-sm bg-white min-h-[470px]">
+          {!isMobile ? (
+            <video
+              src="/video-bg-md.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          ) : (
+            <video
+              src="/video-bg-2xl.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-0 left-0 w-full h-full object-cover"
+            />
+          )}
 
           {/* div degrade */}
           <div
             className="absolute h-full w-full right-0 z-[5] 
-      bg-[linear-gradient(180deg,transparent_35%,white_60%)] 
+      bg-[linear-gradient(180deg,transparent_20%,white_55%)] 
       sm:bg-[linear-gradient(145deg,transparent_40%,white_65%)] 
       md:bg-[linear-gradient(120deg,transparent_50%,white_75%)]"
           ></div>
@@ -54,19 +79,19 @@ const HeroVideoSection = () => {
                   height={0}
                   alt={"Logo Digital X"}
                   src={"/logo-digitalx.svg"}
-                  className="w-1/3 md:w-[250px]"
+                  className="w-1/3 md:w-[180px]"
                 />
                 <h2
                   className="text-digital-blue font-semibold 
             text-2xl leading-7 tracking-wider text-center 
-            sm:text-3xl md:text-3xl sm:leading-10 md:tracking-normal sm:tracking-tighter sm:text-right"
+            sm:text-3xl md:text-3xl sm:leading-10 md:tracking-tight md:leading-7 sm:tracking-tighter sm:text-right"
                 >
                   Tecnologia e precisão <br className="block 2lg:hidden" />
                   para seu diagnóstico
                 </h2>
                 <p
                   className="text-[15px] mx-auto font-light leading-4 text-center  max-w-[490px]
-            sm:text-[18px] sm:leading-6 sm:text-right
+            sm:text-[18px] sm:leading-5 sm:text-right
             md:text-[19px]"
                 >
                   Realizamos exames de imagem com equipamentos de ponta para

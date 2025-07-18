@@ -21,10 +21,13 @@ const LoginPage: React.FC = () => {
     // Lógica de autenticação (simulada)
     // Em um aplicativo real, você faria uma chamada de API aqui
     console.log("Tentativa de login com:", { username, password });
-    if (username === "aluno" && password === "senha123") {
+    if (username === "teste" && password === "teste") {
       setMessage("Login bem-sucedido! Redirecionando...");
       // Aqui você pode redirecionar o usuário ou atualizar o estado da aplicação
-      // Exemplo: setTimeout(() => window.location.href = '/exames', 1000);
+      setTimeout(
+        () => (window.location.href = "/resultados-online/exames-resultado"),
+        1000
+      );
     } else {
       setMessage("Usuário ou senha inválidos.");
     }
@@ -46,6 +49,13 @@ const LoginPage: React.FC = () => {
         <p className="text-slate-500 text-sm mb-6">
           Faça login com seu usuário e senha para visualizar os resultados dos
           seus exames.
+        </p>
+        <p>
+          <small>Login para teste:</small>
+          <br />
+          Usuário: teste
+          <br />
+          Senha: teste
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>

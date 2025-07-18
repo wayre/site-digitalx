@@ -1,8 +1,8 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import ContentPage from "./content";
-import Header from "@/components/HeaderInternas";
-import Footer from "@/components/Footer";
+import Header from "@/components/HeaderProtected";
+import Footer from "@/components/FooterProtected";
 import Image from "next/image";
 import HeaderInternas from "@/components/HeroInternas";
 import Aside from "@/components/Aside";
@@ -39,10 +39,11 @@ export default function CentralDeAjudaPage() {
   return (
     <>
       <Header />
-      <HeaderInternas
+      <div className="h-[70px] sm:h-[76px]"></div>
+      {/* <HeaderInternas
         title="Central de Resultados"
         subtitle="Abaixo verifique todos os seus resultados de exames."
-      />
+      /> */}
 
       <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
         {/***********************
