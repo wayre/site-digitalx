@@ -2,39 +2,36 @@ version: '3.8'
 
 services:
   nextjs-app:
-    # Opção 1: Construir a imagem localmente a partir do seu Dockerfile.
-    # Isso é recomendado para desenvolvimento local, pois reflete as mudanças no código.
-    build:
-      context: .
-      dockerfile: Dockerfile
-    # Opção 2: Puxar a imagem diretamente do Docker Hub (descomente esta linha e comente 'build' acima se preferir).
-    # image: wayreavelar/digitalx-site
-
-    container_name: site-digitalx-local # Um nome diferente para evitar conflito com o da VPS
+    # Use a imagem existente do Docker Hub
+    image: wayreavelar/digitalx-site:latest
+    # container_name: site-digitalx
     restart: always # Garante que o contêiner reinicie se parar inesperadamente
+    networks:
+      - minha_rede
+    labels:
+      # Habilita o Traefik para este serviço
+      - "traefik.enable=true"
+      # Define a regra de roteamento: se a requisição for para digitalx.wayre.dev, vá para este serviço
+      - "traefik.http.routers.nextjs-app.rule=Host(`digitalx.wayre.dev`)"
+      # Define o serviço a ser usado pelo Traefik (o nome do serviço no Docker Compose)
+      - "traefik.http.routers.nextjs-app.service=nextjs-app"
+      # Opcional: Redireciona HTTP para HTTPS (assumindo que você tem um Traefik configurado para SSL)
+      - "traefik.http.routers.nextjs-app.entrypoints=websecure"
+      - "traefik.http.routers.nextjs-app.priority=1"
+      - "traefik.http.routers.nextjs-app.tls=true"
+      - "traefik.http.routers.nextjs-app.tls.certresolver=letsencryptresolver"  # Certificado Let's Encrypt
+      - "traefik.http.services.nextjs-app.loadbalancer.server.port=3000"
+      # Opcional: Middlewares para redirecionamento HTTP para HTTPS, se seu Traefik tiver configurado
+      # - "traefik.http.routers.nextjs-app.middlewares=redirect-to-https@docker"
 
-    # Mapeamento de portas: Porta do seu computador:Porta do container
-    # Isso permite que você acesse o Next.js via http://localhost:3000
-    ports:
-      - "3000:3000"
-
-    # Variáveis de ambiente para sua aplicação Next.js (adicione aqui as suas específicas para o ambiente local)
+    # Variáveis de ambiente para sua aplicação Next.js (adicione aqui as suas)
     environment:
-      NODE_ENV: development # Geralmente 'development' para ambiente local
-      # NEXT_PUBLIC_API_URL: http://localhost:PORTA_DA_SUA_API_LOCAL
-      # Alguma_Variavel_Local: "valor_para_teste"
-
-    # Opcional: Montar seu código fonte local dentro do container.
-    # Isso permite que as mudanças no seu código local sejam refletidas no container sem precisar reconstruir a imagem.
-    # CUIDADO: Isso pode impactar a performance do hot reloading em Next.js devido a problemas de polling.
-    # Se usar, adicione node_modules e .next ao .dockerignore para que não sejam copiados duas vezes.
-    # volumes:
-    #   - .:/app
-    #   - /app/node_modules # Impede que node_modules local sobrescreva o do container
-    #   - /app/.next # Impede que .next local sobrescreva o do container
+      # Exemplo: NODE_ENV já está no Dockerfile, mas pode ser sobreescrito se necessário
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: https://digitalx.wayre.dev
+      # Alguma_Variavel_Interna: "segredo_aqui_mas_use_segredos_do_docker_se_for_sensivel"
 
 networks:
-  # Define uma rede local para este docker-compose.yml
-  # É uma rede interna para os serviços deste arquivo
-  local_next_network:
-    driver: bridge
+  minha_rede:
+    external: true
+    name: public_network
