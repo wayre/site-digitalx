@@ -56,25 +56,6 @@ const ExamCarousel = () => {
       imageUrl: "/exames/AnalisesCefalometricas.webp",
     },
     {
-      id: "facial",
-      title: "Análises Faciais",
-      description:
-        "Análise computadorizada realizada sobre as fotografias da face...",
-      imageUrl: "/exames/AnalisesFaciais.webp",
-    },
-    {
-      id: "lateral-mandibula",
-      title: "Lateral oblíqua da mandíbula",
-      description: "Utilizada para exame do ramo, ângulo e corpo mandibular...",
-      imageUrl: "/exames/Lateralobliquadamandibula.webp",
-    },
-    {
-      id: "pa-mandibula",
-      title: "P.A. de mandíbula com boca aberta",
-      description: "Modificação da técnica radiográfica Frontal com visão...",
-      imageUrl: "/exames/PAdemandibulacombocaaberta.webp",
-    },
-    {
       id: "panoramica",
       title: "Radiografia Panorâmica",
       description:
@@ -104,31 +85,11 @@ const ExamCarousel = () => {
       imageUrl: "/exames/RadiografiaPeriapicalConvecionaleDigital.webp",
     },
     {
-      id: "axial",
-      title: "Radiografia Axial (HIRTZ)",
-      description: "Indicada para verificação prévia da inclinação do longo...",
-      imageUrl: "/exames/RadiografiaAxialHIRTZ.webp",
-    },
-    {
       id: "telerradiografia",
       title: "Telerradiografia lateral e frontal",
       description:
         "É uma radiografia do crânio em que o paciente é posicionado...",
       imageUrl: "/exames/Telerradiografialateralefrontal.webp",
-    },
-    {
-      id: "seios-face",
-      title: "Radiografias P.A. E WATERS",
-      description:
-        "Radiografias realizadas para visualização da transparência...",
-      imageUrl: "/exames/RadiografiasdosseiosdafacePAEWATERS.webp",
-    },
-    {
-      id: "mao-punho",
-      title: "Radiografia da Mão e Punho",
-      description: "Análise radiológica da estimativa da idade óssea...",
-      imageUrl:
-        "/exames/RadiografiadaMaoePunhocomanaliseCarpaleidadeOssea.webp",
     },
   ];
 
