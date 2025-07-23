@@ -10,8 +10,32 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 
 export default function Sobre() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openImage = (src: string) => {
+    setSelectedImage(src);
+  };
+
+  const closeImage = () => {
+    setSelectedImage(null);
+  };
+
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeImage();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   return (
     <>
       {/* Banner Section */}
@@ -32,199 +56,85 @@ export default function Sobre() {
         </div>
       </section>
 
+      <section className="pt-16 px-2 md:px-8">
+        <p className="text-base sm:text-lg">
+          Na <b>Digital X</b>, somos especialistas em exames radiológicos
+          odontológicos de alta precisão, pensados para facilitar o diagnóstico
+          dos cirurgiões-dentistas. Oferecemos{" "}
+          <b>tomografia Cone Beam (Morita Veraview X800)</b>, além de{" "}
+          <b>radiografias intra e extraorais</b>, com imagens nítidas, laudos
+          rápidos e mínima exposição à radiação. Tecnologia de ponta e
+          atendimento ágil para apoiar a confiança dos seus diagnósticos.
+        </p>
+      </section>
+
       {/* About Us Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="bg-[#E5F1FB] h-80 rounded-lg flex items-center justify-center">
-                {/* Placeholder for clinic image */}
-                <div className="text-[#1E5B94] text-5xl font-light">
-                  <Image
-                    src="/digitalx-empresa.webp"
-                    alt="Profissional da saúde sorrindo em um consultório"
-                    // layout="fill"
-                    // objectFit="cover"
-                    // A prioridade na otimização da imagem pode ser útil para o LCP
-                    width={480}
-                    height={330}
-                    className="h-full w-auto object-cover min-h-[230px] sm:min-h-full"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl font-semibold mb-6 text-[#333333]">
-                Nossa História
-              </h2>
-              <p className="text-[#555555] mb-4">
-                A Digital X nasceu do compromisso com a excelência em
-                diagnóstico por imagem na odontologia. Desde nossa fundação,
-                buscamos oferecer aos profissionais e pacientes o que há de mais
-                moderno em tecnologia de imagem.
-              </p>
-              <p className="text-[#555555] mb-4">
-                Localizada em Campo Grande - MS, nossa clínica se tornou
-                referência na região, atendendo dentistas e pacientes com o mais
-                alto padrão de qualidade e precisão diagnóstica.
-              </p>
-              <p className="text-[#555555]">
-                Nossa missão é proporcionar diagnósticos precisos que contribuam
-                para tratamentos odontológicos mais eficazes, melhorando a saúde
-                bucal e a qualidade de vida de nossos pacientes.
-              </p>
-            </div>
-          </div>
+      <section className="pt-16 container mx-auto px-0 mb-16">
+        {/* nossa historia */}
+        <Image
+          src="/transformando-imagens-emconfianca.webp"
+          alt="Profissional da saúde sorrindo em um consultório"
+          // layout="fill"
+          // objectFit="cover"
+          // A prioridade na otimização da imagem pode ser útil para o LCP
+          width={694}
+          height={0}
+          className="h-auto w-full object-fill sm:min-h-full scale-105"
+          priority
+        />
+        <div className="px-4 sm:px-12 text-base sm:text-lg">
+          <h2 className="text-2xl font-light mb-6 max-w-[450px] mt-8">
+            Parceira do profissional odontológico em diagnósticos de alta
+            qualidade
+          </h2>
+          <p className="mb-4">
+            <b>A Digital X</b> nasceu com um objetivo claro:{" "}
+            <b>
+              ser o parceiro diagnóstico de confiança dos cirurgiões-dentistas
+            </b>
+            . Desde o início, investimos em tecnologia de ponta e processos
+            ágeis, entendendo que um exame bem feito impacta diretamente na
+            segurança e no sucesso do tratamento odontológico.
+          </p>
+          <p className="mb-4">
+            Com sede em <b>Campo Grande - MS</b>, nos tornamos referência
+            regional em <b>diagnóstico por imagem odontológica</b>, atendendo
+            profissionais de diversas especialidades com qualidade técnica e
+            atenção ao detalhe.
+          </p>
+          <p className="">
+            Mais do que imagens, entregamos suporte para decisões clínicas mais
+            seguras — contribuindo para a saúde bucal e o bem-estar dos seus
+            pacientes.
+          </p>
         </div>
       </section>
 
-      {/* Our Technology Section */}
-      <section className="py-16 bg-[#E5F1FB]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-[#333333]">
-            Nossa Tecnologia
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center">
-                  <div className="mx-auto bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-2 shadow-md">
-                    <div className="text-[#1E5B94] text-2xl font-bold">3D</div>
-                  </div>
-                  <CardTitle className="text-[#1E5B94]">
-                    Tomografia Cone Beam Morita
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Equipamento de última geração que proporciona imagens
-                    tridimensionais de alta resolução, essenciais para
-                    diagnósticos precisos e planejamentos cirúrgicos.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center">
-                  <div className="mx-auto bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-2 shadow-md">
-                    <div className="text-[#1E5B94] text-2xl font-bold">HD</div>
-                  </div>
-                  <CardTitle className="text-[#1E5B94]">
-                    Radiografia Digital
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Sistemas digitais que garantem imagens de alta definição com
-                    menor exposição à radiação, proporcionando diagnósticos mais
-                    seguros e precisos.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center">
-                  <div className="mx-auto bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-2 shadow-md">
-                    <div className="text-[#1E5B94] text-2xl font-bold">IT</div>
-                  </div>
-                  <CardTitle className="text-[#1E5B94]">
-                    Escaneamento ITERO
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>
-                    Tecnologia avançada de escaneamento intraoral que substitui
-                    as moldagens convencionais, oferecendo maior precisão e
-                    conforto ao paciente.
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Team Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12 text-[#333333]">
-            Nossa Equipe
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div className="h-64 bg-[#E5F1FB] flex items-center justify-center">
-                  {/* Placeholder for team member image */}
-                  <div className="text-[#1E5B94] text-5xl font-light">Foto</div>
-                </div>
-                <CardHeader>
-                  <CardTitle>Dra. Mônica Silva</CardTitle>
-                  <CardDescription>Diretora Clínica</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#555555]">
-                    Especialista em Radiologia Odontológica com mais de 15 anos
-                    de experiência no diagnóstico por imagem.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div className="h-64 bg-[#E5F1FB] flex items-center justify-center">
-                  {/* Placeholder for team member image */}
-                  <div className="text-[#1E5B94] text-5xl font-light">Foto</div>
-                </div>
-                <CardHeader>
-                  <CardTitle>Dr. Carlos Mendes</CardTitle>
-                  <CardDescription>Radiologista</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#555555]">
-                    Especialista em Tomografia Computadorizada e técnicas
-                    avançadas de diagnóstico por imagem.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div className="h-64 bg-[#E5F1FB] flex items-center justify-center">
-                  {/* Placeholder for team member image */}
-                  <div className="text-[#1E5B94] text-5xl font-light">Foto</div>
-                </div>
-                <CardHeader>
-                  <CardTitle>Ana Oliveira</CardTitle>
-                  <CardDescription>Coordenadora de Atendimento</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#555555]">
-                    Responsável por garantir a excelência no atendimento aos
-                    pacientes e profissionais parceiros.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
+      {/* galeria imagens */}
+      <section className="galeria-digitalx grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#D9D9D9] p-3 rounded-md mb-10">
+        {[3, 1, 4, 2].map((key) => {
+          const imageSrc = `/digitalx/digitalx-${key}.webp`;
+          return (
+            <Image
+              key={key}
+              src={imageSrc}
+              alt="Imagem da galeria da clínica Digital X"
+              width={694}
+              height={463}
+              className="h-auto w-full object-cover rounded-sm hover:scale-110 transition-transform duration-300 ease-in-out cursor-pointer"
+              priority
+              onClick={() => openImage(imageSrc)}
+            />
+          );
+        })}
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#1E5B94] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-semibold mb-6">Conheça Nossa Clínica</h2>
+      <section className="w-4/5 m-auto py-6 bg-[#1E5B94] text-white mb-12 rounded-md text-sm">
+        <div className="container mx-auto text-center flex flex-col gap-y-4">
+          <h2 className="text-2xl font-semibold">Conheça Nossa Clínica</h2>
 
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto">
             Venha conhecer nossa estrutura e tecnologia de ponta para
             diagnóstico por imagem odontológica.
           </p>
@@ -232,7 +142,7 @@ export default function Sobre() {
           <div>
             <Button
               asChild
-              size="lg"
+              size="sm"
               className="bg-white text-[#1E5B94] hover:bg-white/90"
             >
               <Link href="/contato">Agendar Visita</Link>
@@ -240,6 +150,34 @@ export default function Sobre() {
           </div>
         </div>
       </section>
+
+      {/* Fullscreen Image Viewer */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 p-4 transition-opacity duration-300"
+          onClick={closeImage}
+        >
+          <button
+            onClick={closeImage}
+            className="absolute top-5 right-5 text-white text-5xl hover:text-gray-300 transition-colors z-50"
+            aria-label="Fechar imagem"
+          >
+            &times;
+          </button>
+          <div
+            className="relative max-w-[90vw] max-h-[90vh] flex justify-center items-center"
+            onClick={(e) => e.stopPropagation()} // Impede que o clique na imagem feche o modal
+          >
+            <Image
+              src={selectedImage}
+              alt="Imagem da galeria em tela cheia"
+              width={1200}
+              height={800}
+              className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }

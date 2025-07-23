@@ -1,7 +1,7 @@
 export function ExamesRadiologicosSobMedida() {
   return (
     <section className="bg-[#111827]">
-      <div className="container mx-auto sm:px-32 py-16 sm:py-32">
+      <div className="container mx-auto py-16 sm:py-32">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl max-w-3xl mx-auto">
             Exames radiológicos sob medida para o seu consultório, seja qual for
@@ -56,26 +56,26 @@ export function ExamesRadiologicosSobMedida() {
             Atendemos:
           </h3>
           <div className="mt-8 flex justify-center">
-            <div className="text-left grid grid-cols-[40%_40%] sm:grid-cols-[48%_48%] gap-8 text-xs md:text-base mx-auto sm:px-8 w-[90%] sm:w-full justify-center tracking-tighter sm:tracking-normal border-b-white/20 border-b pb-14">
-              <ul className="text-lg text-gray-300 flex flex-col gap-y-2">
-                <li className="flex items-start">
+            <div className="text-left flex flex-row gap-8 sm:gap-16 text-xs md:text-base mx-auto sm:px-8 w-[90%] sm:w-full justify-center tracking-tighter sm:tracking-normal border-b-white/20 border-b pb-14">
+              <ul className="text-lg text-gray-300 flex flex-col gap-y-2 max-w-[160px] md:max-w-[180px]">
+                <li className="flex">
                   <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
                   Dentistas clínicos
                 </li>
-                <li className="flex items-start">
+                <li className="flex">
                   <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
                   Implantodontistas
                 </li>
-                <li className="flex items-start">
+                <li className="flex">
                   <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
                   Cirurgiões bucomaxilofaciais
                 </li>
-                <li className="flex items-start">
+                <li className="flex">
                   <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
                   Ortodontistas
                 </li>
               </ul>
-              <ul className="text-lg text-gray-300 flex flex-col gap-y-2">
+              <ul className="text-lg text-gray-300 flex flex-col gap-y-2 max-w-[160px] md:max-w-[180px]">
                 <li className="flex items-start">
                   <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
                   Endodontistas

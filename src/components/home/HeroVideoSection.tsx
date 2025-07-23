@@ -8,8 +8,24 @@ import HeroButtonColors from "./HeroButtonColors";
 import Image from "next/image";
 import { is } from "date-fns/locale";
 
+const slides = [
+  "/hero-img1.webp",
+  "/hero-img2.webp",
+  "/hero-img3.webp",
+  "/hero-img5.webp",
+];
+
 const HeroVideoSection = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(slideInterval);
+  }, [slides.length]);
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -34,25 +50,22 @@ const HeroVideoSection = () => {
       <div className="py-2 bg-[#E6F0F4] w-full relative h-[calc(80vh-55px)] min-h-[415px]">
         <div className="absolute left-1/2 -translate-x-1/2 bg-[#27A0D0] rounded-md w-full max-w-[1480px] m-auto h-[calc(80vh-75px)] min-h-[390px]"></div>
         <div className="absolute left-1/2 -translate-x-1/2 max-w-[1440px] w-[calc(100%-40px)] m-auto h-[calc(80vh)] -mt-[40px] flex flex-col justify-between overflow-hidden z-20 shadow-[0_4px_10px_rgba(0,0,10,0.6)] rounded-sm bg-white min-h-[470px]">
-          {!isMobile ? (
-            <video
-              src="/video-bg-md.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover"
+          {/* Background Slides */}
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-all duration-1000 ${
+                index === currentSlide
+                  ? "opacity-100 scale-100"
+                  : "opacity-0 scale-110"
+              }`}
+              style={{
+                backgroundImage: `url('${slide}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             />
-          ) : (
-            <video
-              src="/video-bg-2xl.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-          )}
+          ))}
 
           {/* div degrade */}
           <div
@@ -79,24 +92,19 @@ const HeroVideoSection = () => {
                   height={0}
                   alt={"Logo Digital X"}
                   src={"/logo-digitalx.svg"}
-                  className="w-1/3 md:w-[180px]"
+                  className="w-[135px] md:w-[180px] min-w-175px]"
                 />
-                <h2
-                  className="text-digital-blue font-semibold 
-            text-2xl leading-7 tracking-wider text-center 
-            sm:text-3xl md:text-3xl sm:leading-10 md:tracking-tight md:leading-7 sm:tracking-tighter sm:text-right"
-                >
-                  Tecnologia e precisão <br className="block 2lg:hidden" />
-                  para seu diagnóstico
+                <h2 className="flex flex-col items-center text-center font-poppins">
+                  <span className="text-[24px] font-extrabold  tracking-wider text-gray-600 -mb-1">
+                    REFERÊNCIA EM
+                  </span>
+                  <span className="text-[20px] font-normal tracking-tight text-gray-700">
+                    INOVAÇÃO E QUALIDADE
+                  </span>
+                  <span className="text-[15px] text-sky-700 font-semibold tracking-tight">
+                    DIAGNÓSTICO ODONTOLÓGICO.
+                  </span>
                 </h2>
-                <p
-                  className="text-[15px] mx-auto font-light leading-4 text-center  max-w-[490px]
-            sm:text-[18px] sm:leading-5 sm:text-right
-            md:text-[19px]"
-                >
-                  Realizamos exames de imagem com equipamentos de ponta para
-                  garantir a máxima qualidade e segurança.
-                </p>
                 <Button
                   onClick={() => handleCTAClick("contato")}
                   className="bg-[#078080] hover:bg-[#066666] text-white font-semibold py-4 px-8 text-lg group mt-1"
