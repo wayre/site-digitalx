@@ -50,57 +50,6 @@ export function ExamesRadiologicosSobMedida() {
             </p>
           </div>
         </div>
-
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-white md:text-3xl">
-            Atendemos:
-          </h3>
-          <div className="mt-8 flex justify-center">
-            <div className="text-left flex flex-row gap-8 sm:gap-16 text-xs md:text-base mx-auto sm:px-8 w-[90%] sm:w-full justify-center tracking-tighter sm:tracking-normal border-b-white/20 border-b pb-14">
-              <ul className="text-lg text-gray-300 flex flex-col gap-y-2 max-w-[160px] md:max-w-[180px]">
-                <li className="flex">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Dentistas clínicos
-                </li>
-                <li className="flex">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Implantodontistas
-                </li>
-                <li className="flex">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Cirurgiões bucomaxilofaciais
-                </li>
-                <li className="flex">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Ortodontistas
-                </li>
-              </ul>
-              <ul className="text-lg text-gray-300 flex flex-col gap-y-2 max-w-[160px] md:max-w-[180px]">
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Endodontistas
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Periodontistas
-                </li>
-                <li className="flex items-start">
-                  <span className="mr-3 mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-green-500"></span>
-                  Outros que trabalham com casos de DTM
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-10">
-            <a
-              href="/whatsapp"
-              target="_blank"
-              className="inline-block rounded-lg bg-blue-600 px-8 py-4 text-lg font-bold text-white transition-colors duration-300 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            >
-              Entre em contato
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
