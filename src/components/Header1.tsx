@@ -56,7 +56,7 @@ const Header1 = () => {
     // { id: "", label: "HOME" },
     { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
-    { id: "servicos", label: "SERVIÇOS" },
+    { id: "downloads", label: "DOWNLOADS" },
   ];
   const navLinksRight = [
     { id: "convenios", label: "CONVÊNIOS" },

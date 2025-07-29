@@ -8,7 +8,7 @@ import HeaderInternas from "@/components/HeroInternas";
 import Aside from "@/components/Aside";
 import ContactSection from "@/components/home/ContactSection";
 
-export default function CentralDeAjudaPage() {
+export default function DownloadsPage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,8 +40,8 @@ export default function CentralDeAjudaPage() {
     <>
       <Header />
       <HeaderInternas
-        title="Nossos Serviços"
-        subtitle="Diagnósticos Radiológicos Odontológicos por Imagem"
+        title="Downloads"
+        subtitle="Baixe programas uteis e outras informações relacionadas"
       />
 
       <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
@@ -56,9 +56,6 @@ export default function CentralDeAjudaPage() {
           {/* aside - coluna 2 */}
           <Aside />
         </div>
-
-        {/* Contato */}
-        <ContactSection />
       </main>
       <Footer />
     </>

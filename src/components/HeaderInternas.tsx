@@ -57,7 +57,7 @@ const HeaderInternas = () => {
     { id: "home", label: "HOME" },
     { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
-    { id: "servicos", label: "SERVIÇOS" },
+    { id: "downloads", label: "DOWNLOADS" },
     { id: "convenios", label: "CONVÊNIOS" },
     { id: "central-de-ajuda", label: "SAC" },
     { id: "contato", label: "CONTATO" },

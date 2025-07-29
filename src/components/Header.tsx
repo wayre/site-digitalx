@@ -59,7 +59,7 @@ const Header = () => {
   const navLinks = [
     { id: "sobre", label: "DIGITAL X" },
     { id: "exames", label: "EXAMES" },
-    { id: "servicos", label: "SERVIÇOS" },
+    { id: "downloads", label: "DOWNLOADS" },
     { id: "convenios", label: "CONVÊNIOS" },
     { id: "central-de-ajuda", label: "CENTRAL DE AJUDA" },
     { id: "contato", label: "CONTATO" },
