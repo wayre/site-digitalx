@@ -122,16 +122,16 @@ const ExamCarousel = () => {
               {examItems.map((item, index) => (
                 <CarouselItem
                   key={item.id}
-                  className="pl-4 md:basis-1/2 lg:basis-1/4"
+                  className="pl-4 basis-1/2 md:basis-1/3  lg:basis-1/4 gap-0"
                 >
-                  <div className="p-1">
+                  <div className="">
                     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                       <div
                         className="w-full h-48 bg-cover bg-center"
                         style={{ backgroundImage: `url(${item.imageUrl})` }}
                       />
                       <CardHeader className="p-4 pb-1">
-                        <CardTitle className="text-lg font-bold line-clamp-2  leading-5">
+                        <CardTitle className="text-[13px] sm:text-lg font-bold line-clamp-2  leading-5">
                           {item.title}
                         </CardTitle>
                       </CardHeader>

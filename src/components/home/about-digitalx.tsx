@@ -1,5 +1,6 @@
 // "use client";
 // src/components/about-digitalx.tsx
+import { Building, ScanLine, Clock } from "lucide-react";
 
 import Image from "next/image";
 import {
@@ -28,15 +29,15 @@ interface FeatureItem {
 const featuresData: FeatureItem[] = [
   {
     id: 1,
-    text: "Oferecemos exames digitais com imagens de alta definição e baixa exposição à radiação.",
+    text: "Centro moderno de radiologia odontológica, com foco em precisão e conforto.",
   },
   {
     id: 2,
-    text: "Realizamos radiografias intra e extraorais, além de tomografia Cone Beam com o equipamento Morita Veraview X800.",
+    text: "Exames digitais com alta definição e baixa exposição à radiação.",
   },
   {
     id: 3,
-    text: "Atendemos diversas especialidades com agilidade, biossegurança e laudos confiáveis.",
+    text: "Radiografias intra e extraorais, e tomografia Cone Beam (Morita Veraview X800).",
   },
 ];
 const cardData: CardItem[] = [
@@ -71,8 +72,11 @@ const cardData: CardItem[] = [
 
 export const AboutDigitalX = () => {
   return (
-    <section className="relative w-full bg-[#F8F9FA] py-14 sm:py-32" id="sobre">
-      <div className="container mx-auto px-6">
+    <section
+      className="relative w-full min-h-[680px] md:h-screen flex flex-col items-center justify-center bg-[#F8F9FA] py-14 sm:py-32 gap-10"
+      id="sobre"
+    >
+      <div className="container mx-auto p-6 max-w-[900px]">
         <div className="grid grid-cols-1 items-center gap-x-16 gap-y-12 md:grid-cols-[43%_1fr] md:gap-2">
           <div className="hidden md:block">
             <div className="flex transform-gpu fade-in justify-center transition-transform duration-700 ease-out hover:scale-105">
@@ -86,7 +90,7 @@ export const AboutDigitalX = () => {
             </div>
           </div>
 
-          <div className="flex flex-col animate-fade-in-left">
+          <div className="flex flex-col animate-fade-in-left gap-y-4 text-gray-700">
             <div className="grid grid-cols-[40%_1fr] md:grid-cols-1 items-center gap-1">
               <Image
                 src="/logo-about-digitalx.webp"
@@ -102,9 +106,11 @@ export const AboutDigitalX = () => {
                       Sobre Nós
                     </div>
 
-                    <h1 className="mt-2 text-base tracking-wide text-gray-800 sm:text-2xl">
-                      <span className="mt-3 text-lg leading-5 text-gray-600">
-                        Somos um centro moderno de radiologia odontológica.
+                    <h1 className="mt-2 text-base tracking-wide sm:text-2xl">
+                      <span className="mt-3 text-2lg leading-5 font-light">
+                        Somos um centro moderno de{" "}
+                        <br className="hidden sm:inline-block" />
+                        radiologia odontológica.
                       </span>
                     </h1>
                   </div>
@@ -112,51 +118,42 @@ export const AboutDigitalX = () => {
               </div>
             </div>
 
-            <ul className="w-[90%] mt-6 space-y-4 ml-4 max-w-[650px]">
-              {featuresData.map((feature) => (
-                <li key={feature.id} className="flex items-start gap-x-3">
-                  <CheckCircle2
-                    className="mt-1 h-5 w-5 flex-none text-teal-500"
-                    aria-hidden="true"
-                  />
-                  <span className="text-base text-gray-600">
-                    {feature.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left uppercase font-semibold">
-              Digital X. Imagem clara, diagnóstico seguro
+            <p className="text-center md:text-left">
+              Na Digital X, oferecemos exames radiológicos odontológicos com
+              alta definição, baixa radiação e laudos confiáveis. Com tecnologia
+              avançada e agilidade no atendimento, somos parceiros do
+              cirurgião-dentista no diagnóstico seguro e preciso.
             </p>
           </div>
         </div>
       </div>
 
       {/* Usamos Grid para um layout responsivo que se ajusta automaticamente. */}
-      <div className="box-itens-sobre container pt-8 m-auto">
-        <div className="grid grid-cols-3 gap-1 sm:gap-3 w-full p-2 lg:gap-8 m-auto max-w-[1000px]">
-          {cardData.map((card) => (
+      <div className="flex flex-row justify-center gap-4 sm:gap-x-3 w-full p-2 lg:gap-x-8 max-w-[1000px] items-start px-4">
+        {cardData.map((card) => (
+          <div
+            key={card.id}
+            className="box-itens-sobre-card flex flex-col items-center text-center p-1 sm:p-3 lg:p-8 bg-white rounded-2xl shadow-xl hover:shadow-lg transition-shadow duration-300 gap-1 min-w-[100px] min-h-32 px-4 md:max-w-[212px] lg:max-w-none"
+          >
             <div
-              key={card.id}
-              className="box-itens-sobre-card flex flex-col items-center text-center p-1 sm:p-3 lg:p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 gap-1"
+              className={`flex h-20 w-20 items-center justify-center rounded-full ${card.bgColor} scale-75 sm:scale-100`}
             >
-              <div
-                className={`flex h-20 w-20 items-center justify-center rounded-full ${card.bgColor} scale-75 sm:scale-100`}
-              >
-                <card.Icon className={`h-10 w-10 ${card.iconColor}`} />
-              </div>
-
-              <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] font-semibold tracking-wider uppercase text-gray-800">
-                {card.title}
-              </h3>
-              <p className="hidden sm:block text-sm text-gray-600 leading-relaxed">
-                {card.description}
-              </p>
+              <card.Icon className={`h-10 w-10 ${card.iconColor}`} />
             </div>
-          ))}
-        </div>
+
+            <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] font-semibold tracking-wider uppercase text-gray-800 overflow-hidden leading-3">
+              {card.title}
+            </h3>
+            <p className="hidden sm:block text-sm text-gray-600 leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+        ))}
       </div>
+
+      <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left uppercase pb-12">
+        Digital X. Imagem clara, diagnóstico seguro
+      </p>
     </section>
   );
 };

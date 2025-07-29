@@ -4,7 +4,7 @@ import Link from "next/link";
 const PartnerBanner = () => {
   return (
     // Container principal com a cor de fundo solicitada (usando valor arbitrário do Tailwind)
-    <section className="bg-[#DBE1DA]">
+    <section className="bg-[#DBE1DA] min-h-[390px]">
       <div className="container mx-auto">
         {/* Grid responsivo:
           - 1 coluna em telas pequenas (padrão)

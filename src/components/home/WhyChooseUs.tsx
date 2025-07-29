@@ -25,10 +25,10 @@ const featuresData = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gray-50 py-16 sm:py-24">
+    <section className="bg-gray-50 py-16 sm:py-24 md:h-screen flex flex-col items-center justify-center min-h-[575px]">
       <div className="container mx-auto px-4">
         {/* --- SEÇÃO SUPERIOR: IMAGEM E TEXTO --- */}
-        <div className="w-5/6 m-auto grid grid-cols-[100px_1fr] sm:grid-cols-[28%_1fr] gap-8 sm:gap-12 lg:gap-16 items-center">
+        <div className="w-5/6 m-auto grid grid-cols-1 sm:grid-cols-[28%_1fr] gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Coluna da Imagem */}
           <div className="flex justify-center">
             {/* NOTA: Substitua pelo caminho da sua imagem */}
@@ -37,12 +37,12 @@ const WhyChooseUs = () => {
               alt="Equipamento de Tomografia Cone Beam"
               width={400}
               height={400}
-              className="object-contain max-h-[150px] lg:max-h-[350px]"
+              className="hidden sm:block w-full object-contain max-h-[150px] lg:max-h-[350px]"
             />
           </div>
 
           {/* Coluna de Texto */}
-          <div className="relative">
+          <div className="relative text-center sm:text-left">
             <div className="relative z-10">
               <p className="text-[0.7rem] font-semibold text-teal-600 uppercase tracking-wider">
                 Melhor Escolha
@@ -61,14 +61,14 @@ const WhyChooseUs = () => {
           </div>
         </div>
         {/* Coluna de Texto small devices */}
-        {/* <div>
-          <p className="block md:hidden w-[79%] m-auto mt-8 text-gray-600 leading-5 tracking-tight">
+        <div>
+          <p className="block md:hidden w-[79%] m-auto mt-8 text-gray-600 leading-5 tracking-tight text-center">
             Na Digital X, unimos tecnologia de ponta e precisão diagnóstica em
             um centro radiológico odontológico moderno, que oferece exames
             digitais e tomografia Cone Beam com mínima exposição à radiação e
             máxima qualidade de imagem para todas as especialidades.
           </p>
-        </div> */}
+        </div>
 
         {/* --- SEÇÃO INFERIOR: DIFERENCIAIS --- */}
         <div className="w-5/6 m-auto mt-20 grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-12">
