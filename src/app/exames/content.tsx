@@ -14,12 +14,14 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Exams = () => {
   const examTypes = [
@@ -40,14 +42,17 @@ const Exams = () => {
       ],
     },
     {
-      title: "Tomografia Expressa",
-      description: "Laudos e imagens disponíveis em até 4 horas",
-      icon: <Zap className="h-8 w-8" />,
+      title: "Radiografias Odontológicas",
+      description: "Ampla gama de radiografias extrabucais e intrabucais",
+      icon: <FileText className="h-8 w-8" />,
       color: "from-purple-500 to-pink-500",
       features: [
-        "Entrega em até 4 horas",
-        "Segunda a sexta, 8h às 14h30",
-        "Máxima agilidade",
+        "Panorâmica",
+        "Telerradiografia",
+        "Periapical",
+        "Interproximal",
+        "Oclusal",
+        "ATM",
       ],
     },
     {
@@ -60,21 +65,21 @@ const Exams = () => {
         "Arquivo STL",
         "Alta precisão",
         "Conforto para o paciente",
-        "Invisalign® compatível",
+        "Invisalign®",
       ],
     },
     {
-      title: "Radiografias Odontológicas",
-      description: "Ampla gama de radiografias extrabucais e intrabucais",
-      icon: <FileText className="h-8 w-8" />,
+      title: "Documentação para Alinhadores",
+      description:
+        "Exames completos para planejamento preciso de alinhadores dentais",
+      icon: <Camera className="h-8 w-8" />,
       color: "from-orange-500 to-red-500",
       features: [
-        "Panorâmica",
-        "Telerradiografia",
-        "Periapical",
-        "Interproximal",
-        "Oclusal",
-        "ATM",
+        "X Aligner",
+        "Invisalign®",
+        "Clear Aligner",
+        "Esthetic Aligner",
+        "Easysolution",
       ],
     },
   ];
@@ -84,23 +89,21 @@ const Exams = () => {
       title: "Documentação Padrão",
       items: [
         "Radiografia Panorâmica",
-        "Telerradiografia Lateral e Frontal",
-        "Radiografia Carpal (até 15 anos)",
-        "Complemento Periapical",
-        "Escaneamento Intraoral",
-        "Modelos de estudo e trabalho",
+        "Telerradiografia Lateral",
+        "Modelos de estudo",
         "Fotografias digitais",
         "Laudos e traçados cefalométricos",
       ],
     },
+
     {
-      title: "Documentação para Alinhadores",
+      title: "Documentação com Escaneamento",
       items: [
-        "X Aligner",
-        "Invisalign®",
-        "Clear Aligner",
-        "Esthetic Aligner",
-        "Easysolution",
+        "Radiografia Panorâmica",
+        "Telerradiografia Lateral",
+        "Escaneamento Intra-oral",
+        "Fotografias digitais",
+        "Laudos e traçados cefalométricos",
       ],
     },
   ];
@@ -132,28 +135,27 @@ const Exams = () => {
   return (
     <div>
       {/* Main Exam Types */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="text-center sm:text-left mb-16 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">
               Nossos Serviços
             </h2>
             <p className="text-lg text-gray-800 max-w-3xl mx-auto leading-relaxed">
-              Na Digital X Diagnóstico por Imagem, oferecemos uma ampla gama de
-              exames odontológicos com tecnologia avançada, rapidez na entrega e
-              conforto para o paciente.
+              Na Digital X, oferecemos uma ampla gama de exames odontológicos
+              com tecnologia avançada e conforto para o paciente.
             </p>
             <p className="text-xl text-gray-600 max-w-2xl mt-12">
               Conheça nossa ampla gama de exames especializados
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="flex flex-col md:flex-row justify-center gap-y-12 flex-wrap">
             {examTypes.map((exam, index) => (
               <div
                 key={exam.title}
                 className={cn(
-                  "group animate-in fade-in duration-500",
+                  "w-full md:w-[45%] ml-4 group animate-in fade-in duration-500",
                   index % 2 === 0
                     ? "slide-in-from-left-8"
                     : "slide-in-from-right-8"
@@ -197,7 +199,7 @@ const Exams = () => {
       </section>
 
       {/* Documentation Section */}
-      <section className="py-2">
+      <section className="py-2 mb-12">
         <div className="container mx-auto px-4">
           <div className="text-center mb-2 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">
@@ -206,11 +208,11 @@ const Exams = () => {
             <p className="text-xl text-gray-600">Completa e especializada</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-y-8 mx-auto">
             {documentationTypes.map((doc, index) => (
               <div
                 key={doc.title}
-                className="animate-in fade-in slide-in-from-bottom-8 duration-500"
+                className="w-full sm:w-[48%] sm:ml-2 animate-in fade-in slide-in-from-bottom-8 duration-500"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <Card className="h-full border-0 shadow-lg">
@@ -240,47 +242,84 @@ const Exams = () => {
         </div>
       </section>
 
-      {/* Advanced Services */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-5 duration-500">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Serviços Avançados
-            </h2>
-            <p className="text-xl text-gray-600">
-              Tecnologia de ponta para diagnósticos precisos
-            </p>
+      {/* Radiografias */}
+      <div id="radiografias" className="mb-20 w-full md:w-[90%] mx-auto">
+        <h3 className="text-2xl font-semibold mb-8 text-[#1E5B94] text-center">
+          Radiografias
+        </h3>
+
+        <div className="w-[80%] md:w-full mx-auto flex flex-col md:flex-row flex-wrap gap-y-4 lg:gap-y-12 justify-center gap-2">
+          <div className="w-full md:w-[48%] max-w-[320px] mx-auto">
+            <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="h-48 bg-[#E5F1FB] flex items-center justify-center">
+                <Image
+                  src="/exames/RadiografiaPeriapicalConvecionaleDigital.webp"
+                  alt="Profissional da saúde sorrindo em um consultório"
+                  width={270}
+                  height={158}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>Radiografias Periapicais</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="mb-4">
+                  Exames detalhados para visualização de dentes individuais e
+                  estruturas adjacentes, incluindo raízes e osso alveolar.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advancedServices.map((service, index) => (
-              <div
-                key={service.title}
-                className="group animate-in fade-in slide-in-from-bottom-8 duration-500"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <Card className="h-full border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-center mb-4">
-                      <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full group-hover:scale-110 transition-transform duration-300">
-                        {service.icon}
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg text-gray-800">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 text-sm">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
+          <div className="w-full md:w-[48%] max-w-[320px] mx-auto">
+            <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="h-48 bg-[#E5F1FB] flex items-center justify-center">
+                <Image
+                  src="/exames/RadiografiaPanoramica.webp"
+                  alt="Profissional da saúde sorrindo em um consultório"
+                  width={270}
+                  height={158}
+                  className="h-full w-full object-cover"
+                />
               </div>
-            ))}
+              <CardHeader>
+                <CardTitle>Radiografia Panorâmica</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="mb-4">
+                  Visão completa de toda a arcada dentária, maxilares,
+                  articulações e estruturas adjacentes em uma única imagem.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="w-full md:w-[48%] max-w-[320px] mx-auto md:last:w-2/3">
+            <Card className="h-full shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+              <div className="h-48 bg-[#E5F1FB] flex items-center justify-center">
+                <Image
+                  src="/exames/Telerradiografialateralefrontal.webp"
+                  alt="Profissional da saúde sorrindo em um consultório"
+                  width={270}
+                  height={158}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle>Radiografia de Perfil</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="mb-4">
+                  Também conhecida como Telerradiografia, permite a análise do
+                  perfil facial, relações entre maxilares e posicionamento
+                  dentário.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Software Section */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
@@ -299,10 +338,7 @@ const Exams = () => {
                   Dental Slice
                 </Badge>
                 <Badge variant="outline" className="text-sm p-3">
-                  ImplantViewer
-                </Badge>
-                <Badge variant="outline" className="text-sm p-3">
-                  CareStream
+                  Software One Volume Viewer
                 </Badge>
                 <Badge variant="outline" className="text-sm p-3">
                   DICOM
