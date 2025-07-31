@@ -145,11 +145,11 @@
   }
 
   .footer-link {
-    @apply text-sm text-gray-600 hover:text-digitalx-500 transition-colors duration-300 inline-block mb-1;
+    @apply text-sm text-gray-400 hover:text-digitalx-500 transition-colors duration-300 inline-block mb-1;
   }
 
   .footer-heading {
-    @apply text-gray-800 font-bold text-base mb-4;
+    @apply text-gray-600 font-bold text-base mb-4;
   }
 
   .ripple {
@@ -223,8 +223,6 @@
     display: none !important;
   }
 } */
-
-
 
 @layer base {
   * {
