@@ -46,7 +46,7 @@ const ContactSection = () => {
           {/* Button 1: Borda branca, texto branco */}
           <Button
             onClick={() =>
-              setAction({ url: "tel:+556730282890", target: "_self" })
+              setAction({ url: "tel:6730282890", target: "_self" })
             }
             variant="outline"
             className="border-2 border-white text-stone-800 hover:bg-white hover:text-medical-green px-8 py-4 text-lg font-opensans font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
@@ -77,21 +77,9 @@ const ContactSection = () => {
             }
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-opensans font-semibold transition-all duration-300 hover:scale-105"
           >
-            💬 WhatsApp
+            WhatsApp
           </Button>
         </div>
-      </div>
-
-      {/* Floating WhatsApp button com pulsar suave */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <Button
-          onClick={() =>
-            setAction({ url: "https://wa.me/556730282890", target: "_blank" })
-          }
-          className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg animate-pulse-gentle"
-        >
-          💬
-        </Button>
       </div>
     </section>
   );

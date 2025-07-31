@@ -90,7 +90,7 @@ const config: Config = {
           transp: "#bcd5e742",
         },
         "digital-blue": "#2b6283",
-        "medical-green": "#146758",
+        "medical-green": "#075985",
         "light-gray": "#F5F5F5",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

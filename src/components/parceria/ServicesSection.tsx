@@ -109,7 +109,7 @@ const ServicesSection = () => {
                   </div>
                 ))}
               </div>
-              <Button className="bg-medical-green hover:bg-green-600 text-white px-6 py-2">
+              <Button className="bg-medical-green hover:bg-sky-600 text-white px-6 py-2">
                 Saiba Mais
               </Button>
             </div>
