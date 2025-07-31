@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Phone } from "lucide-react";
 
 function Aside() {
   return (
@@ -67,6 +68,14 @@ function Aside() {
             E também aos <b>Sábado</b> as 9h às 13h
           </span>
         </div>
+
+        {/* Telefone */}
+        <Link href="tel:6730282890">
+          <div className="flex items-start space-x-4 justify-center mt-3">
+            <Phone className="h-6 w-6 text-[#1E5B94]" />
+            <p className="text-[#555555]">(67) 3028 2890</p>
+          </div>
+        </Link>
       </div>
     </section>
   );

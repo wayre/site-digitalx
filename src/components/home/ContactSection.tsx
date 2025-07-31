@@ -234,7 +234,7 @@ const ContactSection = () => {
                     <p className="font-medium">Telefone:</p>
                     <p className="text-gray-600 flex flex-col">
                       <Link
-                        href="tel:+556730282890"
+                        href="tel:6730282890"
                         className="hover:text-digitalx-500"
                       >
                         (67) 3028-2890

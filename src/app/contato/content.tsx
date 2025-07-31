@@ -67,7 +67,9 @@ export default function Contato() {
                     <h3 className="text-xl font-medium text-[#333333] mb-2">
                       Telefone
                     </h3>
-                    <p className="text-[#555555]">(67) 3028 2890</p>
+                    <Link href="tel:6730282890">
+                      <p className="text-[#555555]">(67) 3028 2890</p>
+                    </Link>
                   </div>
                 </div>
 
@@ -93,7 +95,7 @@ export default function Contato() {
 
                 <div className="pt-6">
                   <Button asChild className="bg-[#25D366] hover:bg-[#20BD5A]">
-                    <Link href="https://wa.me/5567XXXXXXXX">
+                    <Link href="/whatsapp" target="_blank">
                       Agendar Consulta
                     </Link>
                   </Button>
