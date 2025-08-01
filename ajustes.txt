@@ -1,0 +1,35 @@
+1. Remover imagem do botao da hero
+2. Mudar de DIAGNÓSTICO ODONTOLÓGICO para NO DIAGNÓSTICO ODONTOLÓGICO.
+
+
+3. Alterar: Na Digital X, oferecemos exames radiológicos odontológicos com alta definição, baixa radiação e laudos confiáveis. Com tecnologia avançada e agilidade no atendimento, somos parceiros do cirurgião-dentista no diagnóstico seguro e preciso.
+(remover Na digital X)
+
+
+Remover em  Parceria:
+Entre em contato com nossa Central de Atendimento no telefone (57) 3026-2890 para cadastrar suas informações.
+
+Seja Parceiro ( e botao)
+
+
+4. Trocar a imagem do morita por algo mais humanizado.
+
+
+Pagina Sobre
+Remover retangula degrade no tiutlo
+remover texto: "Na digital X,"
+remover o fundo azul do CTA para branco e botao na cor padrao  de botoes definido.
+
+
+
+Convenios:
+subtitulo remover uppercase
+diminuir espacamento de linha no texto ao lado da foto
+
+
+Home: Porque somos a escolha certa:
+Mudar texto de:
+Nossa equipe de radiologistas é liderada pela Dra. Mônica, com extensa experiência em diagnóstico por imagem.
+Para: Nossa equipe possui extensa experiencia de em diagnostico por imagens.
+
+
