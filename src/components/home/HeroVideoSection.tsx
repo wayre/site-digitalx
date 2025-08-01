@@ -12,7 +12,6 @@ const slides = [
   "/hero-img1.webp",
   "/hero-img2.webp",
   "/hero-img3.webp",
-  "/hero-img5.webp",
 ];
 
 const HeroVideoSection = () => {
@@ -54,11 +53,10 @@ const HeroVideoSection = () => {
           {slides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-all duration-1000 ${
-                index === currentSlide
-                  ? "opacity-100 scale-100"
-                  : "opacity-0 scale-110"
-              }`}
+              className={`absolute inset-0 transition-all duration-1000 ${index === currentSlide
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-110"
+                }`}
               style={{
                 backgroundImage: `url('${slide}')`,
                 backgroundSize: "cover",
@@ -78,41 +76,24 @@ const HeroVideoSection = () => {
           {/* Main content wrapper */}
           <div className="relative z-20 h-full w-full flex flex-col justify-between">
             <div
-              className="flex-grow flex items-end text-black 
-        justify-center text-center 
-        sm:justify-end sm:text-right sm:px-1"
+              className="flex-grow flex items-end text-black justify-center sm:justify-end sm:text-right text-center"
             >
               <div
-                className="relative mb-10 flex flex-col  
-            gap-y-2 px-8 items-center 
-          sm:px-14 sm:pl-[30%]  sm:items-end"
+                className="relative mb-10 flex flex-col gap-y-2 px-8 items-center sm:px-10 sm:pl-[30%]"
               >
                 <Image
                   width={300}
                   height={0}
                   alt={"Logo Digital X"}
                   src={"/logo-digitalx.svg"}
-                  className="w-[135px] md:w-[180px] min-w-175px]"
+                  className="w-[195px] md:w-[270px] min-w-175px]"
                 />
-                <h2 className="flex flex-col items-center text-center font-poppins">
-                  <span className="text-[24px] font-extrabold  tracking-wider text-gray-600 -mb-1">
-                    REFERÊNCIA EM
-                  </span>
-                  <span className="text-[20px] font-normal tracking-tight text-gray-700">
-                    INOVAÇÃO E QUALIDADE
-                  </span>
-                  <span className="text-[15px] text-sky-700 font-semibold tracking-tight">
-                    DIAGNÓSTICO ODONTOLÓGICO.
+                <h2 className="flex flex-col items-center text-center font-poppins max-w-[350px]">
+                  <span className="text-[16px] sm:text-[22px] font-bold  tracking-tight text-gray-600 -mb-1  text-center leading-4 sm:leading-6">
+                    REFERÊNCIA EM INOVAÇÃO E QUALIDADE NO DIAGNÓSTICO ODONTOLÓGICO.
                   </span>
                 </h2>
-                <Button
-                  onClick={() => handleCTAClick("contato")}
-                  className="bg-[#078080] hover:bg-[#066666] text-white font-semibold py-4 px-8 text-lg group mt-1"
-                  size="sm"
-                >
-                  Agende via WhatsApp
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
+
               </div>
             </div>
 
