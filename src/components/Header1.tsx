@@ -52,19 +52,15 @@ const Header1 = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const navLinksLeft = [
+  const navLinks = [
     // { id: "", label: "HOME" },
-    { id: "sobre", label: "DIGITAL X" },
+    { id: "sobre", label: "SOBRE" },
     { id: "exames", label: "EXAMES" },
     { id: "downloads", label: "DOWNLOADS" },
-  ];
-  const navLinksRight = [
     { id: "convenios", label: "CONVÊNIOS" },
     { id: "central-de-ajuda", label: "SAC" },
     { id: "contato", label: "CONTATO" },
   ];
-
-  const navLinks = [...navLinksLeft, ...navLinksRight];
 
   return (
     <>
@@ -79,37 +75,24 @@ const Header1 = () => {
         <div
           className={cn(
             "flex flex-row",
-            "flex-row justify-center md:justify-between items-center w-full text-xs py-2 px-3 border-b-gray-200 border-b max-w-[1480px] m-auto",
+            "flex-row justify-center md:justify-center items-center w-full text-xs py-2 px-3 border-b-gray-200 border-b max-w-[1480px] m-auto",
             isAtTop ? "hidden md:flex" : "hidden"
           )}
         >
-          <div className="hidden md:flex flex-row items-center tracking-tighter text-gray-500">
+          <div className="hidden md:flex flex-row items-center justify-center tracking-tighter text-gray-500">
             <MapPin className="h-3 w-3 ml-2 mr-1" />
-            <div>R. Treze de Junho, 499 - Campo Grande/MS</div>
+            <div className="mt-[2px]">R. Treze de Junho, 499 - Campo Grande/MS</div>
             <PhoneIcon className="h-3 w-3 ml-2 mr-1" />
-            <div>(67) 3028-2890</div>
+            <div className="mt-[2px]">(67) 3028-2890</div>
           </div>
-          <div className="flex flex-row gap-2">
-            <Link
-              href="/solicitacao-online"
-              className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
-            >
-              Solicitação Online
-            </Link>
-            <Link
-              href="http://189.7.79.145:8090/account/login"
-              target="_blank"
-              className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
-            >
-              Área do dentista
-            </Link>
-          </div>
+
         </div>
 
         {/* Main Menu */}
         <div
           className={cn(
-            "flex flex-row w-full max-w-[1480px] m-auto px-8 pt-4 pb-2"
+            "flex flex-row w-full max-w-[1480px] m-auto px-4 sm:px-6 pb-2",
+            isScrolled ? "mt-4" : "mt-6"
           )}
         >
           {/* nav menu */}
@@ -119,21 +102,11 @@ const Header1 = () => {
               "w-full text-center justify-between flex items-center font-bold text-base text-gray-900 uppercase tracking-wide whitespace-nowrap"
             )}
           >
-            {/* navleft */}
-            <div className="hidden md:block">
-              <ul className="flex gap-x-5">
-                {navLinksLeft.map((item) => (
-                  <li key={item.id} className="min-w-[73px]">
-                    <Link href={`/${item.id}`} className="hover:text-gray-700 ">
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             {/* logo */}
-            <Link href="/" className="font-bold z-50">
+            <Link href="/" className={cn(
+              "font-bold z-50",
+              isScrolled ? "" : "md:hidden"
+            )}>
               <Image
                 src="/logo-digitalx.svg"
                 alt="Digital X"
@@ -143,12 +116,12 @@ const Header1 = () => {
               />
             </Link>
 
-            {/* navRight */}
-            <div className="hidden md:block">
-              <ul className="flex gap-x-5">
-                {navLinksRight.map((item) => (
-                  <li key={item.id}>
-                    <Link href={`/${item.id}`} className="hover:text-gray-700">
+            {/* navLinks */}
+            <div className="hidden md:block tracking-normal">
+              <ul className="flex text-[12px]">
+                {navLinks.map((item) => (
+                  <li key={item.id} className="flex items-center">
+                    <Link href={`/${item.id}`} className="hover:text-gray-700 border-y-2 border-transparent hover:border-gray-300 transition-all duration-[1600ms] py-1 px-2">
                       {item.label}
                     </Link>
                   </li>
@@ -156,9 +129,26 @@ const Header1 = () => {
               </ul>
             </div>
 
+            {/* buttons rapidos */}
+            <div className="md:w-[160px] lg:w-auto flex flex-row gap-2 uppercase leading-3 text-[10px] flex-wrap md:flex-nowrap justify-end mr-4 sm:mr-0">
+              <Link
+                href="/solicitacao-online"
+                className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
+              >
+                Solicitação Online
+              </Link>
+              <Link
+                href="http://189.7.79.145:8090/account/login"
+                target="_blank"
+                className="bg-[#1AFBFF] hover:bg-[#36d7da] py-1 px-3 rounded-md"
+              >
+                Acessar Exames
+              </Link>
+            </div>
+
             <button
               onClick={toggleMenu}
-              className="block md:hidden focus:outline-none z-50"
+              className="block md:hidden focus:outline-none z-50 mr-3"
               aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -203,7 +193,7 @@ const Header1 = () => {
                 href="http://189.7.79.145:8090/account/login"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Área do Dentista
+                Acessar Exames
               </Link>
             </Button>
           </nav>

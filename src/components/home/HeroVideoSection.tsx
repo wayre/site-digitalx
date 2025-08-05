@@ -45,7 +45,7 @@ const HeroVideoSection = () => {
   };
 
   return (
-    <section className="mt-[130px] md:mt-[167px] flex flex-col relative pb-12">
+    <section className="mt-[130px] md:mt-[132px] flex flex-col relative pb-12 bg-[#f8f9fa]">
       <div className="py-2 bg-[#E6F0F4] w-full relative h-[calc(80vh-55px)] min-h-[415px]">
         <div className="absolute left-1/2 -translate-x-1/2 bg-[#27A0D0] rounded-md w-full max-w-[1480px] m-auto h-[calc(80vh-75px)] min-h-[390px]"></div>
         <div className="absolute left-1/2 -translate-x-1/2 max-w-[1440px] w-[calc(100%-40px)] m-auto h-[calc(80vh)] -mt-[40px] flex flex-col justify-between overflow-hidden z-20 shadow-[0_4px_10px_rgba(0,0,10,0.6)] rounded-sm bg-white min-h-[470px]">
@@ -89,7 +89,7 @@ const HeroVideoSection = () => {
                   className="w-[195px] md:w-[270px] min-w-175px]"
                 />
                 <h2 className="flex flex-col items-center text-center font-poppins max-w-[350px]">
-                  <span className="text-[16px] sm:text-[22px] font-bold  tracking-tight text-gray-600 -mb-1  text-center leading-4 sm:leading-6">
+                  <span className="text-[16px] sm:text-[18px] font-bold  tracking-tight text-gray-600 -mb-1  text-center leading-4 sm:leading-6 mx-1">
                     REFERÊNCIA EM INOVAÇÃO E QUALIDADE NO DIAGNÓSTICO ODONTOLÓGICO.
                   </span>
                 </h2>

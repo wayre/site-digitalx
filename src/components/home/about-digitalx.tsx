@@ -119,7 +119,7 @@ export const AboutDigitalX = () => {
             </div>
 
             <p className="text-center md:text-left">
-              Na Digital X, oferecemos exames radiológicos odontológicos com
+              Oferecemos exames radiológicos odontológicos com
               alta definição, baixa radiação e laudos confiáveis. Com tecnologia
               avançada e agilidade no atendimento, somos parceiros do
               cirurgião-dentista no diagnóstico seguro e preciso.

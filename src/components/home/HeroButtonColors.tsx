@@ -6,7 +6,7 @@ function HeroButtonColors() {
     <>
       {/* button colors */}
       <div className="w-full h-auto sm:h-[168px] md:max-h-[80px] grid grid-cols-2 md:grid-cols-4 max-w-[1920px] mx-auto">
-        <div className="flex items-center justify-center px-6 sm:px-2 py-4 text-white bg-lime-500 lg:min-h-0">
+        <div className="flex items-center justify-center px-6 sm:px-2 py-4 text-white bg-teal-500 lg:min-h-0">
           <Link
             href="/requisicao-digital_x.pdf"
             target="_blank"
