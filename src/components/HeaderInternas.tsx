@@ -55,7 +55,7 @@ const HeaderInternas = () => {
 
   const navLinks = [
     { id: "home", label: "HOME" },
-    { id: "sobre", label: "DIGITAL X" },
+    { id: "sobre", label: "Sobre" },
     { id: "exames", label: "EXAMES" },
     { id: "downloads", label: "DOWNLOADS" },
     { id: "convenios", label: "CONVÊNIOS" },

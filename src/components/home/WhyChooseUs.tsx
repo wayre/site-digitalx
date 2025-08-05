@@ -19,7 +19,7 @@ const featuresData = [
     Icon: Users,
     title: "Profissionais Especializados",
     description:
-      "Nossa equipe de radiologistas é liderada pela Dra. Mônica, com extensa experiência em diagnóstico por imagem.",
+      "Nossa equipe possui extensa experiência em diagnóstico por imagens.",
   },
 ];
 

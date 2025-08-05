@@ -40,7 +40,7 @@ export default function CentralDeAjudaPage() {
     <>
       <Header />
       <HeaderInternas
-        title="Sobre"
+        title="Exames"
         subtitle="Digital X – Diagnósticos  Odontológicos por Imagem"
       />
 

@@ -39,19 +39,6 @@ function Aside() {
             Seja parceiro da Digital X e dedique-se ao que realmente importa: o
             sorriso dos seus pacientes!
           </h3>
-          <p className="mt-2 text-[13px] text-center px-1">
-            Entre em contato com nossa Central de Atendimento no telefone (67)
-            3028-2890 para cadastrar suas informações.
-          </p>
-          <Link
-            href="/parceria"
-            target="_blank"
-            type="button"
-            // Botão com a cor de fundo customizada e efeito de transição
-            className="bg-[#A5CC3A] hover:bg-[#8eb32d] text-gray-900 font-bold tracking-wider uppercase text-sm px-8 py-3 rounded-lg shadow-md transition-colors duration-300 text-center"
-          >
-            Seja Parceiro
-          </Link>
         </div>
 
         {/* horario de atendimento */}

@@ -38,27 +38,12 @@ export default function Sobre() {
 
   return (
     <>
-      {/* Banner Section */}
-      <section className="relative flex items-center overflow-hidden bg-[#1E5B94] h-52">
-        <div className="absolute inset-0 z-0">
-          {/* Placeholder for background image */}
-          <div className="w-full h-full bg-gradient-to-r from-[#1E5B94] to-[#3AADA8] opacity-80"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10 text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            A Digital X
-          </h1>
-
-          <p className="text-xl md:text-2xl max-w-2xl">
-            Referência em diagnóstico por imagem odontológica
-          </p>
-        </div>
-      </section>
-
-      <section className="pt-16 px-2 md:px-8">
+      <section className="pt-10 px-2 md:px-8">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          A Digital X
+        </h2>
         <p className="text-base sm:text-lg">
-          Na <b>Digital X</b>, somos especialistas em exames radiológicos
+          Somos especialistas em exames radiológicos
           odontológicos de alta precisão, pensados para facilitar o diagnóstico
           dos cirurgiões-dentistas. Oferecemos{" "}
           <b>tomografia Cone Beam (Morita Veraview X800)</b>, além de{" "}

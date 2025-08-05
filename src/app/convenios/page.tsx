@@ -95,7 +95,7 @@ export default function Convenios() {
       <Header />
       <HeroInternas
         title="Convênios Aceitos"
-        subtitle="FACILITANDO SEU ACESSO À SAÚDE BUCAL DE QUALIDADE"
+        subtitle="Facilitando seu acesso à saúde bucal de qualidade"
       />
 
       <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
