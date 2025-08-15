@@ -324,24 +324,6 @@
     ]
   },
   {
-    "id": "mediservice",
-    "name": "Mediservice",
-    "logo": "mediservice.jpg",
-    "documentos": [
-      "Carteira do convênio",
-      "Documento de identidade (RG ou CNH)",
-      "CPF",
-      "Guia de autorização (quando necessário)"
-    ],
-    "examesTodo": [
-      "Radiografia Panorâmica",
-      "Tomografia Computadorizada Cone-Beam",
-      "Radiografia Periapical",
-      "Telerradiografia",
-      "Documentação Ortodôntica"
-    ]
-  },
-  {
     "id": "metlife",
     "name": "Metlife",
     "logo": "metlife.jpg",
@@ -363,24 +345,6 @@
     "id": "metlife",
     "name": "Metlife",
     "logo": "metlife.png",
-    "documentos": [
-      "Carteira do convênio",
-      "Documento de identidade (RG ou CNH)",
-      "CPF",
-      "Guia de autorização (quando necessário)"
-    ],
-    "examesTodo": [
-      "Radiografia Panorâmica",
-      "Tomografia Computadorizada Cone-Beam",
-      "Radiografia Periapical",
-      "Telerradiografia",
-      "Documentação Ortodôntica"
-    ]
-  },
-  {
-    "id": "notredame-intermedica",
-    "name": "NotreDame Intermédica",
-    "logo": "notredame-intermedica.png",
     "documentos": [
       "Carteira do convênio",
       "Documento de identidade (RG ou CNH)",
@@ -792,24 +756,6 @@
     ]
   },
   {
-    "id": "sulamerica",
-    "name": "SulAmérica",
-    "logo": "sulamerica.png",
-    "documentos": [
-      "Carteira do convênio",
-      "Documento de identidade (RG ou CNH)",
-      "CPF",
-      "Guia de autorização (quando necessário)"
-    ],
-    "examesTodo": [
-      "Radiografia Panorâmica",
-      "Tomografia Computadorizada Cone-Beam",
-      "Radiografia Periapical",
-      "Telerradiografia",
-      "Documentação Ortodôntica"
-    ]
-  },
-  {
     "id": "unafisco",
     "name": "Unafisco",
     "logo": "unafisco.jpg",
@@ -885,6 +831,78 @@
     "id": "you-odonto",
     "name": "You Odonto",
     "logo": "youodonto.png",
+    "documentos": [
+      "Carteira do convênio",
+      "Documento de identidade (RG ou CNH)",
+      "CPF",
+      "Guia de autorização (quando necessário)"
+    ],
+    "examesTodo": [
+      "Radiografia Panorâmica",
+      "Tomografia Computadorizada Cone-Beam",
+      "Radiografia Periapical",
+      "Telerradiografia",
+      "Documentação Ortodôntica"
+    ]
+  },
+  {
+    "id": "clearcorrect",
+    "name": "ClearCorrect",
+    "logo": "clearcorrect.webp",
+    "documentos": [
+      "Carteira do convênio",
+      "Documento de identidade (RG ou CNH)",
+      "CPF",
+      "Guia de autorização (quando necessário)"
+    ],
+    "examesTodo": [
+      "Radiografia Panorâmica",
+      "Tomografia Computadorizada Cone-Beam",
+      "Radiografia Periapical",
+      "Telerradiografia",
+      "Documentação Ortodôntica"
+    ]
+  },
+  {
+    "id": "invisalign",
+    "name": "Invisalign",
+    "logo": "invisalign.webp",
+    "documentos": [
+      "Carteira do convênio",
+      "Documento de identidade (RG ou CNH)",
+      "CPF",
+      "Guia de autorização (quando necessário)"
+    ],
+    "examesTodo": [
+      "Radiografia Panorâmica",
+      "Tomografia Computadorizada Cone-Beam",
+      "Radiografia Periapical",
+      "Telerradiografia",
+      "Documentação Ortodôntica"
+    ]
+  },
+  {
+    "id": "ortho-e-motion",
+    "name": "Ortho e-Motion",
+    "logo": "ortho-e-motion.webp",
+    "documentos": [
+      "Carteira do convênio",
+      "Documento de identidade (RG ou CNH)",
+      "CPF",
+      "Guia de autorização (quando necessário)"
+    ],
+    "examesTodo": [
+      "Radiografia Panorâmica",
+      "Tomografia Computadorizada Cone-Beam",
+      "Radiografia Periapical",
+      "Telerradiografia",
+      "Documentação Ortodôntica"
+    ]
+  },
+  {
+    "id": "sousmile",
+    "name": "SouSmile",
+    "logo": "sousmile.webp",
     "documentos": [
       "Carteira do convênio",
       "Documento de identidade (RG ou CNH)",

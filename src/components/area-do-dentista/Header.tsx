@@ -32,14 +32,14 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 py-0">
-        <nav className="flex items-center justify-between">
+        <nav className="flex items-end justify-between">
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image
                 src={cn(
                   isScrolled
                     ? "/logo-digitalx-black.webp"
-                    : "/logo-digitalx-white.webp"
+                    : "/logo-digitalx.svg"
                 )}
                 alt="logo DigitalX"
                 height={120}
@@ -57,7 +57,7 @@ const Header = () => {
               className={`font-opensans transition-colors ${
                 isScrolled
                   ? "text-digital-blue hover:text-[#7aaebe]"
-                  : "text-white hover:text-[#7aaebe]"
+                  : "text-black hover:text-[#7aaebe]"
               }`}
             >
               Home
@@ -67,7 +67,7 @@ const Header = () => {
               className={`font-opensans transition-colors ${
                 isScrolled
                   ? "text-digital-blue hover:text-[#7aaebe]"
-                  : "text-white hover:text-[#7aaebe]"
+                  : "text-black hover:text-[#7aaebe]"
               }`}
             >
               Serviços
@@ -77,7 +77,7 @@ const Header = () => {
               className={`font-opensans transition-colors ${
                 isScrolled
                   ? "text-digital-blue hover:text-[#7aaebe]"
-                  : "text-white hover:text-[#7aaebe]"
+                  : "text-black hover:text-[#7aaebe]"
               }`}
             >
               Benefícios
@@ -87,7 +87,7 @@ const Header = () => {
               className={`font-opensans transition-colors ${
                 isScrolled
                   ? "text-digital-blue hover:text-[#7aaebe]"
-                  : "text-white hover:text-[#7aaebe]"
+                  : "text-black hover:text-[#7aaebe]"
               }`}
             >
               Parceria
@@ -97,8 +97,8 @@ const Header = () => {
           <Button
             onClick={() => scrollToSection("contato")}
             className={cn(
-              "bg-[#39af7a] hover:bg-green-600 text-white px-6 py-2 font-opensans font-semibold",
-              isScrolled ? "text-white" : "text-digital-blue"
+              "bg-[#39af7a] hover:bg-green-600 text-black px-6 py-2 font-opensans font-semibold",
+              isScrolled ? "text-black" : "text-digital-blue"
             )}
           >
             Contato

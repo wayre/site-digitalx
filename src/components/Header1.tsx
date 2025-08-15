@@ -58,7 +58,7 @@ const Header1 = () => {
     { id: "exames", label: "EXAMES" },
     { id: "downloads", label: "DOWNLOADS" },
     { id: "convenios", label: "CONVÊNIOS" },
-    { id: "central-de-ajuda", label: "SAC" },
+    { id: "duvidas-frequentes", label: "SAC" },
     { id: "contato", label: "CONTATO" },
   ];
 
@@ -81,11 +81,12 @@ const Header1 = () => {
         >
           <div className="hidden md:flex flex-row items-center justify-center tracking-tighter text-gray-500">
             <MapPin className="h-3 w-3 ml-2 mr-1" />
-            <div className="mt-[2px]">R. Treze de Junho, 499 - Campo Grande/MS</div>
+            <div className="mt-[2px]">
+              R. Treze de Junho, 499 - Campo Grande/MS
+            </div>
             <PhoneIcon className="h-3 w-3 ml-2 mr-1" />
             <div className="mt-[2px]">(67) 3028-2890</div>
           </div>
-
         </div>
 
         {/* Main Menu */}
@@ -103,10 +104,10 @@ const Header1 = () => {
             )}
           >
             {/* logo */}
-            <Link href="/" className={cn(
-              "font-bold z-50",
-              isScrolled ? "" : "md:hidden"
-            )}>
+            <Link
+              href="/"
+              className={cn("font-bold z-50", isScrolled ? "" : "md:hidden")}
+            >
               <Image
                 src="/logo-digitalx.svg"
                 alt="Digital X"
@@ -121,7 +122,10 @@ const Header1 = () => {
               <ul className="flex text-[12px]">
                 {navLinks.map((item) => (
                   <li key={item.id} className="flex items-center">
-                    <Link href={`/${item.id}`} className="hover:text-gray-700 border-y-2 border-transparent hover:border-gray-300 transition-all duration-[1600ms] py-1 px-2">
+                    <Link
+                      href={`/${item.id}`}
+                      className="hover:text-gray-700 border-y-2 border-transparent hover:border-gray-300 transition-all duration-[1600ms] py-1 px-2"
+                    >
                       {item.label}
                     </Link>
                   </li>

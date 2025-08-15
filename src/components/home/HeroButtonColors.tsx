@@ -96,7 +96,7 @@ function HeroButtonColors() {
                 Agendamento de Exames
               </h3>
               <p className="hidden sm:block md:hidden lg:block mt-1 text-[12px] sm:text-[14px] tracking-tight sm:tracking-tight opacity-80 leading-3">
-                Marque sua consulta!
+                Marque sua consulta
               </p>
             </div>
           </Link>

@@ -33,11 +33,11 @@ const WhyChooseUs = () => {
           <div className="flex justify-center">
             {/* NOTA: Substitua pelo caminho da sua imagem */}
             <Image
-              src="/morita-x800.webp"
+              src="/dentista-com-paciente-crianca.webp"
               alt="Equipamento de Tomografia Cone Beam"
               width={400}
               height={400}
-              className="hidden sm:block w-full object-contain max-h-[150px] lg:max-h-[350px]"
+              className="hidden sm:block w-full h-full lg:max-h-[350px] rounded-md shadow-lg object-cover"
             />
           </div>
 

@@ -27,7 +27,7 @@ export default function HomePage() {
         <PartnersBanner />
         <WhyChooseUs />
         {/* <ExamsSection /> */}
-        <ExamesRadiologicosSobMedida />
+        {/* <ExamesRadiologicosSobMedida /> */}
         <ExamCarousel />
         <ConveniosSection />
         <Comments />

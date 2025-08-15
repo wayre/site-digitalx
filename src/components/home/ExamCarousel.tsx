@@ -52,28 +52,28 @@ const ExamCarousel = () => {
       id: "cefalometrica",
       title: "Análises Cefalométricas",
       description:
-        "Traçados computadorizados demarcados após a identificação...",
-      imageUrl: "/exames/AnalisesCefalometricas.webp",
+        "Traçados computadorizados obtidos após identificação e marcação de pontos anatômicos na radiografia.",
+      imageUrl: "/exames/AnalisesCefalometricas1.webp",
     },
     {
       id: "panoramica",
       title: "Radiografia Panorâmica",
       description:
-        "Técnica radiográfica que produz uma única imagem das estruturas...",
+        "Visão completa de toda a arcada dentária, maxilares, articulações e estruturas adjacentes em uma única imagem.",
       imageUrl: "/exames/RadiografiaPanoramica.webp",
     },
     {
       id: "planigrafia",
       title: "Planigrafia de ATM",
       description:
-        "Técnica radiográfica que produz imagens nítidas de estruturas...",
+        "Técnica radiográfica que gera imagens detalhadas das articulações temporomandibulares para avaliação clínica.",
       imageUrl: "/exames/PlanigrafiadeATM.webp",
     },
     {
       id: "tomografia",
       title: "Tomografia Digital Cone-Beam",
       description:
-        "Exame de alta precisão para aquisição das imagens dos ossos...",
+        "Exame preciso que capta imagens tridimensionais dos ossos da face para diagnóstico e planejamento odontológico.",
       imageUrl:
         "/exames/TomografiaComputadorizadaCone-BeamdosMaxilaresTraumaPatologias.webp",
     },
@@ -81,14 +81,14 @@ const ExamCarousel = () => {
       id: "periapical",
       title: "Radiografia Periapical",
       description:
-        "Imagem bi-dimensional com uma visão da anatomia dentária...",
+        "Exames detalhados para visualização de dentes individuais e estruturas adjacentes, incluindo raízes e osso alveolar.",
       imageUrl: "/exames/RadiografiaPeriapicalConvecionaleDigital.webp",
     },
     {
       id: "telerradiografia",
       title: "Telerradiografia lateral e frontal",
       description:
-        "É uma radiografia do crânio em que o paciente é posicionado...",
+        "Radiografia do crânio feita com o paciente posicionado lateral ou frontalmente para análise ortodôntica.",
       imageUrl: "/exames/Telerradiografialateralefrontal.webp",
     },
   ];
@@ -136,7 +136,7 @@ const ExamCarousel = () => {
                         </CardTitle>
                       </CardHeader>
                       <CardContent className="p-4 pt-0">
-                        <CardDescription className="text-gray-600 line-clamp-2">
+                        <CardDescription className="text-gray-600">
                           {item.description}
                         </CardDescription>
                       </CardContent>

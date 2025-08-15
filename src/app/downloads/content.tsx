@@ -30,7 +30,8 @@ const downloads = [
       "O Blue Sky é um visualizador próprio para arquivos gerados por equipamentos Morita.",
     videoUrl: "", // Exemplo de URL de vídeo
     downloadLabel: "DOWNLOAD",
-    downloadHref: "https://www.blueskybio.com/software/download-free-viewer/",
+    downloadHref:
+      "https://blueskybio.com/pages/free-treatement-planning-software",
   },
   {
     id: "software-radiant",

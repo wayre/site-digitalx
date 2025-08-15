@@ -39,13 +39,11 @@ export default function Sobre() {
   return (
     <>
       <section className="pt-10 px-2 md:px-8">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
-          A Digital X
-        </h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">A Digital X</h2>
         <p className="text-base sm:text-lg">
-          Somos especialistas em exames radiológicos
-          odontológicos de alta precisão, pensados para facilitar o diagnóstico
-          dos cirurgiões-dentistas. Oferecemos{" "}
+          Somos especialistas em exames radiológicos odontológicos de alta
+          precisão, pensados para facilitar o diagnóstico dos
+          cirurgiões-dentistas. Oferecemos{" "}
           <b>tomografia Cone Beam (Morita Veraview X800)</b>, além de{" "}
           <b>radiografias intra e extraorais</b>, com imagens nítidas, laudos
           rápidos e mínima exposição à radiação. Tecnologia de ponta e

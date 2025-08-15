@@ -56,8 +56,7 @@ const cardData: CardItem[] = [
     bgColor: "bg-blue-100",
     iconColor: "text-blue-500",
     title: "RAPIDEZ E PRATICIDADE",
-    description:
-      "Mais agilidade: seus exames de imagem com entrega rápida e acesso online.",
+    description: "Exames de imagem com entrega rápida e acesso online.",
   },
   {
     id: 3,
@@ -66,7 +65,7 @@ const cardData: CardItem[] = [
     iconColor: "text-red-500",
     title: "SERVIÇOS",
     description:
-      "Exames por imagem com alta tecnologia: Tomografia, RX, Scan 3D e mais.",
+      "Exames de imagem com alta tecnologia: Tomografia, RX, Scan 3D e mais.",
   },
 ];
 
@@ -119,10 +118,10 @@ export const AboutDigitalX = () => {
             </div>
 
             <p className="text-center md:text-left">
-              Oferecemos exames radiológicos odontológicos com
-              alta definição, baixa radiação e laudos confiáveis. Com tecnologia
-              avançada e agilidade no atendimento, somos parceiros do
-              cirurgião-dentista no diagnóstico seguro e preciso.
+              Oferecemos exames radiológicos odontológicos com alta definição,
+              baixa radiação e laudos confiáveis. Com tecnologia avançada e
+              agilidade no atendimento, somos parceiros do cirurgião-dentista no
+              diagnóstico seguro e preciso.
             </p>
           </div>
         </div>
@@ -141,7 +140,7 @@ export const AboutDigitalX = () => {
               <card.Icon className={`h-10 w-10 ${card.iconColor}`} />
             </div>
 
-            <h3 className="mb-2 text-[0.7rem] md:text-[0.8rem] font-semibold tracking-wider uppercase text-gray-800 overflow-hidden leading-3">
+            <h3 className="mt-3 mb-2 text-[0.7rem] md:text-[0.8rem] font-semibold tracking-wider uppercase text-gray-800 overflow-hidden leading-4">
               {card.title}
             </h3>
             <p className="hidden sm:block text-sm text-gray-600 leading-relaxed">
@@ -150,10 +149,6 @@ export const AboutDigitalX = () => {
           </div>
         ))}
       </div>
-
-      <p className="mt-8 text-[0.9rem] sm:text-lg font-light text-gray-800 md:text-xl text-center md:text-left uppercase pb-12">
-        Digital X. Imagem clara, diagnóstico seguro
-      </p>
     </section>
   );
 };

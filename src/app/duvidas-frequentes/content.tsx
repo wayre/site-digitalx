@@ -18,6 +18,74 @@ interface FAQSection {
 
 const faqSections: FAQSection[] = [
   {
+    title: "",
+    items: [
+      {
+        id: "sobre-2",
+        question: "Quais são os diferenciais da Digital X?",
+        answer: (
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+            Nosso principal diferencial é a tecnologia de ponta que utilizamos,
+            incluindo o equipamento Morita X800 para tomografias Cone Beam. Isso
+            nos permite gerar imagens de alta definição com baixa exposição à
+            radiação, garantindo a segurança e a precisão do seu diagnóstico.
+            Além disso, priorizamos a agilidade, a biossegurança e a entrega de
+            laudos confiáveis.
+          </p>
+        ),
+      },
+      {
+        id: "exames-2",
+        question: "O que é a Tomografia Cone Beam e qual sua importância?",
+        answer: (
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+            A Tomografia Cone Beam (CBCT) é um exame tridimensional que permite
+            a visualização detalhada de estruturas ósseas e tecidos da região
+            bucal e maxilofacial. É fundamental para diagnósticos mais precisos
+            em diversas áreas, como implantodontia, cirurgia, ortodontia e
+            endodontia, por oferecer uma visão completa que as radiografias
+            bidimensionais não conseguem.
+          </p>
+        ),
+      },
+      {
+        id: "agendamento-1",
+        question: "Como faço para agendar um exame na Digital X?",
+        answer: (
+          <div className="space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+            <p>
+              Você pode agendar seu exame de forma rápida e conveniente. Temos
+              algumas opções para você:
+            </p>
+            <ul className="list-disc list-inside pl-4 space-y-1">
+              <li>
+                Telefone: Ligue para nosso número de atendimento e converse com
+                nossa equipe.
+              </li>
+              <li>WhatsApp: Envie uma mensagem para nosso WhatsApp.</li>
+              <li>
+                Site: Preencha o formulário de agendamento em nosso site, e
+                entraremos em contato. Você encontra todos os nossos contatos na
+                página principal.
+              </li>
+            </ul>
+          </div>
+        ),
+      },
+      {
+        id: "agendamento-2",
+        question: "Preciso de pedido do dentista para realizar exames?",
+        answer: (
+          <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+            Sim, para a sua segurança e para garantir que o exame correto seja
+            realizado, é imprescindível apresentar o pedido do seu dentista (ou
+            médico, se for o caso).
+          </p>
+        ),
+      },
+    ],
+  },
+  {
     title: "Sobre a Digital X",
     items: [
       {

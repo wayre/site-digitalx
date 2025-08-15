@@ -14,7 +14,7 @@ export default function CentralDeAjudaPage() {
     <>
       <Header />
       <HeaderInternas
-        title="Central de Ajuda"
+        title="Dúvidas Frequentes"
         subtitle="Tire suas dúvidas com facilidade e rapidez."
       />
 

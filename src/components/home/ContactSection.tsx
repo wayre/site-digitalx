@@ -90,7 +90,9 @@ const ContactSection = () => {
     >
       <div className="w-5/6 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="section-title">Entre em Contato</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+            Entre em Contato
+          </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Estamos prontos para atender você. Preencha o formulário abaixo ou
             utilize um de nossos canais de contato.
@@ -270,8 +272,13 @@ const ContactSection = () => {
                   <Clock className="contact-info-icon" />
                   <div>
                     <p className="font-medium">Horário de funcionamento:</p>
-                    <p className="text-gray-600">Segunda à Sexta: 8h às 18h</p>
-                    <p className="text-gray-600">Sábado: 8h às 12h</p>
+                    <p className="text-gray-600 ml-2">
+                      - Segunda à Sexta: 8h às 18h <br />
+                      <small className="ml-4">
+                        (12h as 13h fechado para almoço)
+                      </small>
+                    </p>
+                    <p className="text-gray-600 ml-2">- Sábado: 8h às 12h</p>
                   </div>
                 </div>
               </div>

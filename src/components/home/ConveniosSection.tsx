@@ -38,148 +38,58 @@ const ConveniosSection = () => {
     };
   }, []);
 
-  // Lista de convênios (exemplos)
-  const insurances = [
-    {
-      id: "unimed",
-      name: "Unimed",
-      logo: "/convenios/unimed-odonto.png",
-    },
-    {
-      id: "bradesco-saude",
-      name: "Bradesco Saúde",
-      logo: "/convenios/bradesco-saude.webp",
-    },
-    {
-      id: "amil",
-      name: "Amil",
-      logo: "/convenios/amil.png",
-    },
-    {
-      id: "sulamerica",
-      name: "SulAmérica",
-      logo: "/convenios/sulamerica.png",
-    },
-    {
-      id: "porto-seguro",
-      name: "Porto Seguro",
-      logo: "/convenios/portoseguro.png",
-    },
-    {
-      id: "hapvida",
-      name: "Hapvida",
-      logo: "/convenios/hapvida.png",
-    },
-    {
-      id: "notredame-intermédica",
-      name: "NotreDame Intermédica",
-      logo: "/convenios/notredame-intermedica.png",
-    },
-    {
-      id: "odontolife",
-      name: "Odontolife",
-      logo: "/convenios/odontolife.jpg",
-    },
-    {
-      id: "mediservice",
-      name: "Mediservice",
-      logo: "/convenios/mediservice.jpg",
-    },
-    {
-      id: "odontoprev",
-      name: "OdontoPrev",
-      logo: "/convenios/odontoprev.png",
-    },
-  ];
-
   return (
     <section
       id="convenios"
-      className="section-padding bg-gray-50"
+      className="section-padding bg-gray-100"
       ref={sectionRef}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto pt-6">
         {/* texto superior */}
         <div className="text-center mb-10">
-          <h2 className="section-title">Convênios</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Trabalhamos com os principais convênios para melhor atender nossos
-            pacientes. Consulte-nos para mais informações sobre coberturas
-            específicas.
-          </p>
+          {/* texto apresentacao */}
+          <div className="flex flex-row gap-2 max-w-[800px] mx-auto px-4">
+            <Image
+              src="/convenios-ilustracao.webp" // A variável importada do asset
+              alt="Ilustração Pessoa feliz - convênios"
+              width={466} // Largura original da imagem
+              height={800} // Altura original da imagem
+              className="w-[40%] h-auto object-contain hidden md:block max-h-[350px]"
+            />
+            <div className="w-11/12 flex flex-col justify-center text-center sm:text-left mx-auto max-w-[400px] sm:max-w-[70%]">
+              <h2 className="hidden md:block section-title mb-4 text-center sm:text-left">
+                Convênios
+              </h2>
+              <h3 className="text-xl sm:text-2xl font-light text-[#333333] flex flex-row items-end gap-2 mb-2">
+                <Image
+                  src="/convenios-ilustracao.webp" // A variável importada do asset
+                  alt="Ilustração Pessoa feliz - convênios"
+                  width={466} // Largura original da imagem
+                  height={800} // Altura original da imagem
+                  className="md:hidden w-[25%] h-auto object-contain"
+                />
+                Facilitamos seu acesso a exames com qualidade, agilidade e
+                cobertura pelos principais planos de saúde
+              </h3>
+              <p className="text-sm sm:text-base font-normal text-[#555555] mt-2">
+                Na Digital X, oferecemos exames de radiologia odontológica com
+                tecnologia de ponta e atendimento humanizado. Para tornar seu
+                diagnóstico ainda mais acessível, aceitamos diversos convênios e
+                planos de saúde.
+              </p>
+              <p className="text-sm sm:text-base font-normal text-[#555555] mt-2">
+                Nosso objetivo é simplificar todo o processo — desde o
+                agendamento até a entrega dos resultados — garantindo agilidade,
+                conforto e excelência no atendimento. Confira abaixo a lista de
+                convênios aceitos e veja como é fácil realizar seu exame
+                conosco. Caso o seu plano não esteja listado ou tenha dúvidas,
+                entre em contato com a nossa equipe. Estamos prontos para
+                ajudar.
+              </p>
+            </div>
+          </div>
         </div>
-        {isMobile ? (
-          // Mobile carousel
-          <div
-            className={`transition-all duration-700 transform ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-10"
-            }`}
-          >
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {insurances.map((insurance, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="basis-1/3 md:basis-1/4 lg:basis-1/6"
-                  >
-                    <div className="p-2">
-                      <div className="relative transition-all p-4 h-24 flex items-center justify-center select-none">
-                        <Link href={`/convenios/${insurance.id}`}>
-                          <Image
-                            src={insurance.logo}
-                            alt={insurance.name}
-                            width={256}
-                            height={97}
-                            // fill
-                            className="max-h-16 max-w-full object-contain transition-transform hover:scale-105"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="flex justify-center mt-4">
-                <CarouselPrevious className="static transform-none mx-2" />
-                <CarouselNext className="static transform-none mx-2" />
-              </div>
-            </Carousel>
-          </div>
-        ) : (
-          // Desktop grid
-          <div className="w-4/6 mx-auto flex flex-row flex-wrap gap-2 overflow-hidden justify-center">
-            {insurances.map((insurance, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "w-1/4 bg-[#f9fafb] max-w-[138px] transition-all px-2 flex items-center justify-center duration-700 transform",
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                )}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                <Link href={`/convenios/${insurance.id}`}>
-                  <Image
-                    src={insurance.logo}
-                    alt={insurance.name}
-                    width={256}
-                    height={97}
-                    className="w-auto h-full object-contain object-center duration-300 transition-transform scale-90 hover:scale-100"
-                  />
-                </Link>
-              </div>
-            ))}
-          </div>
-        )}
+
         <div className="text-center mt-10 flex flex-col items-center justify-center gap-4">
           <Link
             href="/convenios"

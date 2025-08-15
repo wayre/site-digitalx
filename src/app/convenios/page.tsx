@@ -104,44 +104,11 @@ export default function Convenios() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
           {/* coluna 1 */}
           <section>
-            {/* texto apresentacao */}
-            <div className="flex flex-row gap-2">
-              <Image
-                src="/convenios-ilustracao.webp" // A variável importada do asset
-                alt="Ilustração Pessoa feliz - convênios"
-                width={466} // Largura original da imagem
-                height={800} // Altura original da imagem
-                className="w-[40%] h-auto object-contain hidden md:block max-h-[350px]"
-              />
-              <div className="w-11/12 flex flex-col justify-center mx-auto max-w-[400px] sm:max-w-[70%]">
-                <h3 className="text-xl sm:text-2xl font-light text-[#333333] flex flex-row items-end gap-2 mb-2">
-                  <Image
-                    src="/convenios-ilustracao.webp" // A variável importada do asset
-                    alt="Ilustração Pessoa feliz - convênios"
-                    width={466} // Largura original da imagem
-                    height={800} // Altura original da imagem
-                    className="md:hidden w-[25%] h-auto object-contain"
-                  />
-                  Facilitamos seu acesso a exames com qualidade, agilidade e
-                  cobertura pelos principais planos de saúde
-                </h3>
-                <p className="text-sm sm:text-base font-normal text-[#555555] mt-2">
-                  Na Digital X, oferecemos exames de radiologia odontológica com
-                  tecnologia de ponta e atendimento humanizado. Para tornar seu
-                  diagnóstico ainda mais acessível, aceitamos diversos convênios
-                  e planos de saúde.
-                </p>
-                <p className="text-sm sm:text-base font-normal text-[#555555] mt-2">
-                  Nosso objetivo é simplificar todo o processo — desde o
-                  agendamento até a entrega dos resultados — garantindo
-                  agilidade, conforto e excelência no atendimento. Confira
-                  abaixo a lista de convênios aceitos e veja como é fácil
-                  realizar seu exame conosco. Caso o seu plano não esteja
-                  listado ou tenha dúvidas, entre em contato com a nossa equipe.
-                  Estamos prontos para ajudar.
-                </p>
-              </div>
-            </div>
+            <p className="text-gray-600 max-w mx-auto mt-16 max-w-[600px]">
+              Trabalhamos com os principais convênios para melhor atender nossos
+              pacientes. Consulte-nos para mais informações sobre coberturas
+              específicas.
+            </p>
 
             {/* Convenios Section */}
             <section className="py-16">

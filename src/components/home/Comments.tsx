@@ -37,10 +37,10 @@ const Comments = async () => {
   }
 
   return (
-    <section className="w-5/6 m-auto py-12 bg-gray-50">
+    <section className="w-5/6 m-auto py-12 mt-8">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
-          O Que Nossos Clientes Dizem no Google
+          O que nossos clientes dizem no google
         </h2>
         {error ? (
           <p className="text-center text-red-500">
