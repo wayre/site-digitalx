@@ -1,17 +1,17 @@
-"use client";
-
-import Header from "@/components/HeaderInternas"; // Certifique-se que este componente existe e está correto
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-
-import { useIsMobile } from "@/hooks/use-mobile";
-import { useRef, useState, useEffect } from "react";
-import HeroInternas from "@/components/HeroInternas";
-import ContactSection from "@/components/home/ContactSection";
+import { promises as fs } from "fs";
+import path from "path";
+import { Metadata } from "next";
+import Header from "@/components/HeaderInternas";
 import Footer from "@/components/Footer";
 import Aside from "@/components/Aside";
+import HeroInternas from "@/components/HeroInternas";
+import ConveniosClient from "./ConveniosClient"; // Componente cliente para interatividade
+
+export const metadata: Metadata = {
+  title: "Convênios | Digital X",
+  description:
+    "Consulte os convênios aceitos pela Digital X e facilite seu acesso a saúde bucal de qualidade.",
+};
 
 export interface ConvenioTypes {
   id: string;
@@ -21,74 +21,19 @@ export interface ConvenioTypes {
   examesTodo: string[];
 }
 
-export default function Convenios() {
-  const [convenios, setConvenios] = useState<ConvenioTypes[]>([]);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  // const isMobile = useIsMobile(); // This variable is not being used.
-  const [filterText, setFilterText] = useState("");
-  const [filteredConvenios, setFilteredConvenios] = useState(convenios);
+async function getConvenios(): Promise<ConvenioTypes[]> {
+  const filePath = path.join(process.cwd(), "public", "convenios.json");
+  try {
+    const data = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(data);
+  } catch (error) {
+    console.error("Failed to read or parse convenios.json:", error);
+    return []; // Retorna um array vazio em caso de erro
+  }
+}
 
-  useEffect(() => {
-    const fetchConvenios = async () => {
-      try {
-        // Ajuste o caminho para o arquivo JSON conforme necessário
-        // Se o arquivo comentarios.json estiver na pasta public:
-        // const response = await fetch('/comentarios.json');
-        // Se estiver na pasta src e for importado diretamente (requer configuração do bundler): // Mantendo o nome original do arquivo JSON
-        const response = await fetch("/convenios.json"); // Assumindo que está na pasta public
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data: ConvenioTypes[] = await response.json();
-        setConvenios(data);
-      } catch (e) {
-        if (e instanceof Error) {
-          console.log(e.message);
-        } else {
-          console.log("An unknown error occurred");
-        }
-      } finally {
-      }
-    };
-
-    fetchConvenios();
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    const currentSectionRef = sectionRef.current;
-    if (currentSectionRef) {
-      observer.observe(currentSectionRef);
-    }
-
-    return () => {
-      if (currentSectionRef) {
-        observer.disconnect();
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!filterText) {
-      setFilteredConvenios(convenios);
-    } else {
-      const lowercasedFilter = filterText.toLowerCase();
-      const newFilteredConvenios = convenios.filter((convenio) =>
-        convenio.name.toLowerCase().includes(lowercasedFilter)
-      );
-      setFilteredConvenios(newFilteredConvenios);
-    }
-  }, [filterText, convenios]);
+export default async function ConveniosPage() {
+  const convenios = await getConvenios();
 
   return (
     <>
@@ -98,106 +43,14 @@ export default function Convenios() {
         subtitle="Facilitando seu acesso à saúde bucal de qualidade"
       />
 
-      <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
-        {/***********************
-         * 2 colunas (contant and aside) */}
+      <main className="relative max-w-[1280px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
           {/* coluna 1 */}
-          <section>
-            <p className="text-gray-600 max-w mx-auto mt-16 max-w-[600px]">
-              Trabalhamos com os principais convênios para melhor atender nossos
-              pacientes. Consulte-nos para mais informações sobre coberturas
-              específicas.
-            </p>
-
-            {/* Convenios Section */}
-            <section className="py-16">
-              <div className="container mx-auto px-4">
-                {/* formulario para fitragem de convenios filtrando da variavel convenios */}
-                <div className="mb-10 max-w-md mx-auto">
-                  <label
-                    htmlFor="convenio-filter"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Procure seu convênio:
-                  </label>
-                  <input
-                    type="text"
-                    id="convenio-filter"
-                    placeholder="Digite o nome do convênio"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E5B94] focus:border-transparent"
-                    value={filterText}
-                    onChange={(e) => setFilterText(e.target.value)}
-                  />
-                </div>
-
-                <span className="w-full text-[10px] border-b border-gray-900 mb-2 block text-center">
-                  Convênios Aceitos:
-                </span>
-                {/* lista de convenios filtrado ou completo */}
-                <div className="w-full sm:w-5/6 mx-auto flex flex-row flex-wrap gap-2 overflow-hidden justify-center">
-                  {filteredConvenios.map((convenio, index) => (
-                    <div
-                      key={index}
-                      className={cn(
-                        "w-1/4 md:w-1/6 bg-[#f9fafb] max-w-[138px] transition-all px-2 flex items-center justify-center duration-300 transform"
-                        // isVisible // Mantém a animação baseada em isVisible do IntersectionObserver
-                        //   ? "opacity-100 translate-y-0"
-                        //   : "opacity-0 translate-y-10"
-                      )}
-                      style={{ transitionDelay: `${index * 50}ms` }} // Mantém o delay para o efeito de cascata
-                    >
-                      <Link href={`convenios/${convenio.id}`}>
-                        <Image
-                          src={"/convenios/" + convenio.logo}
-                          alt={convenio.name}
-                          width={256}
-                          height={97}
-                          className="w-auto h-full object-contain object-center duration-300 transition-transform scale-90 hover:scale-100"
-                        />
-                      </Link>
-                    </div>
-                  ))}
-
-                  {/* filter nao encontrado */}
-                  {filteredConvenios.length == 0 && filterText.length > 0 && (
-                    <div className="bg-gray-50 text-gray-700 p-3 text-md">
-                      Não encontrado convênio
-                      <span className="text-red-800">{" " + filterText}</span>.
-                    </div>
-                  )}
-                </div>
-              </div>
-            </section>
-
-            {/* Not Found Convenio Section */}
-            <section className="py-16 bg-[#E5F1FB]">
-              <div className="container mx-auto px-4 text-center">
-                <h2 className="text-2xl font-semibold mb-6 text-[#333333]">
-                  Não Encontrou Seu Convênio?
-                </h2>
-
-                <p className="text-[#555555] mb-8 max-w-xl mx-auto">
-                  Entre em contato conosco para verificar a disponibilidade do
-                  seu convênio ou conhecer nossas condições especiais para
-                  pagamento particular.
-                </p>
-
-                <div>
-                  <Button asChild className="bg-[#1E5B94] hover:bg-[#174A7A]">
-                    <Link href="/contato">Falar com Atendimento</Link>
-                  </Button>
-                </div>
-              </div>
-            </section>
-          </section>
+          <ConveniosClient convenios={convenios} />
 
           {/* aside - coluna 2 */}
           <Aside />
         </div>
-
-        {/* Contato */}
-        {/* <ContactSection /> */}
       </main>
       <Footer />
     </>
