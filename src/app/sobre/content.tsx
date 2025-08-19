@@ -112,28 +112,6 @@ export default function Sobre() {
         })}
       </section>
 
-      {/* CTA Section */}
-      <section className="w-4/5 m-auto py-6 bg-[#1E5B94] text-white mb-12 rounded-md text-sm">
-        <div className="container mx-auto text-center flex flex-col gap-y-4">
-          <h2 className="text-2xl font-semibold">Conheça Nossa Clínica</h2>
-
-          <p className="max-w-2xl mx-auto">
-            Venha conhecer nossa estrutura e tecnologia de ponta para
-            diagnóstico por imagem odontológica.
-          </p>
-
-          <div>
-            <Button
-              asChild
-              size="sm"
-              className="bg-white text-[#1E5B94] hover:bg-white/90"
-            >
-              <Link href="/contato">Agendar Visita</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Fullscreen Image Viewer */}
       {selectedImage && (
         <div
