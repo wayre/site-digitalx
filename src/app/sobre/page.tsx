@@ -1,66 +1,48 @@
-"use client";
-import { useRef, useState, useEffect } from "react";
-import ContentPage from "./content";
-import Header from "@/components/HeaderInternas";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import HeaderInternas from "@/components/HeroInternas";
-import Aside from "@/components/Aside";
-import ContactSection from "@/components/home/ContactSection";
+import SobreClientPage from "./SobreClientPage";
+import { Metadata } from "next";
 
-export default function CentralDeAjudaPage() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
+export const metadata: Metadata = {
+  title: "Sobre a DigitalX | Radiologia Odontológica em Campo Grande MS",
+  description:
+    "Conheça a história, a missão e os valores da DigitalX. Somos referência em diagnóstico por imagem odontológica, aliando tecnologia e atendimento humanizado.",
+  keywords: [
+    "sobre a DigitalX",
+    "clínica de radiologia",
+    "história da DigitalX",
+    "missão",
+    "valores",
+    "radiologia odontológica",
+    "Campo Grande MS",
+    "diagnóstico por imagem",
+    "tomografia cone beam",
+    "Morita Veraview X800",
+  ],
+  openGraph: {
+    title: "DigitalX: Referência em Diagnóstico por Imagem Odontológica",
+    description:
+      "Nascemos para ser o parceiro de confiança dos dentistas. Conheça nossa trajetória e nosso compromisso com a qualidade e a tecnologia em Campo Grande - MS.",
+    url: "https://www.digitalxms.com.br/sobre",
+    siteName: "DigitalX Radiologia Odontológica",
+    images: [
+      {
+        url: "https://www.digitalxms.com.br/og-sobre.png", // Replace with a relevant image URL
+        width: 1200,
+        height: 630,
+        alt: "Clínica DigitalX Radiologia Odontológica",
       },
-      { threshold: 0.2 }
-    );
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DigitalX | Sobre Nós",
+    description:
+      "Especialistas em exames radiológicos de alta precisão. Saiba mais sobre nossa história e compromisso com a odontologia.",
+    images: ["https://www.digitalxms.com.br/twitter-sobre.png"], // Replace with a relevant image URL
+  },
+};
 
-    const currentSectionRef = sectionRef.current;
-    if (currentSectionRef) {
-      observer.observe(currentSectionRef);
-    }
-
-    return () => {
-      if (currentSectionRef) {
-        // Garante que o observer só é desconectado se estiver observando
-        observer.disconnect();
-      }
-    };
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <HeaderInternas
-        title="Sobre"
-        subtitle="Digital X – Diagnósticos  Odontológicos por Imagem"
-      />
-
-      <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
-        {/***********************
-         * 2 colunas (contant and aside) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
-          {/* coluna 1 */}
-          <div className="px-8">
-            <ContentPage />
-          </div>
-
-          {/* aside - coluna 2 */}
-          <Aside />
-        </div>
-
-        {/* Contato */}
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default function SobrePage() {
+  return <SobreClientPage />;
 }
