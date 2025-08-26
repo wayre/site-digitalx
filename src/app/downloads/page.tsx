@@ -1,63 +1,49 @@
-"use client";
-import { useRef, useState, useEffect } from "react";
-import ContentPage from "./content";
-import Header from "@/components/HeaderInternas";
-import Footer from "@/components/Footer";
-import Image from "next/image";
-import HeaderInternas from "@/components/HeroInternas";
-import Aside from "@/components/Aside";
-import ContactSection from "@/components/home/ContactSection";
+import DownloadsClientPage from "./DownloadsClientPage";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Downloads | DigitalX Radiologia Odontológica",
+  description:
+    "Acesse nossa área de downloads para baixar softwares, formulários e outros materiais úteis para dentistas e parceiros da DigitalX.",
+  keywords: [
+    "downloads",
+    "softwares odontológicos",
+    "formulários",
+    "DigitalX",
+    "radiologia",
+    "imagiologia",
+    "dental slice",
+    "tomografia",
+    "one volume viewer",
+    "blue sky bio",
+    "radiant viewer",
+  ],
+  openGraph: {
+    title: "Downloads de Softwares e Materiais - DigitalX",
+    description:
+      "Baixe visualizadores de exames (DICOM, STL), tutoriais e formulários. Tudo o que você, dentista, precisa para trabalhar com as imagens da DigitalX.",
+    url: "https://www.digitalxms.com.br/downloads",
+    siteName: "DigitalX Radiologia Odontológica",
+    images: [
+      {
+        url: "https://www.digitalxms.com.br/og-downloads.png", // Replace with a relevant image URL
+        width: 1200,
+        height: 630,
+        alt: "Downloads DigitalX Radiologia",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DigitalX | Downloads para Dentistas",
+    description:
+      "Acesse e baixe softwares visualizadores e materiais de apoio para otimizar sua rotina com os exames da DigitalX.",
+    images: ["https://www.digitalxms.com.br/twitter-downloads.png"], // Replace with a relevant image URL
+  },
+};
 
 export default function DownloadsPage() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    const currentSectionRef = sectionRef.current;
-    if (currentSectionRef) {
-      observer.observe(currentSectionRef);
-    }
-
-    return () => {
-      if (currentSectionRef) {
-        // Garante que o observer só é desconectado se estiver observando
-        observer.disconnect();
-      }
-    };
-  }, []);
-
-  return (
-    <>
-      <Header />
-      <HeaderInternas
-        title="Downloads"
-        subtitle="Baixe programas uteis e outras informações relacionadas"
-      />
-
-      <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
-        {/***********************
-         * 2 colunas (contant and aside) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
-          {/* coluna 1 */}
-          <div className="px-8">
-            <ContentPage />
-          </div>
-
-          {/* aside - coluna 2 */}
-          <Aside />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+  return <DownloadsClientPage />;
 }
