@@ -8,9 +8,45 @@ import HeroInternas from "@/components/HeroInternas";
 import ConveniosClient from "./ConveniosClient"; // Componente cliente para interatividade
 
 export const metadata: Metadata = {
-  title: "Convênios | Digital X",
+  title: "Convênios Odontológicos | DigitalX Radiologia",
   description:
-    "Consulte os convênios aceitos pela Digital X e facilite seu acesso a saúde bucal de qualidade.",
+    "Confira a lista de convênios odontológicos aceitos na DigitalX. Realize seus exames de radiologia com a cobertura do seu plano em Campo Grande - MS.",
+  keywords: [
+    "convênios odontológicos",
+    "planos aceitos",
+    "DigitalX",
+    "radiologia",
+    "exames de imagem",
+    "cobertura plano",
+    "amil dental",
+    "bradesco dental",
+    "sulamerica odonto",
+    "unimed odonto",
+  ],
+  openGraph: {
+    title: "Convênios Aceitos na DigitalX Radiologia Odontológica",
+    description:
+      "Verifique se o seu plano odontológico é aceito na DigitalX e agende seus exames com tranquilidade. Ampla cobertura em Campo Grande - MS.",
+    url: "https://www.digitalxms.com.br/convenios",
+    siteName: "DigitalX Radiologia Odontológica",
+    images: [
+      {
+        url: "https://www.digitalxms.com.br/og-convenios.png", // Replace with a relevant image URL
+        width: 1200,
+        height: 630,
+        alt: "Convênios Odontológicos Aceitos na DigitalX",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DigitalX | Convênios Odontológicos",
+    description:
+      "Sua saúde bucal mais acessível. Consulte a lista de convênios que atendemos e venha para a DigitalX.",
+    images: ["https://www.digitalxms.com.br/twitter-convenios.png"], // Replace with a relevant image URL
+  },
 };
 
 export interface ConvenioTypes {
