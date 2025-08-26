@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "DigitalX Radiologia Odontológica",
     images: [
       {
-        url: "https://www.digitalxms.com.br/og-faq.png", // Replace with a relevant image URL
+        url: "/digitalx-imagensOdontologicas-wide.webp",
         width: 1200,
         height: 630,
         alt: "FAQ - Dúvidas Frequentes da DigitalX",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "DigitalX | FAQ de Radiologia Odontológica",
     description:
       "Tem perguntas sobre exames de imagem odontológica? A DigitalX responde! Acesse nosso FAQ completo.",
-    images: ["https://www.digitalxms.com.br/twitter-faq.png"], // Replace with a relevant image URL
+    images: ["/digitalx-imagensOdontologicas-wide.webp"],
   },
 };
 

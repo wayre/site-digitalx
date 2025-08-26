@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "DigitalX Radiologia Odontológica",
     images: [
       {
-        url: "https://www.digitalxms.com.br/og-convenios.png", // Replace with a relevant image URL
+        url: "/digitalx-imagensOdontologicas-wide.webp",
         width: 1200,
         height: 630,
         alt: "Convênios Odontológicos Aceitos na DigitalX",

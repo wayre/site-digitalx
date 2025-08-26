@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "DigitalX Radiologia Odontológica",
     images: [
       {
-        url: "https://www.digitalxms.com.br/og-sobre.png", // Replace with a relevant image URL
+        url: "/digitalx-imagensOdontologicas-wide.webp",
         width: 1200,
         height: 630,
         alt: "Clínica DigitalX Radiologia Odontológica",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "DigitalX | Sobre Nós",
     description:
       "Especialistas em exames radiológicos de alta precisão. Saiba mais sobre nossa história e compromisso com a odontologia.",
-    images: ["https://www.digitalxms.com.br/twitter-sobre.png"], // Replace with a relevant image URL
+    images: ["/digitalx-imagensOdontologicas-wide.webp"],
   },
 };
 

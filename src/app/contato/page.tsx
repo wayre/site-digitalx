@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "DigitalX Radiologia Odontológica",
     images: [
       {
-        url: "https://www.digitalxms.com.br/og-image.png", // Replace with a relevant image URL
+        url: "/digitalx-imagensOdontologicas-wide.webp",
         width: 1200,
         height: 630,
         alt: "DigitalX Radiologia Odontológica - Contato",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Contato e Central de Ajuda | DigitalX Radiologia Odontológica",
     description:
       "Precisa de informações ou suporte? Entre em contato com a DigitalX, sua parceira em radiologia odontológica digital.",
-    images: ["https://www.digitalxms.com.br/twitter-image.png"], // Replace with a relevant image URL
+    images: ["/digitalx-imagensOdontologicas-wide.webp"],
   },
 };
 
