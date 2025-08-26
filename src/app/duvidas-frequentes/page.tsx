@@ -1,40 +1,49 @@
-"use client";
-import { useRef } from "react";
-import ContentPage from "./content";
-import Header from "@/components/HeaderInternas";
-import Footer from "@/components/Footer";
-import HeaderInternas from "@/components/HeroInternas";
-import Aside from "@/components/Aside";
-import ContactSection from "@/components/home/ContactSection";
+import DuvidasFrequentesClientPage from "./DuvidasFrequentesClientPage";
+import { Metadata } from "next";
 
-export default function CentralDeAjudaPage() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+export const metadata: Metadata = {
+  title: "Dúvidas Frequentes (FAQ) | DigitalX Radiologia Odontológica",
+  description:
+    "Encontre respostas para as perguntas mais comuns sobre nossos exames, agendamentos, preparo e resultados. FAQ da DigitalX para pacientes e dentistas.",
+  keywords: [
+    "dúvidas frequentes",
+    "FAQ",
+    "DigitalX",
+    "radiologia odontológica",
+    "exames",
+    "agendamento",
+    "preparo para exames",
+    "resultados de exames",
+    "tomografia",
+    "radiografia panorâmica",
+    "convênios",
+  ],
+  openGraph: {
+    title: "FAQ - Dúvidas Frequentes | DigitalX Radiologia",
+    description:
+      "Tudo o que você precisa saber sobre os exames da DigitalX em um só lugar. Consulte nosso FAQ e tire suas dúvidas sobre agendamento, preparo e mais.",
+    url: "https://www.digitalxms.com.br/duvidas-frequentes",
+    siteName: "DigitalX Radiologia Odontológica",
+    images: [
+      {
+        url: "https://www.digitalxms.com.br/og-faq.png", // Replace with a relevant image URL
+        width: 1200,
+        height: 630,
+        alt: "FAQ - Dúvidas Frequentes da DigitalX",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DigitalX | FAQ de Radiologia Odontológica",
+    description:
+      "Tem perguntas sobre exames de imagem odontológica? A DigitalX responde! Acesse nosso FAQ completo.",
+    images: ["https://www.digitalxms.com.br/twitter-faq.png"], // Replace with a relevant image URL
+  },
+};
 
-  return (
-    <>
-      <Header />
-      <HeaderInternas
-        title="Dúvidas Frequentes"
-        subtitle="Tire suas dúvidas com facilidade e rapidez."
-      />
-
-      <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
-        {/***********************
-         * 2 colunas (contant and aside) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
-          {/* coluna 1 */}
-          <div className="px-8">
-            <ContentPage />
-          </div>
-
-          {/* aside - coluna 2 */}
-          <Aside />
-        </div>
-
-        {/* Contato */}
-        <ContactSection />
-      </main>
-      <Footer />
-    </>
-  );
+export default function DuvidasFrequentesPage() {
+  return <DuvidasFrequentesClientPage />;
 }
