@@ -1,36 +1,45 @@
-"use client";
-import { useRef } from "react";
-import ContentPage from "./content";
-import Header from "@/components/HeaderInternas";
-import Footer from "@/components/Footer";
-import HeaderInternas from "@/components/HeroInternas";
-import Aside from "@/components/Aside";
+import ContatoClientPage from "./ContatoClientPage";
+import { Metadata } from "next";
 
-export default function CentralDeAjudaPage() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+export const metadata: Metadata = {
+  title: "Contato e Central de Ajuda | DigitalX Radiologia Odontológica",
+  description:
+    "Entre em contato com a DigitalX para agendar exames, tirar dúvidas ou obter informações. Nossa equipe está pronta para atender dentistas e pacientes.",
+  keywords: [
+    "contato digitalx",
+    "telefone digitalx",
+    "endereço digitalx",
+    "radiologia odontológica",
+    "exames de imagem",
+    "Campo Grande MS",
+    "central de ajuda",
+  ],
+  openGraph: {
+    title: "Contato e Central de Ajuda | DigitalX Radiologia Odontológica",
+    description:
+      "Facilite seu dia a dia com nossos canais de atendimento. A DigitalX oferece suporte especializado para dentistas e pacientes em Campo Grande - MS.",
+    url: "https://www.digitalxms.com.br/contato",
+    siteName: "DigitalX Radiologia Odontológica",
+    images: [
+      {
+        url: "https://www.digitalxms.com.br/og-image.png", // Replace with a relevant image URL
+        width: 1200,
+        height: 630,
+        alt: "DigitalX Radiologia Odontológica - Contato",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contato e Central de Ajuda | DigitalX Radiologia Odontológica",
+    description:
+      "Precisa de informações ou suporte? Entre em contato com a DigitalX, sua parceira em radiologia odontológica digital.",
+    images: ["https://www.digitalxms.com.br/twitter-image.png"], // Replace with a relevant image URL
+  },
+};
 
-  return (
-    <>
-      <Header />
-      <HeaderInternas
-        title="Central de Ajuda"
-        subtitle="Tire suas dúvidas com facilidade e rapidez."
-      />
-
-      <main className="relative max-w-[1280px] mx-auto" ref={sectionRef}>
-        {/***********************
-         * 2 colunas (contant and aside) */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_28%] gap-4 p-3 w-full mx-auto mt-4">
-          {/* coluna 1 */}
-          <div className="px-8">
-            <ContentPage />
-          </div>
-
-          {/* aside - coluna 2 */}
-          <Aside />
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
+export default function ContatoPage() {
+  return <ContatoClientPage />;
 }
