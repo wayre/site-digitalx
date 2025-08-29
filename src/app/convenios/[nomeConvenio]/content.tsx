@@ -83,8 +83,8 @@ const ConvenioDetalhes = () => {
     // Substitui a quebra de linha seguida por traço por um delimitador único e divide a string.
     // Também remove o traço inicial para evitar um item vazio no array.
     return texto
-      .replace(/\n- /g, "__DELIMITADOR__")
-      .replace(/^- /, "")
+      .replace(/\n/g, "__DELIMITADOR__")
+      .replace(/- /g, "")
       .split("__DELIMITADOR__");
   };
 
@@ -171,12 +171,14 @@ const ConvenioDetalhes = () => {
                           <li
                             key={index}
                             className={
-                              index == 0
+                              index == 0 || item.includes("Para os demais")
                                 ? "ml-0 font-normal"
                                 : "ml-4 text-[15px] text-orange-900"
                             }
                           >
-                            {index == 0 ? item : `- ${item}`}
+                            {index == 0 || item.includes("Para os demais")
+                              ? item
+                              : `- ${item}`}
                           </li>
                         )
                       )}
