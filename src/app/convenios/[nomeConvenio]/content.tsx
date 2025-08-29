@@ -135,7 +135,7 @@ const ConvenioDetalhes = () => {
               {convenio.name}
             </h1>
             <p className="text-gray-600 mt-2">
-              Informações sobre documentação e exames atendidos
+              Informações e orientações sobre o convênio.
             </p>
           </div>
         </section>
