@@ -121,7 +121,7 @@ const ConvenioDetalhes = () => {
     <div className="min-h-screen bg-white">
       <main>
         {/* Header Section */}
-        <section className="bg-gray-50 py-8">
+        <section className="bg-gray-50 pb-8">
           <div className="container mx-auto">
             <Button
               variant="ghost"
@@ -141,7 +141,7 @@ const ConvenioDetalhes = () => {
         </section>
 
         {/* Content Section */}
-        <section className="section-padding">
+        <section className="pb-4">
           <div className="container mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-[55%_1fr] md:grid-cols-[60%_1fr]  gap-8 lg:gap-12 lg:px-12">
               {/* Primeira Coluna - Informações */}
