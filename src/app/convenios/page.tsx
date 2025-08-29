@@ -53,12 +53,12 @@ export interface ConvenioTypes {
   id: string;
   name: string;
   logo: string;
-  documentos: string[];
-  examesTodo: string[];
+  conveniosVinculados: string[];
+  orientacoes: string;
 }
 
 async function getConvenios(): Promise<ConvenioTypes[]> {
-  const filePath = path.join(process.cwd(), "public", "convenios.json");
+  const filePath = path.join(process.cwd(), "public", "convenios-novo1.json");
   try {
     const data = await fs.readFile(filePath, "utf-8");
     return JSON.parse(data);

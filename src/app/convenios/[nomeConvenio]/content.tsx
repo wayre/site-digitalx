@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useParams, useRouter } from "next/navigation";
 import { ConvenioTypes } from "@/app/convenios/page";
 import Image from "next/image";
+import React from "react";
 
 const ConvenioDetalhes = () => {
   const [conveniosData, setConveniosData] = useState<ConvenioTypes[]>([]);
@@ -26,7 +27,7 @@ const ConvenioDetalhes = () => {
     const fetchConvenios = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("/convenios.json"); // Assumindo que está na pasta public
+        const response = await fetch("/convenios-novo1.json"); // Assumindo que está na pasta public
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -73,6 +74,19 @@ const ConvenioDetalhes = () => {
       </div>
     );
   }
+  // Função para formatar o texto e retornar um array de strings
+  const formatarOrientacoesArray = (texto: string): string[] => {
+    if (!texto) {
+      return [];
+    }
+
+    // Substitui a quebra de linha seguida por traço por um delimitador único e divide a string.
+    // Também remove o traço inicial para evitar um item vazio no array.
+    return texto
+      .replace(/\n- /g, "__DELIMITADOR__")
+      .replace(/^- /, "")
+      .split("__DELIMITADOR__");
+  };
 
   if (!convenio) {
     return (
@@ -129,57 +143,67 @@ const ConvenioDetalhes = () => {
         {/* Content Section */}
         <section className="section-padding">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:px-12">
+            <div className="grid grid-cols-1 sm:grid-cols-[55%_1fr] md:grid-cols-[60%_1fr]  gap-8 lg:gap-12 lg:px-12">
               {/* Primeira Coluna - Informações */}
               <div>
-                <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="bg-white rounded-lg shadow-md p-8 ">
                   <div className="text-center mb-8">
                     <Image
                       src={`/convenios/${convenio.logo}`}
                       alt={convenio.name}
                       width={256}
                       height={97}
-                      className="w-48 h-auto mx-auto object-contain"
+                      className="w-48 h-auto object-contain"
                     />
                   </div>
 
-                  {/* Documentação Necessária */}
-                  <div className="mb-8 w-4/5 ">
-                    <div className="flex items-center mb-4">
-                      <FileText className="text-[#078080] mr-3 h-6 w-6" />
-                      <h3 className="text-xl font-semibold text-gray-800">
-                        Documentação Necessária
-                      </h3>
-                    </div>
-                    <ul className="space-y-2">
-                      {convenio.documentos.map((doc: string, index: number) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-[#078080] mr-2">•</span>
-                          <span className="text-gray-600">{doc}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Exames Atendidos */}
+                  {/* Orientações */}
                   <div>
                     <div className="flex items-center mb-4">
                       <Calendar className="text-[#078080] mr-3 h-6 w-6" />
                       <h3 className="text-xl font-semibold text-gray-800">
-                        Exames Atendidos
+                        Orientações
                       </h3>
                     </div>
                     <ul className="space-y-2">
-                      {convenio.examesTodo.map(
-                        (exame: string, index: number) => (
-                          <li key={index} className="flex items-start">
-                            <span className="text-[#078080] mr-2">•</span>
-                            <span className="text-gray-600">{exame}</span>
+                      {formatarOrientacoesArray(convenio.orientacoes).map(
+                        (item, index) => (
+                          <li
+                            key={index}
+                            className={
+                              index == 0
+                                ? "ml-0 font-normal"
+                                : "ml-4 text-[15px] text-orange-900"
+                            }
+                          >
+                            {index == 0 ? item : `- ${item}`}
                           </li>
                         )
                       )}
                     </ul>
                   </div>
+
+                  {/* conveniosVinculados */}
+                  {convenio.conveniosVinculados.length > 0 && (
+                    <div className="mt-8 mb-8 w-4/5 ">
+                      <div className="flex items-center mb-4">
+                        <FileText className="text-[#078080] mr-3 h-6 w-6" />
+                        <h3 className="text-xl font-semibold text-gray-800">
+                          Convênios Vinculados
+                        </h3>
+                      </div>
+                      <ul className="">
+                        {convenio.conveniosVinculados.map(
+                          (doc: string, index: number) => (
+                            <li key={index} className="flex items-start ml-4">
+                              <span className="text-[#078080] mr-2">•</span>
+                              <span className="text-gray-600">{doc}</span>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
 

@@ -128,9 +128,9 @@ export default function ConveniosClient({ convenios }: ConveniosClientProps) {
           </h2>
 
           <p className="text-[#555555] mb-8 max-w-xl mx-auto">
-            Entre em contato conosco para verificar a disponibilidade do
-            seu convênio ou conhecer nossas condições especiais para
-            pagamento particular.
+            Entre em contato conosco para verificar a disponibilidade do seu
+            convênio ou conhecer nossas condições especiais para pagamento
+            particular.
           </p>
 
           <div>

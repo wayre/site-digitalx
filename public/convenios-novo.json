@@ -1,0 +1,182 @@
+[
+  {
+    "id": "odontoprev",
+    "nome": "Odontoprev",
+    "orientacao": "O lançamento é feito por meio do dentista credenciado ao convenio, no consultório\nodontológico. Neste caso não é preciso trazer o pedido;\nPara dentistas não credenciados, o lançamento é feito na clinica radiológica. Neste\ncaso é necessário:\n- Documento com foto;\n- O pedido do dentista com justificativa clínica, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "odontoprev.png"
+  },
+  {
+    "id": "bradesco",
+    "nome": "Bradesco",
+    "orientacao": "O lançamento é feito por meio do dentista credenciado ao convenio, no consultório\nodontológico. Neste caso não é preciso trazer o pedido;\nPara dentistas não credenciados, o lançamento é feito na clinica radiológica. Neste\ncaso é necessário:\n- Documento com foto;\n- O pedido do dentista com justificativa clínica, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "bradesco-saude.webp"
+  },
+  {
+    "id": "brasil-dental",
+    "nome": "Brasil Dental",
+    "orientacao": "O lançamento é feito por meio do dentista credenciado ao convenio, no consultório\nodontológico. Neste caso não é preciso trazer o pedido;\nPara dentistas não credenciados, o lançamento é feito na clinica radiológica. Neste\ncaso é necessário:\n- Documento com foto;\n- O pedido do dentista com justificativa clínica, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "bb-dental",
+    "nome": "BB Dental",
+    "orientacao": "O lançamento é feito por meio do dentista credenciado ao convenio, no consultório\nodontológico. Neste caso não é preciso trazer o pedido;\nPara dentistas não credenciados, o lançamento é feito na clinica radiológica. Neste\ncaso é necessário:\n- Documento com foto;\n- O pedido do dentista com justificativa clínica, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "sepaco",
+    "nome": "Sepaco",
+    "orientacao": "O lançamento é feito por meio do dentista credenciado ao convenio, no consultório\nodontológico. Neste caso não é preciso trazer o pedido;\nPara dentistas não credenciados, o lançamento é feito na clinica radiológica. Neste\ncaso é necessário:\n- Documento com foto;\n- O pedido do dentista com justificativa clínica, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "viventeris",
+    "nome": "Viventeris",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "brazil-dental",
+    "nome": "Brazil Dental",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "prevident",
+    "nome": "Prevident",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "prevident.png"
+  },
+  {
+    "id": "bioral",
+    "nome": "Bioral",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "calcard",
+    "nome": "Calcard",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "nossa-saúde",
+    "nome": "Nossa Saúde",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "servir",
+    "nome": "Servir",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "quallity-pro-saúde",
+    "nome": "Quallity Pro Saúde",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "simpli-odonto",
+    "nome": "Simpli Odonto",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "w.-dental",
+    "nome": "W. Dental",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "odontoseg",
+    "nome": "Odontoseg",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "pernanbucanas",
+    "nome": "Pernanbucanas",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "care-plus",
+    "nome": "Care Plus",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "ipress",
+    "nome": "Ipress",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": ""
+  },
+  {
+    "id": "hapvida",
+    "nome": "Hapvida",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "hapvida.png"
+  },
+  {
+    "id": "metlife",
+    "nome": "Metlife",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "metlife.png"
+  },
+  {
+    "id": "amil-dental",
+    "nome": "Amil Dental",
+    "orientacao": "Para Documentação Ortodôntica necessário o lançamento prévio no sistema do\nconvênio, o paciente deve encaminhar para nós, via whatsapp, os seguintes\ndocumentos escaneado ou em fotos enquadradas e legíveis:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 90 dias retirado diretamente do convênio ou\n30 dias quando direto do dentista.\nPara os demais exames lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 90 dias retirado diretamente do convênio ou\n30 dias quando direto do dentista.",
+    "imagem": "amil.png"
+  },
+  {
+    "id": "dental-uni-–-odonto-life",
+    "nome": "Dental Uni – Odonto Life",
+    "orientacao": "É necessário o lançamento prévio no sistema do convênio, o paciente deve\nencaminhar para nós via whatsapp, os seguintes documentos escaneados ou em fotos\nenquadradas e legíveis:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "dentaluni.png"
+  },
+  {
+    "id": "ideal-odonto",
+    "nome": "Ideal Odonto",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "idealodonto.png"
+  },
+  {
+    "id": "odonto-live",
+    "nome": "Odonto Live",
+    "orientacao": "É necessário o lançamento prévio no sistema do convênio, o paciente deve\nencaminhar para nós via whatsapp, os seguintes documentos escaneados ou em fotos\nenquadradas e legíveis:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "odontolive.png"
+  },
+  {
+    "id": "prover",
+    "nome": "Prover",
+    "orientacao": "Lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "proverodonto.png"
+  },
+  {
+    "id": "odonto-empresas",
+    "nome": "Odonto Empresas",
+    "orientacao": "Para Documentação Ortodôntica necessário o lançamento prévio no sistema do\nconvênio, o paciente deve encaminhar para nós, via whatsapp, os seguintes\ndocumentos escaneado ou em fotos enquadradas e legíveis:\n- Documento pessoal com foto;",
+    "imagem": "odonto-empresas.png"
+  },
+  {
+    "id": "--pedido-do-dentista-com-justificativa-clínica-detalhada,-em-papel-timbrado,-carimbado,",
+    "nome": "- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,",
+    "orientacao": "",
+    "imagem": ""
+  },
+  {
+    "id": "sempre-odonto",
+    "nome": "Sempre Odonto",
+    "orientacao": "O beneficiário tem que apresentar a identificação PASS CARD, solicitada diretamente\nna central do convênio. Juntamente com os seguintes documentos:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.",
+    "imagem": "sempreodonto.png"
+  },
+  {
+    "id": "odont",
+    "nome": "Odont",
+    "orientacao": "Para Documentação Ortodôntica necessário o lançamento prévio no sistema do\nconvênio, o paciente deve encaminhar para nós, via whatsapp, os seguintes\ndocumentos escaneado ou em fotos enquadradas e legíveis:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias.\nPara os demais exames lançamento no balcão, trazer:\n- Documento pessoal com foto;\n- Pedido do dentista com justificativa clínica detalhada, em papel timbrado, carimbado,\nassinado e datado com data válida para 30 dias",
+    "imagem": "odontplanosodontologicos.png"
+  }
+]
