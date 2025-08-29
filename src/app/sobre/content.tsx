@@ -65,11 +65,7 @@ export default function Sobre() {
           className="h-auto w-full object-fill sm:min-h-full scale-105"
           priority
         />
-        <div className="px-4 sm:px-12 text-base sm:text-lg">
-          <h2 className="text-2xl font-light mb-6 max-w-[450px] mt-8">
-            Parceira do profissional odontológico em diagnósticos de alta
-            qualidade
-          </h2>
+        <div className="px-4 sm:px-12 text-base sm:text-lg pt-10">
           <p className="mb-4">
             <b>A Digital X</b> nasceu com um objetivo claro:{" "}
             <b>
